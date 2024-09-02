@@ -1,0 +1,33 @@
+#EXTM3U
+
+# Movies Section
+#EXTINF:-1, Movie 1 DP : Sex And Corruption
+#EXTVTT:https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/Digital.Playground.Kayden.Kross.Sex.And.Corruption.vtt
+#EXTIMG:https://imgs1cdn.adultempire.com/products/43/1587243h.jpg
+https://kebab.bunkr.ru/Digital-Playground-Kayden-Kross-Sex-And-Corruption-TUyppuvieztOhtV3XwUiZzljpWBEDada.mp4
+
+#EXTINF:-1, Movie 2 DP : La Boutique
+#EXTVTT:https://www.example.com/movie2-thumbnails.vtt
+#EXTIMG:https://imgs1cdn.adultempire.com/products/89/1647289h.jpg
+https://pizza.bunkr.ru/Digital-Playground-La-Boutique-720p-sVBBTE1tsedsDslYLF4BvSWkhVkBJJ0b.mp4
+
+#EXTINF:-1, Movie 2 Title
+#EXTVTT:https://www.example.com/movie2-thumbnails.vtt
+#EXTIMG:https://www.example.com/movie2-thumbnail.jpg
+https://www.example.com/movie2.mp4
+
+#EXTINF:-1, Movie 2 Title
+#EXTVTT:https://www.example.com/movie2-thumbnails.vtt
+#EXTIMG:https://www.example.com/movie2-thumbnail.jpg
+https://www.example.com/movie2.mp4
+
+# TV Series Section
+#EXTINF:-1, TV Series 1 Episode 1
+#EXTVTT:https://www.example.com/series1-episode1-thumbnails.vtt
+#EXTIMG:https://www.example.com/series1-episode1-thumbnail.jpg
+https://www.example.com/series1-episode1.mp4
+
+#EXTINF:-1, TV Series 1 Episode 2
+#EXTVTT:https://www.example.com/series1-episode2-thumbnails.vtt
+#EXTIMG:https://www.example.com/series1-episode2-thumbnail.jpg
+https://www.example.com/series1-episode2.mp4
