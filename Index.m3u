@@ -1,9 +1,9 @@
 #EXTM3U
-
-#EXTINF:-0,Sex and Corruption: Episode 3 (2011)
-#EXTIMG:https://imgs1cdn.adultempire.com/products/43/1587243h.jpg
+#EXTINF:-1 tvg-logo="https://imgs1cdn.adultempire.com/products/43/1587243h.jpg" group-title="Movies", Sex and Corruption: Episode 3 (2011)
 https://kebab.bunkr.ru/Digital-Playground-Kayden-Kross-Sex-And-Corruption-TUyppuvieztOhtV3XwUiZzljpWBEDada.mp4
-
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:play-and-exit
+#EXTINF:-1, #EXTVLCOPT:customplayer=https://playerjs3.onrender.com/player.html?file=https://kebab.bunkr.ru/Digital-Playground-Kayden-Kross-Sex-And-Corruption-TUyppuvieztOhtV3XwUiZzljpWBEDada.mp4&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/Digital.Playground.Kayden.Kross.Sex.And.Corruption.vtt&poster=https://imgs1cdn.adultempire.com/galleries/40/68864533787225440_800.jpg
 #EXTINF:-0, Movie 2 DP : La Boutique
 #EXTVTT:https://www.example.com/movie2-thumbnails.vtt
 #EXTIMG:https://imgs1cdn.adultempire.com/products/89/1647289h.jpg
