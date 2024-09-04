@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        .movie-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .movie-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .movie-details {
+            margin-top: 20px;
+        }
+        .loading {
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="movieContainer" class="movie-container">
+        <div id="loading" class="loading">Loading...</div>
+    </div>
+
+    <script>
+        const API_KEY = '05902896074695709d7763505bb88b4d&include_adult=true';  // Replace with your TMDb API key
+        const queryParams = new URLSearchParams(window.location.search);
+        const movieTitle = queryParams.get('title');
+
+        const searchMovie = async (title) => {
+            try {
+                const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(title)}`);
+                const data = await response.json();
+                if (data.results.length > 0) {
+                    return data.results[0];
+                } else {
+                    console.error('Movie not found!');
+                }
+            } catch (error) {
+                console.error('Error searching for movie:', error);
+            }
+        };
+
+        const fetchMovieDetails = async (id) => {
+            try {
+                const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=videos,credits`);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching movie details:', error);
+            }
+        };
+
+        const displayMovieDetails = (data) => {
+            const movieContainer = document.getElementById('movieContainer');
+            movieContainer.innerHTML = `
+                <h1>${data.title}</h1>
+                <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}">
+                <div class="movie-details">
+                    <p>${data.overview}</p>
+                    <h3>Cast:</h3>
+                    <ul>${data.credits.cast.slice(0, 5).map(actor => `<li>${actor.name} as ${actor.character}</li>`).join('')}</ul>
+                    <h3>Trailer:</h3>
+                    ${data.videos.results.length ? `<a href="https://www.youtube.com/watch?v=${data.videos.results[0].key}" target="_blank">Watch Trailer</a>` : 'No trailer available'}
+                </div>
+            `;
+        };
+
+        const init = async () => {
+            if (movieTitle) {
+                const movieData = await searchMovie(movieTitle);
+                if (movieData) {
+                    const movieDetails = await fetchMovieDetails(movieData.id);
+                    displayMovieDetails(movieDetails);
+                }
+            } else {
+                document.getElementById('loading').innerText = 'No movie title provided!';
+            }
+        };
+
+        init();
+    </script>
+</body>
+</html>
