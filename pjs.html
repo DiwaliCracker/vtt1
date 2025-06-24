@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Media Showcase</title>
+  <style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  padding: 15px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Backdrop */
+.backdrop {
+  position: relative;
+  width: 100%;
+  height: calc(100vw / 16 * 9); /* 16:9 aspect ratio */
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+}
+
+.poster-container {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  bottom: 20px;
+  width: 29%;
+  aspect-ratio: 2 / 3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.poster-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Main Container */
+.main-container {
+  padding-top: 20px;
+}
+
+.divider {
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+
+.section {
+  margin: 20px 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.logo {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 20px;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Toggle Visibility */
+.hidden-items {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+.visible-items {
+  max-height: 2000px; /* large enough to fit full content */
+  opacity: 1;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+/* Posters Layout */
+.posters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+/* Wrapper for Each Poster */
+.poster-wrapper {
+  flex: 1 1 calc(33.333% - 40px); /* 3 per row */
+  max-width: calc(33.333% - 40px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .poster-wrapper {
+    flex: 1 1 calc(50% - 30px); /* 2 per row */
+    max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 600px) {
+  .poster-wrapper {
+    flex: 1 1 100%; /* 1 per row */
+    max-width: 100%;
+  }
+}
+
+.poster-wrapper a {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Poster Image */
+.poster-wrapper a img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay video/iframe */
+.overlay video,
+.overlay iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.poster-wrapper a:hover .overlay video,
+.poster-wrapper a:hover .overlay iframe,
+.poster-wrapper.touch-active .overlay video,
+.poster-wrapper.touch-active .overlay iframe {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Name Overlay (bottom over image) */
+.overlay2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: none;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.poster-wrapper a:hover .overlay2,
+.poster-wrapper.touch-active .overlay2 {
+  display: block;
+}
+
+.overlay2 h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Actor List Styles */
+.actor-list {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+  margin-top: 5px;
+  width: 100%;
+  line-height: 1.4;
+}
+
+.poster-wrapper:hover .actor-list,
+.poster-wrapper.touch-active .actor-list {
+  max-height: 100px;
+  opacity: 1;
+}
+
+.actor-list a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 5px;
+  word-break: break-word;
+}
+
+.actor-list a:hover {
+  text-decoration: underline;
+}
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffcc00;
+}
+
+/* Responsive Header for Mobile */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-name {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .navbar a {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="header" id="header">
+    <div class="header" id="header">
+  <div class="header-content">
+    <div class="site-name">Jaye Summers</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="movies.html">Movies</a>
+      <a href="series.html">Series</a>
+      <a href="p.html">Pornstars</a>
+      <a href="#about">About</a>
+      <a href="TermsAndCondition.html">Terms and Conditions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+</div>
+
+<!-- <div class="backdrop" id="backdrop" style="background-image: url('https://get.wallhere.com/photo/Jaye-Summers-model-women-looking-at-viewer-swimming-pool-swimwear-Vixen-com-1452559.jpg');"> -->
+    <div class="backdrop" id="backdrop" style="background-image: url('https://content-vixen.pornstar-scenes.com/Jaye_Summers-Am_I_Distracting_You_Part_2/Jaye-Summers-Vixen-Am-I-Distracting-You-Part-2-2017-10-16-014_1500.webp');">
+    <div class="poster-container">
+      <img src="https://cdni.pornpics.com/1280/7/543/82422085/82422085_014_c676.jpg" alt="Poster">
+      <!-- <img src="https://get.wallhere.com/photo/Jaye-Summers-model-women-looking-at-viewer-swimming-pool-swimwear-Vixen-com-1452557.jpg" alt="Poster"> -->
+      <!-- <img src="https://cdni.pornpics.com/1280/1/265/25954720/25954720_001_ad6f.jpg" alt="Poster"> -->
+    </div>
+  </div><hr>
+
+<div class="main-container" id="main-container"></div>
+
+<script>
+  // Sample data for sections
+  const sections = [
+    {
+      logo: "https://krako.pratikbhandare.workers.dev/1:/posters/Studio%20Logo/VixenT.png",
+      items: [
+        {
+          img: "https://cdn.vixen.com/scene/videoimages/100964/mainLandscape/1550830019011/vixen-biggest-fans_1920x1080.webp",
+          video: "https://cold1.saint2.cr/videos/84be2979af6c84f06db2e556cb8fd1a2.mp4",
+          iframe: "",
+          name: "Biggest Fans",
+          altname: "Jaye summers Biggest Fans vixen",
+          link: "pjs.html",
+         actors: [
+      { name: "Tom Cruise", link: "https://example.com/tom",
+    img: "hhttps://cdn.vixen.com/scene/videoimages/100964/mainLandscape/1550830019011/vixen-biggest-fans_1920x1080.webp"
+ },
+      { name: "Emily Blunt", link: "https://example.com/emily",
+    img: "https://cdn.vixen.com/scene/videoimages/100538/mainLandscape/1546529479832/vixen-am-i-distracting-you-part-2_1920x1080.webp"
+ }]
+        },
+        {
+          img: "https://cdn.vixen.com/scene/videoimages/100538/mainLandscape/1546529479832/vixen-am-i-distracting-you-part-2_1920x1080.webp",
+          video: "",
+          iframe: "https://hlsplayer.onrender.com/Player.html?file=https://trailer.adultempire.com/hls/previewscene/2535594/582267/master.m3u8",
+          name: "Am I Distracting You? Part 2",
+          altname: "Jaye Summers Am I Distracting You? Part 2 vixen",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        }
+      ]
+    },
+    {
+      logo: "https://krako.pratikbhandare.workers.dev/1:/posters/Studio%20Logo/TushyT.png",
+      items: [
+        {
+          img: "https://cdn.tushy.com/scene/videoimages/100874/mainLandscape/1547037571907/tushy-two-for-one_1920x1080.webp",
+          video: "https://en.porndiff.com/tubes/videos/100874_two-for-one_353P.mp4",
+          iframe: "",
+          name: "Two For One",
+          altname: "Jaye Summers tushy Two For One",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://cdn.tushy.com/scene/videoimages/100411/mainLandscape/1544541408779/tushy-do-anal-with-my-boyfriend_1920x1080.jpeg",
+          video: "https://en.porndiff.com/tubes/videos/100411_do-anal-with-my-boyfriend_353P.mp4",
+          iframe: "",
+          name: "Do Anal With my Boyfriend",
+          altname: "Jaye Summers tushy Do Anal With my Boyfriend",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://cdn.tushy.com/scene/videoimages/100389/mainLandscape/1544540263564/tushy-rent-free_1920x1080.jpeg",
+          video: "https://en.porndiff.com/tubes/videos/100389_rent-free_353P.mp4",
+          iframe: "",
+          name: "Rent Free",
+          altname: "Jaye Summers tushy Rent Free",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+      ]
+    },
+    {
+      logo: "https://krako.pratikbhandare.workers.dev/1:/posters/Studio%20Logo/BlackedT.png",
+      items: [
+        {
+          img: "https://cdn.blacked.com/scene/videoimages/100439/mainLandscape/1538734181399/blacked-brakes-biggest-fans-adventures_1920x1080.jpeg",
+          video: "https://en.porndiff.com/tubes/videos/100439_brakes-biggest-fans-adventures_353P.mp4",
+          iframe: "",
+          name: "Brake's Biggest Fans Adventures",
+          altname: "Jaye Summers blacked Brake's Biggest Fans Adventures",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+      ]
+    },
+    {
+      logo: "https://krako.pratikbhandare.workers.dev/1:/posters/Studio%20Logo/TushyRawT.png",
+      items: [
+        {
+          img: "https://cdn.tushyraw.com/scene/videoimages/100933/mainLandscape/1545125064430/tushyraw-hit-my-spot_1920x1080.webp",
+          video: "https://en.porndiff.com/tubes/videos/100933_hit-my-spot_353P.mp4",
+          iframe: "",
+          name: "Hit My Spot",
+          altname: "Jaye Summers tushyraw Hit My Spot",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+      ]
+    },
+    {
+      logo: "https://images.ctfassets.net/5mtb3zfzz1y7/5pQAKrYgoC7bFhSGIScwUb/b07c3908ccd466a8829659a9d8477ed4/puretaboo-hor-White.svg",
+      items: [
+        {
+          img: "https://transform.gammacdn.com/movies/54227/54227_01/previews/2/239/top_1_1920x1080/54227_01_01.jpg?width=1920&height=1080&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/171998.mp4",
+          iframe: "",
+          name: "Unrequited",
+          altname: "Jaye Summers puretaboo Unrequited",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/75193/75193_01/previews/2/239/top_1_1920x1080/75193_01_01.jpg?width=1920&height=1080&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/146252.mp4",
+          iframe: "",
+          name: "Sex Addicts Anonymous",
+          altname: "Jaye Summers puretaboo Sex Addicts Anonymous",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/74762/74762_01/previews/2/239/top_1_1920x1080/74762_01_01.jpg?width=1920&height=1080&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/145356.mp4",
+          iframe: "",
+          name: "Careful What You Wish For",
+          altname: "Jaye Summers puretaboo Careful What You Wish For",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/74715/74715_01/previews/2/239/top_1_1920x1080/74715_01_01.jpg?width=1920&height=1080&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/145243.mp4",
+          iframe: "",
+          name: "Future Darkly: Father Recall",
+          altname: "Jaye Summers puretaboo Future Darkly: Father Recall",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/70659/70659_01/previews/2/239/top_1_960x544/70659_01_01.jpg?width=1920&height=1080&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/135254.mp4",
+          iframe: "",
+          name: "The Bad Uncle Returns",
+          altname: "Jaye Summers puretaboo The Bad Uncle Returns",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/70523/70523_01/previews/2/239/top_1_960x544/70523_01_01.jpg?width=1920&height=1080&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/135063.mp4",
+          iframe: "",
+          name: "Seven Minutes In Hell",
+          altname: "Jaye Summers puretaboo Seven Minutes In Hell",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/68768/68768_01/previews/2/239/top_1_960x544/68768_01_01.jpg?width=1920&height=1080&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/131864.mp4",
+          iframe: "",
+          name: "The Cookie Jar",
+          altname: "Jaye Summers puretaboo The Cookie Jar",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/66792/66792_01/previews/2/239/top_1_960x544/66792_01_01.jpg?width=1920&height=1080&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/127687.mp4",
+          iframe: "",
+          name: "The Bad Uncle",
+          altname: "Jaye Summers puretaboo The Bad Uncle",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+      ]
+    },
+    {
+      logo: "https://static01-cms-fame.gammacdn.com/girlsway/m/a8iczq59ntsksc8s/girlsway-NEWlogo2019.svg",
+      items: [
+        {
+          img: "https://transform.gammacdn.com/movies/55403/55403_01/previews/2/187/top_1_1920x1080/55403_01_01.jpg?width=1920&height=1080&format=webp&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/175062.mp4",
+          iframe: "",
+          name: "Interrupted By Their Teacher",
+          altname: "Jaye Summers girlsway Interrupted By Their Teacher",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/55410/55410_01/previews/2/175/top_1_1920x1080/55410_01_01.jpg?width=1920&height=1080&format=webp&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/175069.mp4",
+          iframe: "",
+          name: "Back In Town",
+          altname: "Jaye Summers girlsway Back In Town",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/52143/52143_01/previews/2/162/top_1_960x544/52143_01_01.jpg?width=1920&height=1080&format=webp&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/166290.mp4",
+          iframe: "",
+          name: "Making Her Assistant Watch",
+          altname: "Jaye Summers girlsway Making Her Assistant Watch",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/70694/70694_01/previews/2/162/top_1_960x544/70694_01_01.jpg?width=1920&height=1080&format=webp&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/135320.mp4",
+          iframe: "",
+          name: "The Sore Cyclist",
+          altname: "Jaye Summers girlsway The Sore Cyclist",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/65732/65732_01/previews/2/162/top_1_960x544/65732_01_01.jpg?width=1920&height=1080&format=webp&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/125404.mp4",
+          iframe: "",
+          name: "Chinese Medicinal Tummy Rub",
+          altname: "Jaye Summers Chinese Medicinal Tummy Rub",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+      ]
+    },
+    {
+      logo: "https://cherrypimps.com/custom_assets/images/logo.png",
+      items: [
+        {
+          img: "https://cherrypimps.com/content/contentthumbs/62/04/126204-4x.jpg",
+          video: "https://en.porndiff.com/tubes/videos/cherrypimps-jaye-fails-every-test-but-one.mp4",
+          iframe: "",
+          name: "Jaye Fails Every Test But One",
+          altname: "jaye summers Jaye Fails Every Test But One",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://cherrypimps.com/content/contentthumbs/48/12/124812-4x.jpg",
+          video: "https://en.porndiff.com/tubes/videos/cherrypimps-jaye-summers-knows-how-to-deep-throat-a-cock.mp4",
+          iframe: "",
+          name: "Jaye Summers Knows How To Deep Throat A Cock",
+          altname: "jaye summers Jaye Summers Knows How To Deep Throat A Cock",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://cherrypimps.com/content/contentthumbs/22/74/112274-4x.jpg",
+          video: "",
+          iframe: "",
+          name: "Carter and Jaye Scissor LIVE",
+          altname: "jaye summers Carter and Jaye Scissor LIVE",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://cherrypimps.com/content/contentthumbs/38/44/83844-4x.jpg",
+          video: "",
+          iframe: "",
+          name: "Showing Off That Booty",
+          altname: "jaye summers Showing Off That Booty",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://cherrypimps.com/content/contentthumbs/71/87/117187-4x.jpg",
+          video: "https://en.porndiff.com/tubes/videos/cherrypimps-teasing-you-to-get-my-ass-fucked.mp4",
+          iframe: "",
+          name: "Teasing You To Get My Ass Fucked",
+          altname: "jaye summers Teasing You To Get My Ass Fucked",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://cherrypimps.com/content/contentthumbs/33/13/83313-4x.jpg",
+          video: "",
+          iframe: "",
+          name: "Ready To Play with You LIVE",
+          altname: "jaye summers Ready To Play with You LIVE",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://cherrypimps.com/content/contentthumbs/07/60/90760-4x.jpg",
+          video: "",
+          iframe: "",
+          name: "Cum In My Mouth LIVE",
+          altname: "jaye summers Cum In My Mouth LIVE",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+      ]
+    },
+    {
+      logo: "https://www.bang.com/build/images/bang/bang-logo_inv.f5137c9b.svg",
+      items: [
+        {
+          img: "https://i.bang.com/screenshots/37655/movie/1/1532235.jpg",
+          video: "https://i.bang.com/v/37655/185205/preview720.mp4",
+          iframe: "",
+          name: "Jaye Summers gets her throat stretched for choir by the priest!",
+          altname: "jaye summers Jaye Summers gets her throat stretched for choir by the priest!",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://i.bang.com/screenshots/27646/movie/1/1344186.jpg",
+          video: "https://i.bang.com/v/27646/145154/preview720.mp4",
+          iframe: "",
+          name: "Slutty 19 year old brunette with small tits rides anonymous cock",
+          altname: "jaye summers Slutty 19 year old brunette with small tits rides anonymous cock",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://i.bang.com/screenshots/41447/movie/1/1645547.jpg",
+          video: "https://i.bang.com/v/41447/204932/preview720.mp4",
+          iframe: "",
+          name: "Jaye Summers likes a finger in her ass as her hairy pussy is fucked",
+          altname: "jaye summers Jaye Summers likes a finger in her ass as her hairy pussy is fucked",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://i.bang.com/screenshots/51548/movie/3/1856868.jpg",
+          video: "https://i.bang.com/v/51548/241888/preview720.mp4",
+          iframe: "",
+          name: "Jaye Summers rides a frat guys dick like the slut she is!",
+          altname: "jaye summers Jaye Summers rides a frat guys dick like the slut she is!",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://i.bang.com/screenshots/50213/movie/1/1827938.jpg",
+          video: "https://i.bang.com/v/50213/236873/preview720.mp4",
+          iframe: "",
+          name: "Jaye Summers is filled to the max with cock as she takes it on all fours",
+          altname: "jaye summers Jaye Summers is filled to the max with cock as she takes it on all fours",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://i.bang.com/screenshots/41382/movie/2/1644277.jpg",
+          video: "https://i.bang.com/v/41382/204682/preview720.mp4",
+          iframe: "",
+          name: "Jaye Summers licks her step dadz ass after he fucks her hairy pussy",
+          altname: "jaye summers Jaye Summers licks her step dadz ass after he fucks her hairy pussy",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+      ]
+    },
+    {
+      logo: "https://static01-cms-openlife.gammacdn.com/xempire/m/1attnvb5iow08w4c/logo-xempire.svg",
+      items: [
+        {
+          img: "https://transform.gammacdn.com/movies/74703/74703_01/previews/11/80/top_1_960x544/74703_01_01.jpg?&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/145213.mp4",
+          iframe: "",
+          name: "Zoey's 1st Lesbian Anal",
+          altname: "jaye summers Zoey's 1st Lesbian Anal",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/74061/74061_01/previews/11/66/top_1_960x544/74061_01_01.jpg?&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/144146.mp4",
+          iframe: "",
+          name: "The Love Shack Pt.1",
+          altname: "jaye summers The Love Shack Pt.1",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/67875/67875_01/previews/11/68/top_1_960x544/67875_01_01.jpg?&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/129973.mp4",
+          iframe: "",
+          name: "Double The Cum",
+          altname: "jaye summers Double The Cum",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/67325/67325_01/previews/11/68/top_1_960x544/67325_01_01.jpg?&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/128876.mp4",
+          iframe: "",
+          name: "Her 1st Blowbang",
+          altname: "jaye summers Her 1st Blowbang",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/66894/66894_01/previews/11/75/top_1_960x544/66894_01_01.jpg?&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/127974.mp4",
+          iframe: "",
+          name: "A Sexy Goodbye",
+          altname: "jaye summers A Sexy Goodbye",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/50492/50492_01/previews/11/75/top_1_960x544/50492_01_01.jpg?&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/120691.mp4",
+          iframe: "",
+          name: "Innocent Cutie Tries BBC",
+          altname: "jaye summers Innocent Cutie Tries BBC",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/50415/50415_01/previews/11/66/top_1_960x544/50415_01_01.jpg?&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/120485.mp4",
+          iframe: "",
+          name: "Swing Date",
+          altname: "jaye summers Swing Date",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://transform.gammacdn.com/movies/50541/50541_01/previews/11/68/top_1_960x544/50541_01_01.jpg?&format=webp",
+          video: "https://videothumb.gammacdn.com/500x281/120889.mp4",
+          iframe: "",
+          name: "Anally Educated",
+          altname: "jaye summers Anally Educated",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+      ]
+    },
+    {
+      logo: "https://images-assets-ht.project1content.com/Brazzers/Tour/Tour/PC/5f1b1271a1e429.16105348.png",
+      items: [
+        {
+          img: "https://media-public-ht.project1content.com/m=eaSaaTbWx/328/2a5/d7b/8ca/4f7/ba5/4c8/b55/f95/831/b8/poster/poster_01.jpg",
+          video: "https://prog-public-ht.project1content.com/328/2a5/d7b/8ca/4f7/ba5/4c8/b55/f95/831/b8/mediabook/mediabook_320p.mp4",
+          iframe: "",
+          name: "Take Me Home",
+          altname: "jaye summers Take Me Home",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://media-public-ht.project1content.com/m=eaSaaTbWx/48e/f5a/fa4/e4e/4b7/681/b03/636/191/8a3/7a/poster/poster_01.jpg",
+          video: "https://prog-public-ht.project1content.com/48e/f5a/fa4/e4e/4b7/681/b03/636/191/8a3/7a/mediabook/mediabook_320p.mp4",
+          iframe: "",
+          name: "Earning Her Allowance",
+          altname: "jaye summers Earning Her Allowance",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "https://media-public-ht.project1content.com/m=eaSaaTbWx/48c/c47/e51/229/4c2/6a2/66f/93a/81d/a53/3c/poster/poster_01.jpg",
+          video: "https://prog-public-ht.project1content.com/48c/c47/e51/229/4c2/6a2/66f/93a/81d/a53/3c/mediabook/mediabook_320p.mp4",
+          iframe: "",
+          name: "The New Model",
+          altname: "jaye summers The New Model",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+      ]
+    },
+    {
+      logo: "https://images-assets-ht.project1content.com/Mofos/Logos/63336562c75224.99037602.png",
+      items: [
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+        {
+          img: "",
+          video: "",
+          iframe: "",
+          name: "",
+          altname: "jaye summers ",
+          link: "",
+         actors: [
+      { name: "", link: "" },
+      { name: "", link: "" }]
+        },
+      ]
+    }
+  ];
+
+ 
+ const container = document.getElementById("main-container");
+
+  sections.forEach((section, sectionIndex) => {
+    const sectionDiv = document.createElement("div");
+    sectionDiv.classList.add("section");
+
+    const logo = document.createElement("img");
+    logo.src = section.logo;
+    logo.alt = "Logo";
+    logo.classList.add("logo");
+    logo.onclick = () => {
+      const itemsDiv = sectionDiv.querySelector(".posters");
+      const isVisible = itemsDiv.classList.contains("visible-items");
+      itemsDiv.classList.toggle("visible-items", !isVisible);
+      itemsDiv.classList.toggle("hidden-items", isVisible);
+    };
+    sectionDiv.appendChild(logo);
+
+    const dividerTop = document.createElement("div");
+    dividerTop.classList.add("divider");
+    sectionDiv.appendChild(dividerTop);
+
+    const postersDiv = document.createElement("div");
+    postersDiv.classList.add(
+      "posters",
+      sectionIndex === 0 ? "visible-items" : "hidden-items"
+    );
+
+    section.items.forEach(item => {
+      const posterWrapper = document.createElement("div");
+      posterWrapper.classList.add("poster-wrapper");
+
+      const anchor = document.createElement("a");
+      anchor.href = item.link;
+      anchor.setAttribute("altname", item.altname);
+      anchor.style.position = "relative";
+
+      // Loading bar
+      const loadingBar = document.createElement("div");
+      loadingBar.style.position = "absolute";
+      loadingBar.style.top = "0";
+      loadingBar.style.left = "0";
+      loadingBar.style.height = "4px";
+      loadingBar.style.width = "0%";
+      loadingBar.style.background = "#00bcd4";
+      loadingBar.style.transition = "width 1s ease";
+      anchor.appendChild(loadingBar);
+
+      const img = document.createElement("img");
+      img.src = item.img;
+      img.alt = item.altname;
+      anchor.appendChild(img);
+
+      const overlay = document.createElement("div");
+      overlay.classList.add("overlay");
+      anchor.appendChild(overlay);
+
+      let videoElement = null;
+      let isTouch = false;
+
+     function showOverlay() {
+  if (overlay.childNodes.length > 0) return;
+
+  loadingBar.style.width = "100%";
+
+  setTimeout(() => {
+    loadingBar.style.width = "0%";
+    overlay.innerHTML = "";
+
+    if (item.video) {
+      videoElement = document.createElement("video");
+      videoElement.src = item.video; // only loaded now
+      videoElement.muted = true;
+      videoElement.loop = true;
+      videoElement.autoplay = true;
+      videoElement.playsInline = true;
+      overlay.appendChild(videoElement);
+      videoElement.play();
+    }
+
+    if (item.iframe) {
+      const iframe = document.createElement("iframe");
+      iframe.src = item.iframe; // only loaded now
+      iframe.setAttribute("frameborder", "0");
+      overlay.appendChild(iframe);
+    }
+
+    overlay.style.display = "block";
+  }, 1000);
+}
+
+      function hideOverlay() {
+        if (videoElement) {
+          videoElement.pause();
+          videoElement.src = "";
+          videoElement.load();
+          videoElement = null;
+        }
+        overlay.innerHTML = "";
+        overlay.style.display = "none";
+        loadingBar.style.width = "0%";
+      }
+
+      // Desktop
+      anchor.addEventListener("mouseenter", () => {
+        if (!isTouch) {
+          showOverlay();
+          posterWrapper.classList.add("touch-active");
+        }
+      });
+
+      anchor.addEventListener("mouseleave", () => {
+        if (!isTouch) {
+          hideOverlay();
+          posterWrapper.classList.remove("touch-active");
+        }
+      });
+
+      // Mobile
+     let touchStartTime = 0;
+
+anchor.addEventListener("touchstart", (e) => {
+  isTouch = true;
+  touchStartTime = Date.now();
+});
+
+anchor.addEventListener("touchend", (e) => {
+  const tapDuration = Date.now() - touchStartTime;
+
+  if (tapDuration < 300) {
+    if (!posterWrapper.classList.contains("touch-active")) {
+      // First tap: show video, prevent navigation
+      e.preventDefault();
+
+      // Close other active posters
+      document.querySelectorAll('.poster-wrapper.touch-active').forEach(wrapper => {
+        if (wrapper !== posterWrapper) {
+          wrapper.classList.remove("touch-active");
+          const otherOverlay = wrapper.querySelector(".overlay");
+          const otherVideo = otherOverlay.querySelector("video");
+          if (otherVideo) {
+            otherVideo.pause();
+            otherVideo.src = "";
+            otherVideo.load();
+          }
+          otherOverlay.innerHTML = "";
+          otherOverlay.style.display = "none";
+        }
+      });
+
+      // Activate current poster
+      showOverlay();
+      posterWrapper.classList.add("touch-active");
+    } else {
+      // Second tap: allow navigation (default behavior)
+      // Do not prevent default here
+    }
+  }
+
+
+
+  // Else allow scroll & anchor to work
+});
+
+
+      const overlay2 = document.createElement("div");
+      overlay2.classList.add("overlay2");
+
+      const name = document.createElement("h3");
+      name.textContent = item.name;
+      overlay2.appendChild(name);
+      anchor.appendChild(overlay2);
+
+      posterWrapper.appendChild(anchor);
+
+      // Actor Names
+      if (item.actors && item.actors.length > 0) {
+        const actorList = document.createElement("div");
+        actorList.classList.add("actor-list");
+
+        item.actors.forEach((actor, index) => {
+          const actorLink = document.createElement("a");
+          actorLink.href = actor.link;
+          actorLink.textContent = actor.name;
+          actorLink.target = "_blank";
+          actorList.appendChild(actorLink);
+          if (index < item.actors.length - 1) {
+            actorList.appendChild(document.createTextNode(", "));
+          }
+        });
+
+        posterWrapper.appendChild(actorList);
+      }
+
+      postersDiv.appendChild(posterWrapper);
+    });
+
+    sectionDiv.appendChild(postersDiv);
+    const dividerBottom = document.createElement("div");
+    dividerBottom.classList.add("divider");
+    sectionDiv.appendChild(dividerBottom);
+
+    container.appendChild(sectionDiv);
+    });
+</script>
+
+</body>
+</html>
