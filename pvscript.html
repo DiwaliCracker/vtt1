@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Results</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .posters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .poster-wrapper {
+      flex: 1 1 calc(33.333% - 40px);
+      max-width: calc(33.333% - 40px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 1024px) {
+      .poster-wrapper {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .poster-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    .poster-wrapper a {
+      width: 100%;
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .poster-wrapper a img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay video,
+    .overlay iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    }
+
+    .poster-wrapper a:hover .overlay video,
+    .poster-wrapper a:hover .overlay iframe {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .overlay2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 0 0 10px 10px;
+    }
+
+    .overlay2 h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .actor-list {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      font-size: 14px;
+      color: #ccc;
+      text-align: center;
+      margin-top: 5px;
+      width: 100%;
+      line-height: 1.4;
+    }
+
+    .poster-wrapper:hover .actor-list {
+      max-height: 100px;
+      opacity: 1;
+    }
+
+    .actor-list a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 5px;
+      word-break: break-word;
+    }
+
+    .actor-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Search Results</h1>
+<div class="posters" id="results-container"></div>
+
+  <script>
+   const query = new URLSearchParams(window.location.search).get("q")?.toLowerCase() || "";
+const pages = [
+  "https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/pkk2.html", "https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/pvv.html", "https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/pil.html", "https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/pjs.html"
+]; // You can keep adding more HTML files here
+
+const resultsContainer = document.getElementById("results-container");
+
+async function fetchAndExtractSections(pageUrl) {
+  try {
+    const res = await fetch(pageUrl);
+    const text = await res.text();
+    const match = text.match(/const sections\s*=\s*(\[[\s\S]*?\]);/);
+    if (match && match[1]) {
+      const json = new Function("return " + match[1])();
+      return json;
+    }
+  } catch (e) {
+    console.error("Failed to load", pageUrl, e);
+  }
+  return [];
+}
+
+function createPoster(item) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "poster-wrapper";
+
+  const anchor = document.createElement("a");
+  anchor.href = item.link;
+  anchor.setAttribute("altname", item.altname);
+  anchor.style.position = "relative";
+
+  const loadingBar = document.createElement("div");
+loadingBar.style.position = "absolute";
+loadingBar.style.top = "0";
+loadingBar.style.left = "0";
+loadingBar.style.height = "4px";
+loadingBar.style.width = "0%";
+loadingBar.style.background = "#00bcd4";
+loadingBar.style.transition = "width 1s ease";
+anchor.appendChild(loadingBar);
+
+const img = document.createElement("img");
+img.src = item.img;
+img.alt = item.altname;
+anchor.appendChild(img);
+
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+
+  let videoElement = null;
+let timeoutId = null;
+
+anchor.addEventListener("mouseenter", () => {
+  loadingBar.style.width = "100%";
+  timeoutId = setTimeout(() => {
+    overlay.innerHTML = "";
+
+    if (item.video) {
+      videoElement = document.createElement("video");
+      videoElement.src = item.video;
+      videoElement.muted = true;
+      videoElement.loop = true;
+      videoElement.playsInline = true;
+      overlay.appendChild(videoElement);
+      videoElement.play();
+    } else if (item.iframe) {
+      const iframe = document.createElement("iframe");
+      iframe.src = item.iframe;
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allow", "autoplay");
+      overlay.appendChild(iframe);
+    }
+  }, 1000);
+});
+
+anchor.addEventListener("mouseleave", () => {
+  clearTimeout(timeoutId);
+  if (videoElement) {
+    videoElement.pause();
+    videoElement.src = "";
+    videoElement.load();
+    videoElement = null;
+  }
+  overlay.innerHTML = "";
+  loadingBar.style.width = "0%";
+});
+
+  anchor.appendChild(overlay);
+
+  const overlay2 = document.createElement("div");
+  overlay2.className = "overlay2";
+  const name = document.createElement("h3");
+  name.textContent = item.name;
+  overlay2.appendChild(name);
+  anchor.appendChild(overlay2);
+  wrapper.appendChild(anchor);
+
+  if (item.actors?.length) {
+    const actorList = document.createElement("div");
+    actorList.className = "actor-list";
+    item.actors.forEach((actor, index) => {
+      const link = document.createElement("a");
+      link.href = actor.link;
+      link.target = "_blank";
+      link.textContent = actor.name;
+      actorList.appendChild(link);
+      if (index < item.actors.length - 1) {
+        actorList.appendChild(document.createTextNode(", "));
+      }
+    });
+    wrapper.appendChild(actorList);
+  }
+
+  resultsContainer.appendChild(wrapper);
+}
+
+(async () => {
+  const fetchPromises = pages.map(fetchAndExtractSections);
+  const allResults = await Promise.all(fetchPromises);
+
+  allResults.flat().forEach(section => {
+    section.items.forEach(item => {
+      const combined = `${item.name} ${item.altname} ${item.actors?.map(a => a.name).join(" ")}`.toLowerCase();
+      if (combined.includes(query)) {
+        createPoster(item);
+      }
+    });
+  });
+})();
+
+</script>
+
+</body>
+</html>
+
