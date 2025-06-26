@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     /* Header styles */
+     .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #1a1a1a;
+        color: white;
+      }
+      .header h1 {
+        font-size: 30px;
+        margin: 0;
+      }
+      .header a {
+        margin: 5px;
+        color: white;
+        text-decoration: none;
+      }
+      .header a:hover {
+        text-decoration: underline;
+      }
+      /* Series section styles */
+      #video {
+			position: absolute;
+			top: 10%;
+			left: 10%;
+			border-radius: 8px;
+      /* transform: scale(1.8);
+      transition: transform 1.2s ease-in-out; */
+		}
+      .series-section {
+        padding: 20px;
+      }
+      .series-section .first{
+       background-image: url(https://vip.sexhd.pics/media/brazzersnetwork/india-summer/altin-keiran-lee-3gpsares/india-summer-9.jpg);
+        background-position-y:10%;
+        background-repeat: no-repeat;
+        background-size:cover;
+        border: 1px solid rgb(204, 204, 204);
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px -5px, rgba(0, 0, 0, 0.1) 0px 1px 4px;
+      }
+      
+      .series-section .trailer a{
+        color: aliceblue;
+        position: absolute;
+        top: 60%;
+        left: 60%;
+        text-decoration: none;
+      }
+      .series-section .trailer a h3:hover{
+        color: brown;
+        transition: 0.2s linear;
+      }
+      .series-section .main .second{
+        font-family: Inter, "Droid Sans", sans-serif;
+        position: relative;
+       padding-right: 50px;
+        color:honeydew;
+        top: 23%;
+        
+        display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+      }
+      .series-section h2 {
+        color: aliceblue;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .series-section h3 {
+        color: aliceblue;
+        
+      }
+      .series-section .image {
+        position: relative;
+       width: 250px;
+       left: 40%;
+      }
+      .series-section .posters {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px;
+      }
+      .series-section .posters a .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* right: 0; */
+        width:100%;
+        height: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+        /* background-color: rgba(0, 0, 0, 0.8); */
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        display: flex;
+        /* align-items: center;
+        justify-content: center;
+        text-align: center; */
+      }
+      .series-section .posters a:hover .overlay{
+      opacity: 1;
+      }
+      .series-section .posters a .overlay2{
+        position: absolute;
+       left: 20%;
+        bottom: 0;
+        
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+      }
+      .series-section .posters a:hover .overlay2{
+      opacity: 1;
+      }
+      .series-section .posters a {
+        display: block;
+        position: relative;
+      }
+      .series-section .posters img {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        transition: transform 0.2s ease-out;
+      }
+      /* .series-section .posters a:hover img {
+        transform: scale(1.1);
+      }
+      .series-section .posters a:hover .overlay{
+        transform: scale(1.1);
+      } */
+      .series-section .posters a:hover .overlay2{
+        transform: scale(1.1);
+      }
+      .series-section .posters a:after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+        border-radius: 5px;
+      }
+      /* .series-section .posters a:hover:after {
+        opacity: 1;
+      } */
+      /* Footer styles */
+      .footer {
+        background-color: #1a1a1a;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      .footer p {
+        margin: 0;
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+body{
+  background-color: black;
+}
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>India Summer</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="series.html">Series</a>
+        <a href="p.html">Pornstars</a>
+        <a href="about.html">About</a>
+        <a href="TermsAndCondition.html">Terms and Conditions</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+  
+    <div id="images-container"></div>
+    <section class="series-section">
+      <div class="first">
+        <img src="https://cdni.pornpics.com/1280/7/190/16919043/16919043_033_05ba.jpg" alt=" India Summers " class="image1" width="30%" height="auto">
+        </div>
+        <div class="trailer">
+          <a href="#" onclick="showVideo()" onmouseenter="playVideo(this)"><h3>▶  Play Trailer</h3></a>
+    <div id="video" style="display:none;">
+      <video src="https://www.eporner.com/dload/H1wrvRqhPNK/720/5611489-720p.mp4" controls controlsList="nodownload" oncontextmenu="return false;" width="993" height="558"></video>
+      <button onclick="hideVideo()" onmouseenter="playVideo(this)">Close</button>
+    </div></div>
+        <br><br>
+
+        
+      <img src="https://images.ctfassets.net/5mtb3zfzz1y7/5pQAKrYgoC7bFhSGIScwUb/b07c3908ccd466a8829659a9d8477ed4/puretaboo-hor-White.svg" alt="" class="image"><hr>
+      <div class="posters">
+         
+         
+        <a href="https://playerjs.onrender.com/player.html?file=[360p]https://banal.me/mp4/2124238/files/360/23d169cd48d3ec15f51f1c55c5f2fd74/1717861533,[480p]https://banal.me/mp4/2124238/files/480/23d169cd48d3ec15f51f1c55c5f2fd74/1717861533,[720p]https://banal.me/mp4/2124238/files/720/23d169cd48d3ec15f51f1c55c5f2fd74/1717861533,[1080p]https://banal.me/mp4/2124238/files/1080/23d169cd48d3ec15f51f1c55c5f2fd74/1717861533&poster=https://transform.gammacdn.com/movies/70045/70045_01/previews/2/239/top_1_960x544/70045_01_01.jpg?width=650&height=365&format=webp" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://transform.gammacdn.com/movies/70045/70045_01/previews/2/239/top_1_960x544/70045_01_01.jpg?width=650&height=365&format=webp" alt="To Catch a Cheater India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://videothumb.gammacdn.com/500x281/134176.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>To Catch a Cheater</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=https://krako.pratikbhandare.workers.dev/98:/Bot%20Upload/Elsa%20Jean%20Megapack%201080p/puretaboo.18.05.15.india.summer.and.elsa.jean.the.fosters.mp4" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://transform.gammacdn.com/movies/68320/68320_01/previews/2/239/top_1_960x544/68320_01_01.jpg?width=650&height=365&format=webp" alt="The Fosters India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://videothumb.gammacdn.com/500x281/131492.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>The Fosters</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=https://krako.pratikbhandare.workers.dev/98:/Bot%20Upload/PureTaboo%202017-2018/Trailer%20Park%20Taboo%20-%20Part%202%20(India%20Summer,%20Kenzie%20Reeves)%20[2018-04-26].mp4" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://transform.gammacdn.com/movies/67828/67828_01/previews/2/239/top_1_960x544/67828_01_01.jpg?width=650&height=365&format=webp" alt="Trailer Park Taboo - Part 2 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://videothumb.gammacdn.com/500x281/131088.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Trailer Park Taboo - Part 2</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=[360p]https://banal.me/mp4/3196481/files/360/f4cc4d7381cff3fe5928d1fa53542cf3/1717862361,[480p]https://banal.me/mp4/3196481/files/480/f4cc4d7381cff3fe5928d1fa53542cf3/1717862361,[720p]https://banal.me/mp4/3196481/files/720/f4cc4d7381cff3fe5928d1fa53542cf3/1717862361&poster=https://transform.gammacdn.com/movies/66571/66571_01/previews/2/239/top_1_1920x1080/66571_01_01.jpg?width=650&height=365&format=webp" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://transform.gammacdn.com/movies/66571/66571_01/previews/2/239/top_1_1920x1080/66571_01_01.jpg?width=650&height=365&format=webp" alt="A Mother's Choice India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://videothumb.gammacdn.com/500x281/127176.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>A Mother's Choice</h3>
+          </div>
+        </a></div><hr><br>
+        
+        <img src="https://images-assets-ht.project1content.com/DigitalPlayground/Tour/5d8b77dc907c33.90448738.png" alt="" class="image"><hr>
+        <div class="posters">
+           
+           
+        <a href="https://goodporn.to/embed/43470" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/473/a32/7ee/4c8/422/eb5/729/374/a6e/4fd/92/poster/poster_01.jpg" alt="Pick A Room: Episode 3 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/473/a32/7ee/4c8/422/eb5/729/374/a6e/4fd/92/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Pick A Room: Episode 3</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/43468" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/bbf/982/eaa/562/454/59f/2fc/43d/f8b/149/6a/poster/poster_01.jpg" alt="Pick A Room: Episode 2 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/bbf/982/eaa/562/454/59f/2fc/43d/f8b/149/6a/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Pick A Room: Episode 2</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/43191" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/454/cca/82f/7cd/468/088/3c5/f3a/f5b/85a/40/poster/poster_01.jpg" alt="My Stepdaughter's Boyfriend India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/454/cca/82f/7cd/468/088/3c5/f3a/f5b/85a/40/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>My Stepdaughter's Boyfriend</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/43121" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/64e/71e/995/00b/486/0af/628/abd/3ae/b57/ae/poster/poster_01.jpg" alt="Hold the Moan Part 2 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/64e/71e/995/00b/486/0af/628/abd/3ae/b57/ae/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Hold the Moan Part 2</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=https://krako.pratikbhandare.workers.dev/0:/DATA%20%E1%BB%9E%20%C4%91%C3%A2y/1./digitalplayground%2016.11.17%20India%20Summer,%20Blake%20Eden,%20Keiran%20Lee.In%20The%20Flesh%20[1080p].mp4" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/523/fcb/53b/8c2/475/a82/af5/ca0/7c2/07d/50/poster/poster_01.jpg" alt="In The Flesh India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/523/fcb/53b/8c2/475/a82/af5/ca0/7c2/07d/50/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>In The Flesh</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/42444" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/87a/ca2/172/2eb/4b0/c8a/379/508/ce1/a56/8d/poster/poster_01.jpg" alt="Teachers 2 - Scene 2 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/87a/ca2/172/2eb/4b0/c8a/379/508/ce1/a56/8d/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Teachers 2 - Scene 2</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/41751" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/38c/279/00c/c97/486/6bf/f69/27c/4e0/98e/dc/poster/poster_01.jpg" alt="Watching You Episode 1 - Scene 2 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/38c/279/00c/c97/486/6bf/f69/27c/4e0/98e/dc/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Watching You Episode 1 - Scene 2</h3>
+          </div>
+        </a></div><hr><br>
+        
+        <img src="https://images-assets-ht.project1content.com/RK/Common/Logo/60c9012ec9bcc7.52711226.png" alt="" class="image"><hr>
+        <div class="posters">
+           
+           
+        <a href="https://goodporn.to/embed/35519" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/fe7/566/cc2/d2e/4ff/cb1/a8f/dd9/b77/439/75/poster/poster_01.jpg" alt="Banged by the Brand New Tool India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/fe7/566/cc2/d2e/4ff/cb1/a8f/dd9/b77/439/75/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Banged by the Brand New Tool</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/35483" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/913/16e/3d9/7a2/49d/e97/e07/3dc/b24/a11/90/poster/poster_01.jpg" alt="Roommate Rivalry India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/913/16e/3d9/7a2/49d/e97/e07/3dc/b24/a11/90/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Roommate Rivalry</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/33228" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/745/4f7/a13/860/431/fb2/87f/7f6/fca/700/eb/poster/poster_01.jpg" alt="Hot Milf India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/745/4f7/a13/860/431/fb2/87f/7f6/fca/700/eb/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Hot Milf</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/32660" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/c5b/2c8/586/290/4fc/4a7/f2e/179/90d/714/05/poster/poster_01.jpg" alt="Dirty Bella India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/c5b/2c8/586/290/4fc/4a7/f2e/179/90d/714/05/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Dirty Bella</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/32522" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/8d8/cf9/9d8/2f2/497/fa7/982/bfc/ab3/b4f/89/poster/poster_01.jpg" alt="Lick Her Lips India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/8d8/cf9/9d8/2f2/497/fa7/982/bfc/ab3/b4f/89/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Lick Her Lips</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=https://krako.pratikbhandare.workers.dev/98:/Bot%20Upload/Kate%20England/India%20Summer%20And%20Kate%20England%20-%20Kissing%20Kate%20432.mp4" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/87b/45d/818/352/46f/4a8/60d/526/629/6ad/6c/poster/poster_01.jpg" alt="Kissing Kate India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/87b/45d/818/352/46f/4a8/60d/526/629/6ad/6c/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Kissing Kate</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/31915" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/13f/c74/487/85e/467/2b9/79e/049/a1d/07a/9e/poster/poster_01.jpg" alt="Hot For Hope India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/13f/c74/487/85e/467/2b9/79e/049/a1d/07a/9e/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Hot For Hope</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/31469" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/e89/08e/a10/92d/443/cba/f3b/569/b2f/c59/aa/poster/poster_01.jpg" alt="Sexy India India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/e89/08e/a10/92d/443/cba/f3b/569/b2f/c59/aa/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Sexy India</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=https://krako.pratikbhandare.workers.dev/98:/Bot%20Upload/Shae%20Summers%20[bt]/MilfHunter%20-%202014.04.07%20Shae%20Summers,%20India%20Summer%20-%20Topless%20Tennis%201080p.mp4" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/532/4b8/807/d10/445/48f/22d/d59/eeb/9fc/c9/poster/poster_01.jpg" alt="Topless Tennis India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/532/4b8/807/d10/445/48f/22d/d59/eeb/9fc/c9/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Topless Tennis</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/30909" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/0b3/b5a/1d9/8db/4a0/2b8/166/5d9/a2e/c42/b8/poster/poster_01.jpg" alt="All In India India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/0b3/b5a/1d9/8db/4a0/2b8/166/5d9/a2e/c42/b8/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>All In India</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/30687" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/bf9/8b8/079/b47/4d4/188/78a/2ce/d62/704/65/poster/poster_01.jpg" alt="Lusty Exchange India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/bf9/8b8/079/b47/4d4/188/78a/2ce/d62/704/65/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Lusty Exchange</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/30532" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/d45/968/0f5/e4c/49d/5b5/01b/04f/b2d/059/67/poster/poster_01.jpg" alt="Sex Ed India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/d45/968/0f5/e4c/49d/5b5/01b/04f/b2d/059/67/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Sex Ed</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/29567" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/039/07f/d3d/b82/4e1/d96/0db/d9d/558/af2/28/poster/poster_01.jpg" alt="Show Me Blow Me India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/039/07f/d3d/b82/4e1/d96/0db/d9d/558/af2/28/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Show Me Blow Me</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=https://krako.pratikbhandare.workers.dev/98:/Bot%20Upload/Franceska%20Jaimes%20[ass]/!CFNMSecret%20-%202011%20Gropist%201080p.mp4" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/37d/e51/cc8/f6f/4b3/9a0/d01/76a/fed/798/4a/poster/poster_01.jpg" alt="gropist India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/37d/e51/cc8/f6f/4b3/9a0/d01/76a/fed/798/4a/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>gropist</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/27595" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/b38/83b/8a1/448/4ab/ca5/31f/293/923/8c1/15/poster/poster_01.jpg" alt="Horny Hotties India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/b38/83b/8a1/448/4ab/ca5/31f/293/923/8c1/15/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Horny Hotties</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/26260" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eyzaevFb/bac/8a8/ea8/40e/484/881/43c/aed/ad5/084/a4/poster/poster_01.jpg" alt="Booty Polish India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/bac/8a8/ea8/40e/484/881/43c/aed/ad5/084/a4/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Booty Polish</h3>
+          </div>
+        </a></div><hr><br>
+        
+        <img src="https://images-assets-ht.project1content.com/Mofos/Logos/60915aaf375964.67128001.png" alt="" class="image"><hr>
+        <div class="posters">
+           
+           
+        <a href="https://goodporn.to/embed/6996" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/e49/81f/454/5c9/45f/4b6/013/c9c/96f/054/c6/poster/poster_01.jpg" alt="Bossy Threesome India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/e49/81f/454/5c9/45f/4b6/013/c9c/96f/054/c6/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Bossy Threesome</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/5854" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/53a/65f/7c6/3ba/4ec/ea5/8f1/5a3/167/7a2/e6/poster/poster_01.jpg" alt="Babysitter's Private Striptease Lessons India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/53a/65f/7c6/3ba/4ec/ea5/8f1/5a3/167/7a2/e6/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Babysitter's Private Striptease Lessons</h3>
+          </div>
+        </a></div><hr><br>
+        
+        <img src="https://images-assets-ht.project1content.com/MileHigh/SweetSinners/Logos/5d84e51b880011.94590097.png" alt="" class="image"><hr>
+        <div class="posters">
+           
+           
+        <a href="https://playerjs.onrender.com/player.html?file=https://krako.pratikbhandare.workers.dev/98:/Bot%20Upload/Mile.High.Media.January-December.2020.1080p.WEB-DL.AAC2.0.x264-ForeverAloneDude/my-girlfriends-mother-vol.14-scene-4-ForeverAloneDude.mp4" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eWQamQbWx/c51/da4/9df/0f8/488/3b9/8bd/32c/533/385/ff/poster/poster_01.jpg" alt="My Girlfriends Mother Vol.14 Scene 4 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/c51/da4/9df/0f8/488/3b9/8bd/32c/533/385/ff/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>My Girlfriends Mother Vol.14 Scene 4</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=https://krako.pratikbhandare.workers.dev/98:/Bot%20Upload/Mile.High.Media.January-December.2020.1080p.WEB-DL.AAC2.0.x264-ForeverAloneDude/my-girlfriends-mother-vol.14-scene-3-ForeverAloneDude.mp4" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/513/9fd/d05/3b6/498/4b0/3cd/3b0/a87/3cd/53/poster/poster_01.jpg" alt="My Girlfriends Mother Vol.14 Scene 3 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/513/9fd/d05/3b6/498/4b0/3cd/3b0/a87/3cd/53/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>My Girlfriends Mother Vol.14 Scene 3</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/21729" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/f51/165/198/afc/425/fbd/ee8/9a1/a75/479/95/poster/poster_01.jpg" alt="Mother's Keeping Secrets Scene 3 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/f51/165/198/afc/425/fbd/ee8/9a1/a75/479/95/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Mother's Keeping Secrets Scene 3</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/21300" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/5c5/0ff/74c/1ae/487/eb2/cd6/343/7e7/004/84/poster/poster_01.jpg" alt="BTS _ Family Holiday #02 Scene 5 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/5c5/0ff/74c/1ae/487/eb2/cd6/343/7e7/004/84/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>BTS _ Family Holiday #02 Scene 5</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=[360p]https://banal.me/mp4/339863/files/360/83d7bbe8531134b28ed329aedeea29f4/1717860022,[480p]https://banal.me/mp4/339863/files/480/83d7bbe8531134b28ed329aedeea29f4/1717860022,[720p]https://banal.me/mp4/339863/files/720/83d7bbe8531134b28ed329aedeea29f4/1717860022,[1080p]https://banal.me/mp4/339863/files/1080/83d7bbe8531134b28ed329aedeea29f4/1717860022&poster=https://media-public-ht.project1content.com/m=eaSaaTbWx/c13/3d3/b91/7d9/4ba/4a0/70b/583/3ce/afb/92/poster/poster_01.jpg" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/c13/3d3/b91/7d9/4ba/4a0/70b/583/3ce/afb/92/poster/poster_01.jpg" alt="Family Holiday #02 _ Part 2 Scene 2 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/c13/3d3/b91/7d9/4ba/4a0/70b/583/3ce/afb/92/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Family Holiday #02 _ Part 2 Scene 2</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/21256" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/5ae/c64/b41/cfe/4a2/587/373/d6f/c48/55d/49/poster/poster_01.jpg" alt="The Puppeteer   Part 2: Secrets & Revelations Scene 2 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/5ae/c64/b41/cfe/4a2/587/373/d6f/c48/55d/49/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>The Puppeteer   Part 2: Secrets & Revelations Scene 2</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/20775" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/b77/f4e/518/63b/467/985/e48/674/c21/99f/85/poster/poster_01.jpg" alt="Enough is enough! Scene 3 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/b77/f4e/518/63b/467/985/e48/674/c21/99f/85/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Enough is enough! Scene 3</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/20712" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/e10/1d1/324/419/46a/5ab/941/f7c/893/a0a/37/poster/poster_01.jpg" alt=MILF Wants Boy Candy Scene 3 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/e10/1d1/324/419/46a/5ab/941/f7c/893/a0a/37/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>MILF Wants Boy Candy Scene 3</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/20342" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/fda/014/4c7/3e9/4b7/b86/8b4/978/5dc/9af/7a/poster/poster_01.jpg" alt="Mother Step-Daughter Affair #02 Scene 2 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/fda/014/4c7/3e9/4b7/b86/8b4/978/5dc/9af/7a/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Mother Step-Daughter Affair #02 Scene 2</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/20394" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/5e8/716/696/9bb/4b7/994/e60/c7d/bb6/0cb/4b/poster/poster_01.jpg" alt="Forbidden Affairs #05 _ My Wife's Daughter Scene 1 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/5e8/716/696/9bb/4b7/994/e60/c7d/bb6/0cb/4b/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Forbidden Affairs #05 _ My Wife's Daughter Scene 1</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/20292" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/b41/2e7/08b/88e/46f/cba/367/b2e/e40/ff2/28/poster/poster_01.jpg" alt="My Girlfriend's Mother #09 Scene 4 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/b41/2e7/08b/88e/46f/cba/367/b2e/e40/ff2/28/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>My Girlfriend's Mother #09 Scene 4</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=[360p]https://banal.me/mp4/2018618/files/360/6e962308e4b76623ffc7bbe942606a94/1717861295,[480p]https://banal.me/mp4/2018618/files/480/6e962308e4b76623ffc7bbe942606a94/1717861295,[720p]https://banal.me/mp4/2018618/files/720/6e962308e4b76623ffc7bbe942606a94/1717861295&poster=https://media-public-ht.project1content.com/m=eaSaaTbWx/b1c/789/15c/688/49d/3aa/77b/304/005/e54/99/poster/poster_01.jpg" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/b1c/789/15c/688/49d/3aa/77b/304/005/e54/99/poster/poster_01.jpg" alt="My Girlfriend's Mother #09 Scene 1 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/b1c/789/15c/688/49d/3aa/77b/304/005/e54/99/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>My Girlfriend's Mother #09 Scene 1</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=[360p]https://banal.me/mp4/2125513/files/360/2f34d99d61b1e0bc9ad1c89aa4c997d5/1717861840,[480p]https://banal.me/mp4/2125513/files/480/2f34d99d61b1e0bc9ad1c89aa4c997d5/1717861840,[720p]https://banal.me/mp4/2125513/files/720/2f34d99d61b1e0bc9ad1c89aa4c997d5/1717861840&poster=https://media-public-ht.project1content.com/m=eaSaaTbWx/3e9/1d2/c85/32c/447/d8f/a69/7db/e23/cc5/4c/poster/poster_01.jpg&thumbnails=https://webdrako.pages.dev/" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/3e9/1d2/c85/32c/447/d8f/a69/7db/e23/cc5/4c/poster/poster_01.jpg" alt="Forbidden Affairs #04   My Son's Girlfriend Scene 1 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/3e9/1d2/c85/32c/447/d8f/a69/7db/e23/cc5/4c/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Forbidden Affairs #04   My Son's Girlfriend Scene 1</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19966" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/de4/024/372/d58/459/5bf/92a/f14/d78/d82/c2/poster/poster_01.jpg" alt="The New Stepmother #11 Scene 3 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/de4/024/372/d58/459/5bf/92a/f14/d78/d82/c2/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>The New Stepmother #11 Scene 3</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19969" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/67e/57c/876/576/4b8/8a5/d57/bdf/e63/048/e5/poster/poster_01.jpg" alt="The New Stepmother #11 Scene 2 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/67e/57c/876/576/4b8/8a5/d57/bdf/e63/048/e5/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>The New Stepmother #11 Scene 2</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19909" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/b6b/48a/971/f0d/413/b92/35c/9ec/c64/1a7/da/poster/poster_01.jpg" alt="The Swinger #04 Scene 4 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/b6b/48a/971/f0d/413/b92/35c/9ec/c64/1a7/da/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>The Swinger #04 Scene 4</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19922" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/fa3/d58/82f/b23/417/192/561/f96/833/735/80/poster/poster_01.jpg" alt="The Swinger #04 Scene 3 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/fa3/d58/82f/b23/417/192/561/f96/833/735/80/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>The Swinger #04 Scene 3</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19717" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/fad/604/2ad/3d0/4ec/79d/02b/efb/b36/c67/96/poster/poster_01.jpg" alt="My Daughter's Boyfriend #09 Scene 4 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/fad/604/2ad/3d0/4ec/79d/02b/efb/b36/c67/96/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>My Daughter's Boyfriend #09 Scene 4</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19539" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/1a8/4c0/745/489/45c/1bf/215/0c3/9de/72e/a7/poster/poster_01.jpg" alt="Forbidden Affairs _ My Wife's Sister Scene 2 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/1a8/4c0/745/489/45c/1bf/215/0c3/9de/72e/a7/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>Forbidden Affairs _ My Wife's Sister Scene 2</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19545" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eaSaaTbWx/2c5/49a/22a/4ab/4dd/39b/e13/e49/561/c9f/9b/poster/poster_01.jpg" alt="My Daughter's Boyfriend #09 Scene 1 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/2c5/49a/22a/4ab/4dd/39b/e13/e49/561/c9f/9b/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>My Daughter's Boyfriend #09 Scene 1</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19637" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eWQamQbWx/a0d/ca0/3b4/350/4f1/98d/ca3/ab3/2e9/a18/3f/poster/poster_01.jpg" alt="The Swinger #03 Scene 4 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/a0d/ca0/3b4/350/4f1/98d/ca3/ab3/2e9/a18/3f/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>The Swinger #03 Scene 4</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19401" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eWQamQbWx/006/3a9/0d2/6c2/4a4/0b7/b5b/3b3/f73/41d/a9/poster/poster_01.jpg" alt="The Swinger #03 Scene 3 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/006/3a9/0d2/6c2/4a4/0b7/b5b/3b3/f73/41d/a9/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>The Swinger #03 Scene 3</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19499" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eWQamQbWx/420/50d/1e1/5b0/4b6/ca7/41b/978/560/bcc/2c/poster/poster_01.jpg" alt="The Neighbors #03 Scene 3 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/420/50d/1e1/5b0/4b6/ca7/41b/978/560/bcc/2c/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>The Neighbors #03 Scene 3</h3>
+          </div>
+        </a>
+        <a href="https://goodporn.to/embed/19516" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="https://media-public-ht.project1content.com/m=eWQamQbWx/d6f/ed4/c57/b10/420/f8e/56b/38f/b88/47d/b7/poster/poster_01.jpg" alt="The Neighbors #03 Scene 1 India Summers " class="image1">
+          <div class="overlay">
+            <video src="https://prog-public-ht.project1content.com/d6f/ed4/c57/b10/420/f8e/56b/38f/b88/47d/b7/mediabook/mediabook_320p.mp4" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3>The Neighbors #03 Scene 1</h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="" alt=" India Summers " class="image1">
+          <div class="overlay">
+            <video src="" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3></h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="" alt=" India Summers " class="image1">
+          <div class="overlay">
+            <video src="" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3></h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="" alt=" India Summers " class="image1">
+          <div class="overlay">
+            <video src="" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3></h3>
+          </div>
+        </a>
+        <a href="https://playerjs.onrender.com/player.html?file=" onmouseout="stopVideo(this)" onmouseenter="playVideo(this)">
+          <img src="" alt=" India Summers " class="image1">
+          <div class="overlay">
+            <video src="" autoplay muted loop preload="none"></video>
+          </div>
+          <div class="overlay2">
+            <h3></h3>
+          </div>
+        </a>
+        <!-- <img src="https://images-assets-ht.project1content.com/DigitalPlayground/Tour/5d8b77dc907c33.90448738.png" alt="" class="image"> -->
+           <!-- <a href="">
+            <img src="" alt=" India Summers " class="image1">https://penthousegold.com/images/logo_phGold.png
+            <div class="overlay">
+                <video src=""></video>
+            </div>
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+            <div class="overlay">
+                <video src=""></video>
+            </div>
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+            <div class="overlay">
+                <video src=""></video>
+            </div>
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+            <div class="overlay">
+                <video src=""></video>
+            </div>
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+            <div class="overlay">
+                <video src=""></video>
+            </div>
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+            <div class="overlay">
+                <video src=""></video>
+            </div>
+          </a> -->
+
+          <!-- <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a>
+          <a href="">
+            <img src="" alt=" India Summers " class="image1">
+          </a> -->
+    </div>
+</section>
+<script src="searchpis.js"></script>
+<script>
+  const searchButton = document.querySelector('#search-button');
+    const searchInput = document.querySelector('#search-input');
+    const images = document.querySelectorAll('.posters img');
+
+    // Add event listener to search button
+    searchButton.addEventListener('click', searchImages);
+
+    // Add event listener to search input for Enter key press
+    searchInput.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        searchImages();
+      }
+    });
+
+    function searchImages() {
+      const searchTerm = searchInput.value.trim().toLowerCase();
+      images.forEach(img => {
+        if (img.alt.toLowerCase().includes(searchTerm)) {
+          img.style.display = 'block';
+        } else {
+          img.style.display = 'none';
+        }
+      });
+    }
+</script>
+<script>
+    function stopVideo(element) {
+      var video = element.querySelector('video');
+      video.pause();
+      video.currentTime = 0;
+    }
+    function playVideo(element) {
+      var video = element.querySelector('video');
+      video.play();
+      video.currentTime=0;
+    }
+    function showVideo() {
+			document.getElementById("video").style.display = "block";
+		}
+
+		function hideVideo() {
+			document.getElementById("video").style.display = "none";
+		}
+  </script>
+<footer class="footer">
+  <p>&copy; 2023 Movie Website</p>
+  <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</footer>
+</body>
+</html>
