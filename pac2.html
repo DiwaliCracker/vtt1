@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Media Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .site-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 10px;
+      transition: background 0.3s, color 0.3s;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffcc00;
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .site-name {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .navbar {
+        justify-content: flex-start;
+      }
+    }
+
+    /* Backdrop */
+    .backdrop {
+      position: relative;
+      width: 100%;
+      height: calc(100vw / 16 * 9);
+      background-size: cover;
+      background-position: top;
+      margin-top: 60px;
+    }
+
+    .poster-container {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      bottom: 20px;
+      width: 29%;
+      aspect-ratio: 2 / 3;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .poster-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .main-container {
+      padding-top: 20px;
+    }
+
+    .divider {
+      border-top: 1px solid #444;
+      margin: 20px 0;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .logo {
+      cursor: pointer;
+      display: block;
+      margin: 0 auto 20px;
+      width: 200px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    .hidden-items {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+    }
+
+    .visible-items {
+      max-height: 2000px;
+      opacity: 1;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+    }
+
+    .posters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .poster-wrapper {
+      flex: 1 1 calc(33.333% - 40px);
+      max-width: calc(33.333% - 40px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: 1024px) {
+      .poster-wrapper {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .poster-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    .poster-wrapper a {
+      width: 100%;
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .poster-wrapper a img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay video,
+    .overlay iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    }
+
+    .poster-wrapper a:hover .overlay video,
+    .poster-wrapper a:hover .overlay iframe,
+    .poster-wrapper.touch-active .overlay video,
+    .poster-wrapper.touch-active .overlay iframe {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .overlay2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      display: none;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .poster-wrapper a:hover .overlay2,
+    .poster-wrapper.touch-active .overlay2 {
+      display: block;
+    }
+
+    .overlay2 h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .actor-list {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      font-size: 14px;
+      color: #ccc;
+      text-align: center;
+      margin-top: 5px;
+      width: 100%;
+      line-height: 1.4;
+    }
+
+    .poster-wrapper:hover .actor-list,
+    .poster-wrapper.touch-active .actor-list {
+      max-height: 100px;
+      opacity: 1;
+    }
+
+    .actor-list a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 5px;
+      word-break: break-word;
+    }
+
+    .actor-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header" id="header">
+  <div class="header-content">
+    <div class="site-name">Avery Cristy</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="movies.html">Movies</a>
+      <a href="series.html">Series</a>
+      <a href="p.html">Pornstars</a>
+      <a href="#about">About</a>
+      <a href="TermsAndCondition.html">Terms and Conditions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<div class="backdrop" id="backdrop" style="background-image: url('https://imgs1cdn.adultempire.com/galleries/62/524151691109912562_9000.jpg');">
+  <div class="poster-container">
+    <img src="https://imgs1cdn.adultempire.com/galleries/02/282888477487776002_3000.jpg" alt="Poster">
+  </div>
+</div><hr>
+
+<div class="main-container" id="main-container"></div>
+
+<script>
+const sections = [
+  {
+    logo: "https://simp6.jpg5.su/images3/VixenTd75b86f9217c2960.png",
+    items: [
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/103729/mainLandscape/1668079765272/vixen-the-au-pair_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103729_l5OUlLH2_2nPNx1j0RLRcn5cPc0UWFYkeg1_x_cmg2g_353P.mp4",
+        iframe: "",
+        name: "The Au Pair",
+        altname: "Avery Cristy vixen The Au Pair Eve Sweet, Avery Cristy & Christian Clay",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/103729/mainLandscape/1668079765272/vixen-the-au-pair_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Eve Sweet", link: "pes.html" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/103269/mainLandscape/1649420934468/vixen-some-boys-club_1920x1080.webp",
+        video: "https://kolop.kolop.workers.dev/direct.aspx?id=1AynMrBMuI5JktmU5Lj9-7S61muXgXKJd",
+        iframe: "",
+        name: "Some Boys Club",
+        altname: "Avery Cristy vixen Some Boys Club Avery Cristy, Alexis Tae & Alex Jones",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/103269/mainLandscape/1649420934468/vixen-some-boys-club_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Alexis Tae", link: "pat.html" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/102993/mainLandscape/1636717941588/vixen-ac-bf-need_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102993_uXIff7l6ZYUPIhu6yRVSrHpRR5_lcmZjCd8Sn_PbBWU_353P.mp4",
+        iframe: "",
+        name: "Eager Pupil",
+        altname: "Avery Cristy vixen Eager Pupil Avery Cristy, Sonya Blaze & Alberto Blanco",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/102993/mainLandscape/1636717941588/vixen-ac-bf-need_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Sonya Blaze", link: "" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/102790/mainLandscape/1628173715016/vixen-psychosexual-part-3_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102790_psychosexual-part-3_353P.mp4",
+        iframe: "",
+        name: "Psychosexual Part 3",
+        altname: "Avery Cristy vixen Psychosexual Part 3 Avery Cristy & Oliver Flynn",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/102790/mainLandscape/1628173715016/vixen-psychosexual-part-3_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/102553/mainLandscape/1613666594432/vixen-love-triangle_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102553_love-triangle_353P.mp4",
+        iframe: "",
+        name: "Love Triangle",
+        altname: "Avery Cristy vixen Love Triangle Avery Cristy, Naomi Swann & Mick Blue",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/102553/mainLandscape/1613666594432/vixen-love-triangle_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Naomi Swann", link: "pns.html" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/102474/mainLandscape/1607693711182/vixen-uncontrollable_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102474_uncontrollable_353P.mp4",
+        iframe: "",
+        name: "Uncontrollable",
+        altname: "Avery Cristy vixen Uncontrollable Kenna James, Avery Cristy & Oliver Flynn",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/102474/mainLandscape/1607693711182/vixen-uncontrollable_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Kenna James", link: "pkj.html" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/102402/mainLandscape/1603348134850/vixen-wild-and-wet_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102402_wild-and-wet_353P.mp4",
+        iframe: "",
+        name: "Wild And Wet",
+        altname: "Avery Cristy vixen Wild And Wet Avery Cristy, Jill Kassidy & Michael Stefano",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/102402/mainLandscape/1603348134850/vixen-wild-and-wet_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Jill Kassidy", link: "pjl.html" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/101589/mainLandscape/1588930810270/vixen-relationship-goals_1920x1080.webp",
+        video: "https://kolop.kolop.workers.dev/direct.aspx?id=11u58wJsPSLd4W2LaoLh80xKqb9IYePuC",
+        iframe: "",
+        name: "Relationship Goals",
+        altname: "Avery Cristy vixen Relationship Goals Alina Lopez, Avery Cristy & Mick Blue",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/101589/mainLandscape/1588930810270/vixen-relationship-goals_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Alina Lopez", link: "pal.html" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/101530/mainLandscape/1583483991240/vixen-pure-excitement_1920x1080.webp",
+        video: "https://kolop.kolop.workers.dev/direct.aspx?id=1ivtRmpDvTaODTqhaxYgKCOOPJOWcYs3j",
+        iframe: "",
+        name: "Pure Excitement",
+        altname: "Avery Cristy vixen Pure Excitement Avery Cristy & Alberto Blanco",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/101530/mainLandscape/1583483991240/vixen-pure-excitement_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://simp6.jpg5.su/images3/TushyT358789c2072dc427.png",
+      items: [
+      {
+        img: "https://cdn.tushy.com/scene/videoimages/103525/mainLandscape/1660909997899/tushy-unforgettable-day_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103525_1udpzh5-h0XlKCkv6KYaI_Pn8J4jzYPLn_bpJaCzwxM_353P.mp4",
+        iframe: "",
+        name: "Unforgettable Day",
+        altname: "Avery Cristy Tushy Unforgettable Day Stefany Kyler, Avery Cristy, Christian Clay & Alberto Blanco",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.tushy.com/scene/videoimages/103525/mainLandscape/1660909997899/tushy-unforgettable-day_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Stefany Kyler", link: "psk.html" }
+        ]
+      },
+      {
+        img: "https://cdn.tushy.com/scene/videoimages/102428/mainLandscape/1604668984299/tushy-new-years_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102428_new-years_353P.mp4",
+        iframe: "",
+        name: "New Years",
+        altname: "Avery Cristy Tushy New Years Avery Cristy & Manuel Ferrara",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.tushy.com/scene/videoimages/102428/mainLandscape/1604668984299/tushy-new-years_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      },
+      {
+        img: "https://cdn.tushy.com/scene/videoimages/101553/mainLandscape/1585401108522/tushy-frustration_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/101553_frustration_353P.mp4",
+        iframe: "",
+        name: "Frustration",
+        altname: "Avery Cristy Tushy Frustration Avery Cristy & Christian Clay",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.tushy.com/scene/videoimages/101553/mainLandscape/1585401108522/tushy-frustration_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      },
+      {
+        img: "https://cdn.tushy.com/scene/videoimages/101370/mainLandscape/1572024337559/tushy-secret-crush_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/101370_secret-crush_353P.mp4",
+        iframe: "",
+        name: "Secret Crush",
+        altname: "Avery Cristy Tushy Secret Crush Avery Cristy & Mick Blue",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.tushy.com/scene/videoimages/101370/mainLandscape/1572024337559/tushy-secret-crush_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://simp6.jpg5.su/images3/TushyRaw878f1152e7f233b5.png",
+      items: [
+      {
+        img: "https://cdn.tushyraw.com/scene/videoimages/102361/mainLandscape/1600250195665/tushyraw-82030_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102361_82030_353P.mp4",
+        iframe: "",
+        name: "Knockout",
+        altname: "Avery Cristy Tushyraw Knockout Avery Cristy & Michael Stefano",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.tushyraw.com/scene/videoimages/102361/mainLandscape/1600250195665/tushyraw-82030_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://simp6.jpg5.su/images3/DeeperTb626bf87e1917b56.png",
+      items: [
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/103877/mainLandscape/1676637299637/deeper-the-view-ep-4_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103877_x4GF37vIdQhI--xD5aZLsgsj6Ja1TOc8JPEwW0z2AyE_353P.mp4",
+        iframe: "",
+        name: "The View Ep 4",
+        altname: "Avery Cristy Deeper The View Ep 4 Avery Cristy & Anton Harden",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/103877/mainLandscape/1676637299637/deeper-the-view-ep-4_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/103873/mainLandscape/1676308164926/deeper-the-view-ep-1_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103873_X3CdEpkkeUZQSzWh0eHhzR-HwK0lvufyzmlEPWH0brM_353P.mp4",
+        iframe: "",
+        name: "The View Ep 1",
+        altname: "Avery Cristy Deeper The View Ep 1 Avery Cristy & Isiah Maxwell",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/103873/mainLandscape/1676308164926/deeper-the-view-ep-1_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/103764/mainLandscape/1669915085044/deeper-video-secrets-part-4_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103764_IoO91VmXojs8c_zMJg0fdeSepQfX1xdgZFUAK0-imMw_353P.mp4",
+        iframe: "",
+        name: "Video Secrets Part 4",
+        altname: "Avery Cristy Deeper Video Secrets Part 4 Kenna James, Avery Cristy & Anton Harden",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/103764/mainLandscape/1669915085044/deeper-video-secrets-part-4_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Kenna James", link: "pkj.html" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/103671/mainLandscape/1664994361128/deeper-video-secrets-part-3_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103671_9VON2Qw6oEfdFwu8_DjP890boH0ga2DcPTQaOvwLaZw_353P.mp4",
+        iframe: "",
+        name: "Video Secrets Part 3",
+        altname: "Avery Cristy Deeper Video Secrets Part 3 Avery Cristy & Seth Gamble",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/103671/mainLandscape/1664994361128/deeper-video-secrets-part-3_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/103515/mainLandscape/1660240863827/deeper-video-secrets-part-2_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103515_1B3_rSa7cmEsdi5x9bCF0fZdIIvWCW-WGem5Z6a6wys_353P.mp4",
+        iframe: "",
+        name: "Video Secrets Part 2",
+        altname: "Avery Cristy Deeper Video Secrets Part 2 Lilly Bell, Anton Harden & Avery Cristy",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/103515/mainLandscape/1660240863827/deeper-video-secrets-part-2_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Lilly Bell", link: "plb.html" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/102844/mainLandscape/1631185102586/deeper-muse-2-episode-4_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102844_KtaBKGVBJKWJ5NvSH5dA8HNuFo44fDSXrrT6DPSuWE8_353P.mp4",
+        iframe: "",
+        name: "Muse 2 Episode 4: Another’s Good",
+        altname: "Avery Cristy Deeper Muse 2 Episode 4: Another’s Good Avery Cristy, Vanna Bardot & Quinton James",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/102844/mainLandscape/1631185102586/deeper-muse-2-episode-4_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Vanna Bardot", link: "pvb.html" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/102737/mainLandscape/1626326634695/deeper-another-person_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102737_another-person_353P.mp4",
+        iframe: "",
+        name: "Another Person",
+        altname: "Avery Cristy Deeper Another Person Avery Cristy, Vanna Bardot & Oliver Flynn",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/102737/mainLandscape/1626326634695/deeper-another-person_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Vanna Bardot", link: "pvb.html" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/102664/mainLandscape/1620918058837/deeper-jewel_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102664_jewel_353P.mp4",
+        iframe: "",
+        name: "Jewel",
+        altname: "Avery Cristy Deeper Jewel Avery Cristy & Troy Francisco",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/102664/mainLandscape/1620918058837/deeper-jewel_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/102587/mainLandscape/1615559076746/deeper-reason_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102587_reason_353P.mp4",
+        iframe: "",
+        name: "Reason",
+        altname: "Avery Cristy Deeper Reason Avery Cristy & Manuel Ferrara",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/102587/mainLandscape/1615559076746/deeper-reason_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://simp6.jpg5.su/images3/BlackedT3a957822a03d2a3e.png",
+      items: [
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/102493/mainLandscape/1610364240432/blacked-no-turning-back_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102493_no-turning-back_353P.mp4",
+        iframe: "",
+        name: "No Turning Back",
+        altname: "Avery Cristy Blacked No Turning Back Avery Cristy & Sly Diggler",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/102493/mainLandscape/1610364240432/blacked-no-turning-back_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      },
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/101582/mainLandscape/1588411246915/blacked-initiation_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/101582_initiation_353P.mp4",
+        iframe: "",
+        name: "Initiation",
+        altname: "Avery Cristy Blacked Initiation Avery Cristy, Ashley Lane & Jax Slayher",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/101582/mainLandscape/1588411246915/blacked-initiation_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Ashley Lane", link: "pal.html" }
+        ]
+      },
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/101562/mainLandscape/1586396263639/blacked-for-a-friend_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/101562_for-a-friend_353P.mp4",
+        iframe: "",
+        name: "For A Friend",
+        altname: "Avery Cristy Blacked For A Friend Avery Cristy & Freddy Gong",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/101562/mainLandscape/1586396263639/blacked-for-a-friend_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://simp6.jpg5.su/images3/BlackedRawT75d8518af1a2459f.png",
+      items: [
+      {
+        img: "https://cdn.blackedraw.com/scene/videoimages/102536/mainLandscape/1612167578890/blackedraw-two-piece_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102536_two-piece_353P.mp4",
+        iframe: "",
+        name: "Two Piece",
+        altname: "Avery Cristy Blackedraw Two Piece Vicki Chase, Avery Cristy & Anton Harden",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blackedraw.com/scene/videoimages/102536/mainLandscape/1612167578890/blackedraw-two-piece_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Vicki Chase", link: "pvc.html" }
+        ]
+      },
+      {
+        img: "https://cdn.blackedraw.com/scene/videoimages/101423/mainLandscape/1576114430990/blackedraw-11-10-19-avery-cristy_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/101423_down-to-business_353P.mp4",
+        iframe: "",
+        name: "Down To Business",
+        altname: "Avery Cristy Blackedraw Down To Business Avery Cristy & Pressure",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blackedraw.com/scene/videoimages/101423/mainLandscape/1576114430990/blackedraw-11-10-19-avery-cristy_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://simp6.jpg5.su/images3/SlayedT7e99391476a1de5b.png",
+      items: [
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/103543/mainLandscape/1662544742857/slayed-061422-ac_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103543_Vkz2Lcp2bK--amd6plI0-eqy-WTOu16l2oP4jgQK9Pc_353P.mp4",
+        iframe: "",
+        name: "Arabesque",
+        altname: "Avery Cristy Slayed Arabesque Avery Cristy, Gianna Dior, Spencer Bradley, Reina Rae & September Reign",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/103543/mainLandscape/1662544742857/slayed-061422-ac_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Gianna Dior", link: "pgd.html" },
+          { name: "Spencer Bradley", link: "psb.html" },
+          { name: "Reina Rae", link: "prr.html" },
+          { name: "September Reign", link: "psepr.html" }
+        ]
+      },
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/103254/mainLandscape/1648719596119/slayed-02162-ac_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103254_isuaMJBT8xgzyyW4H8b0ctCq68kE9z_nkxc9JRY0YuU_353P.mp4",
+        iframe: "",
+        name: "Pipes",
+        altname: "Avery Cristy Slayed Pipes Avery Cristy & Kenna James",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/103254/mainLandscape/1648719596119/slayed-02162-ac_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Kenna James", link: "pkj.html" }
+        ]
+      },
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/103179/mainLandscape/1643206311031/slayed-120621-hy-rd_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103179_mxQcmDW3DhcAIRCRXrgGcK0M6_ZjWGJhDzgeH_CNoy4_353P.mp4",
+        iframe: "",
+        name: "Girl Talk",
+        altname: "Avery Cristy Slayed Girl Talk Haley Reed & Avery Cristy",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/103179/mainLandscape/1643206311031/slayed-120621-hy-rd_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Haley Reed", link: "phr.html" }
+        ]
+      },
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/103142/mainLandscape/1640344799106/slayed-stream_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103142_HIxt9Ub0Dz0ejSvS4lrm-A9qoPORxTPGgBDGEm_Kn6w_353P.mp4",
+        iframe: "",
+        name: "Stream",
+        altname: "Avery Cristy Slayed Stream Avery Cristy & Aidra Fox",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/103142/mainLandscape/1640344799106/slayed-stream_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Aidra Fox", link: "paf.html" }
+        ]
+      },
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/103117/mainLandscape/1638523212529/slayed-vibing_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103117_lkVQUErJgAbc8-Cq2_2IlKj9E9ShTpNsHkj6T3ODFLk_353P.mp4",
+        iframe: "",
+        name: "Vibing",
+        altname: "Avery Cristy Slayed Vibing Avery Cristy & Azul Hermosa",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/103117/mainLandscape/1638523212529/slayed-vibing_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Azul Hermosa", link: "pah.html" }
+        ]
+      },
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/102785/mainLandscape/1628083917944/slayed-defiance_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102785_defiance_353P.mp4",
+        iframe: "",
+        name: "Defiance",
+        altname: "Avery Cristy Slayed Defiance Kenzie Anne & Avery Cristy",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/102785/mainLandscape/1628083917944/slayed-defiance_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "Kenzie Anne", link: "pka.html" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "",
+      items: [
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "",
+      items: [
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Avery Cristy ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Avery Cristy", link: "pac2.html" },
+          { name: "", link: "" }
+        ]
+      }
+    ]
+  }
+];
+
+const container = document.getElementById("main-container");
+
+sections.forEach((section, sectionIndex) => {
+  const sectionDiv = document.createElement("div");
+  sectionDiv.classList.add("section");
+
+  const logo = document.createElement("img");
+  logo.src = section.logo;
+  logo.alt = "Logo";
+  logo.classList.add("logo");
+  logo.onclick = () => {
+    const itemsDiv = sectionDiv.querySelector(".posters");
+    const isVisible = itemsDiv.classList.contains("visible-items");
+    itemsDiv.classList.toggle("visible-items", !isVisible);
+    itemsDiv.classList.toggle("hidden-items", isVisible);
+  };
+  sectionDiv.appendChild(logo);
+
+  sectionDiv.appendChild(document.createElement("div")).classList.add("divider");
+
+  const postersDiv = document.createElement("div");
+  postersDiv.classList.add("posters", sectionIndex === 0 ? "visible-items" : "hidden-items");
+
+  section.items.forEach(item => {
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("poster-wrapper");
+
+    const anchor = document.createElement("a");
+    anchor.href = item.link;
+    anchor.setAttribute("altname", item.altname);
+    anchor.style.position = "relative";
+
+    const loadingBar = document.createElement("div");
+    loadingBar.style.position = "absolute";
+    loadingBar.style.top = "0";
+    loadingBar.style.left = "0";
+    loadingBar.style.height = "4px";
+    loadingBar.style.width = "0%";
+    loadingBar.style.background = "#00bcd4";
+    loadingBar.style.transition = "width 1s ease";
+    anchor.appendChild(loadingBar);
+
+    const img = document.createElement("img");
+    img.src = item.img;
+    img.alt = item.altname;
+    anchor.appendChild(img);
+
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    anchor.appendChild(overlay);
+
+    let videoElement = null;
+    let touchStartTime = 0;
+
+    anchor.addEventListener("mouseenter", () => {
+      wrapper.classList.add("touch-active");
+      showOverlay();
+    });
+
+    anchor.addEventListener("mouseleave", () => {
+      wrapper.classList.remove("touch-active");
+      hideOverlay();
+    });
+
+    anchor.addEventListener("touchstart", (e) => {
+      touchStartTime = Date.now();
+    });
+
+    anchor.addEventListener("touchend", (e) => {
+      const tapDuration = Date.now() - touchStartTime;
+      if (tapDuration < 300) {
+        if (!wrapper.classList.contains("touch-active")) {
+          e.preventDefault();
+          document.querySelectorAll(".poster-wrapper.touch-active").forEach(w => {
+            if (w !== wrapper) {
+              w.classList.remove("touch-active");
+              const ov = w.querySelector(".overlay");
+              const vid = ov.querySelector("video");
+              if (vid) {
+                vid.pause();
+                vid.src = "";
+                vid.load();
+              }
+              ov.innerHTML = "";
+              ov.style.display = "none";
+            }
+          });
+          wrapper.classList.add("touch-active");
+          showOverlay();
+        }
+      }
+    });
+
+    function showOverlay() {
+      if (overlay.childNodes.length > 0) return;
+      loadingBar.style.width = "100%";
+      setTimeout(() => {
+        loadingBar.style.width = "0%";
+        overlay.innerHTML = "";
+        if (item.video) {
+          videoElement = document.createElement("video");
+          videoElement.src = item.video;
+          videoElement.muted = true;
+          videoElement.loop = true;
+          videoElement.autoplay = true;
+          videoElement.playsInline = true;
+          overlay.appendChild(videoElement);
+          videoElement.play();
+        }
+        if (item.iframe) {
+          const iframe = document.createElement("iframe");
+          iframe.src = item.iframe;
+          iframe.setAttribute("frameborder", "0");
+          overlay.appendChild(iframe);
+        }
+        overlay.style.display = "block";
+      }, 1000);
+    }
+
+    function hideOverlay() {
+      if (videoElement) {
+        videoElement.pause();
+        videoElement.src = "";
+        videoElement.load();
+        videoElement = null;
+      }
+      overlay.innerHTML = "";
+      overlay.style.display = "none";
+      loadingBar.style.width = "0%";
+    }
+
+    const overlay2 = document.createElement("div");
+    overlay2.classList.add("overlay2");
+    const name = document.createElement("h3");
+    name.textContent = item.name;
+    overlay2.appendChild(name);
+    anchor.appendChild(overlay2);
+    wrapper.appendChild(anchor);
+
+    if (item.actors?.length) {
+      const actorList = document.createElement("div");
+      actorList.classList.add("actor-list");
+      item.actors.forEach((actor, index) => {
+        const link = document.createElement("a");
+        link.href = actor.link;
+        link.textContent = actor.name;
+        link.target = "_blank";
+        actorList.appendChild(link);
+        if (index < item.actors.length - 1) {
+          actorList.appendChild(document.createTextNode(", "));
+        }
+      });
+      wrapper.appendChild(actorList);
+    }
+
+    postersDiv.appendChild(wrapper);
+  });
+
+  sectionDiv.appendChild(postersDiv);
+  sectionDiv.appendChild(document.createElement("div")).classList.add("divider");
+  container.appendChild(sectionDiv);
+});
+</script>
+
+</body>
+</html>
