@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Media Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .site-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 10px;
+      transition: background 0.3s, color 0.3s;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffcc00;
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .site-name {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .navbar {
+        justify-content: flex-start;
+      }
+    }
+
+    /* Backdrop */
+    .backdrop {
+      position: relative;
+      width: 100%;
+      height: calc(100vw / 16 * 9);
+      background-size: cover;
+      background-position: top;
+      margin-top: 60px;
+    }
+
+    .poster-container {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      bottom: 20px;
+      width: 29%;
+      aspect-ratio: 2 / 3;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .poster-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .main-container {
+      padding-top: 20px;
+    }
+
+    .divider {
+      border-top: 1px solid #444;
+      margin: 20px 0;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .logo {
+      cursor: pointer;
+      display: block;
+      margin: 0 auto 20px;
+      width: 200px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    .hidden-items {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+    }
+
+    .visible-items {
+      max-height: 2000px;
+      opacity: 1;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+    }
+
+    .posters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .poster-wrapper {
+      flex: 1 1 calc(33.333% - 40px);
+      max-width: calc(33.333% - 40px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: 1024px) {
+      .poster-wrapper {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .poster-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    .poster-wrapper a {
+      width: 100%;
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .poster-wrapper a img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay video,
+    .overlay iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    }
+
+    .poster-wrapper a:hover .overlay video,
+    .poster-wrapper a:hover .overlay iframe,
+    .poster-wrapper.touch-active .overlay video,
+    .poster-wrapper.touch-active .overlay iframe {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .overlay2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      display: none;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .poster-wrapper a:hover .overlay2,
+    .poster-wrapper.touch-active .overlay2 {
+      display: block;
+    }
+
+    .overlay2 h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .actor-list {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      font-size: 14px;
+      color: #ccc;
+      text-align: center;
+      margin-top: 5px;
+      width: 100%;
+      line-height: 1.4;
+    }
+
+    .poster-wrapper:hover .actor-list,
+    .poster-wrapper.touch-active .actor-list {
+      max-height: 100px;
+      opacity: 1;
+    }
+
+    .actor-list a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 5px;
+      word-break: break-word;
+    }
+
+    .actor-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header" id="header">
+  <div class="header-content">
+    <div class="site-name">Penny Barber</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="movies.html">Movies</a>
+      <a href="series.html">Series</a>
+      <a href="p.html">Pornstars</a>
+      <a href="#about">About</a>
+      <a href="TermsAndCondition.html">Terms and Conditions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<div class="backdrop" id="backdrop" style="background-image: url('https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/164000/164095/12014836.jpg');">
+  <div class="poster-container">
+    <img src="https://imgs1cdn.adultempire.com/galleries/93/366283696823750393_3000.jpg" alt="Poster">
+  </div>
+</div><hr>
+
+<div class="main-container" id="main-container"></div>
+
+<script>
+const sections = [
+  {
+    logo: "https://assets.milfy.com/img/milfy-white.svg",
+    // logo: "https://kolop.kolop.workers.dev/direct.aspx?id=1rvJCLK98vQkhSnMl_Lh2xUIf82gZ2VA7",
+    items: [
+      {
+        img: "https://cdn.milfy.com/scene/videoimages/104988/mainLandscape/1729926840903/milfy-domme-mommy-penny-barber-punishes-boy-toy-while-hubbys-at-work_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/milfy-domme-mommy-penny-barber-punishes-boy-toy-while-hubbys-at-work.mp4",
+        iframe: "",
+        name: "Domme Mommy Penny Barber Punishes Boy Toy While Hubbys At Work",
+        altname: "Penny Barber MILFY Domme Mommy Penny Barber Punishes Boy Toy While Hubbys At Work Penny Barber & Kai Jaxon",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.milfy.com/scene/videoimages/104988/mainLandscape/1729926840903/milfy-domme-mommy-penny-barber-punishes-boy-toy-while-hubbys-at-work_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/149000/149461/10771&dgt=3&ext=jpg&frm=899&tl=965" }
+ ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://cdn.milfy.com/scene/videoimages/104869/mainLandscape/1724842612118/milfy-professor-penny-barber-takes-every-inch-of-students-bbc_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/milfy-professor-penny-barber-takes-every-inch-of-students-bbc.mp4",
+        iframe: "",
+        name: "Professor Penny Barber Takes Every Inch Of Students BBC",
+        altname: "Penny Barber MILFY Professor Penny Barber Takes Every Inch Of Students BBC Penny Barber & Dwayne Foxxx",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.milfy.com/scene/videoimages/104869/mainLandscape/1724842612118/milfy-professor-penny-barber-takes-every-inch-of-students-bbc_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/145000/145383/10405&dgt=3&ext=jpg&frm=171&tl=247" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/145000/145383/10405&dgt=3&ext=jpg&frm=171&tl=247
+      },
+      {
+        img: "https://cdn.milfy.com/scene/videoimages/104155/mainLandscape/1691497291567/milfy-tasty-milf-is-hungry-for-young-studs-cock_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/milfy-tasty-milf-is-hungry-for-young-studs-cock.mp4",
+        iframe: "",
+        name: "Tasty MILF Is Hungry For Young Studs Cock",
+        altname: "Penny Barber MILFY Tasty MILF Is Hungry For Young Studs Cock Penny Barber & Dante Colle",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.milfy.com/scene/videoimages/104155/mainLandscape/1691497291567/milfy-tasty-milf-is-hungry-for-young-studs-cock_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/117000/117515/7902&dgt=3&ext=jpg&frm=626&tl=710" }
+ ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://cdn.milfy.com/scene/videoimages/104056/mainLandscape/1686151110753/milfy-cock-hungry-realtor-cant-resist-hard-dick_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/milfy-cock-hungry-realtor-cant-resist-hard-dick.mp4",
+        iframe: "",
+        name: "Cock Hungry Realtor Cant Resist Hard Dick",
+        altname: "Penny Barber MILFY Cock Hungry Realtor Cant Resist Hard Dick Penny Barber & Chris Diamond",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.milfy.com/scene/videoimages/104056/mainLandscape/1686151110753/milfy-cock-hungry-realtor-cant-resist-hard-dick_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/164000/164095/12014&dgt=3&ext=jpg&frm=828&tl=862" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/164000/164095/12014&dgt=3&ext=jpg&frm=828&tl=862
+      }
+    ]
+    },
+    {
+      logo: "https://assets.deeper.com/img/deeper-white.svg",
+      items: [
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/103743/mainLandscape/1669371242391/deeper-tumble_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/103743_6BZNkdhlNSpiagLlN8hIdKKybae0j-RmcDC-41hqfYI_353P.mp4",
+        iframe: "",
+        name: "Tumble",
+        altname: "Penny Barber Tumble deeper Penny Barber & Manuel Ferrara",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/103743/mainLandscape/1669371242391/deeper-tumble_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+ ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      }
+    ]
+    },
+    {
+      logo: "https://assets.blacked.com/img/blacked-white.svg",
+      // logo: "https://simp6.jpg5.su/images3/BlackedT3a957822a03d2a3e.png",
+      items: [
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/104482/mainLandscape/1711347693135/blacked-naughty-milf-penny-risks-it-all-for-two-thick-bbcs_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/104482_kECQHlUNB4tIW0m12KSpI4xgwaIepMDZiZ2v-k-E35k_353P.mp4",
+        iframe: "",
+        name: "Naughty MILF Penny Risks It All For Two Thick BBCs",
+        altname: "Penny Barber blacked Naughty MILF Penny Risks It All For Two Thick BBCs Penny Barber, Isiah Maxwell & Hollywood Cash",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/104482/mainLandscape/1711347693135/blacked-naughty-milf-penny-risks-it-all-for-two-thick-bbcs_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/133000/133182/929&dgt=4&ext=jpg&frm=6953&tl=7045" }
+ ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/103867/mainLandscape/1675261769678/blacked-waking-dream_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/103867_iE2wdrWwMTSI8f5pycSMAAtyikdDo3sT-mFay-M79PY_353P.mp4",
+        iframe: "",
+        name: "Waking Dream",
+        altname: "Penny Barber blacked Waking Dream Penny Barber & Anton Harden ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/103867/mainLandscape/1675261769678/blacked-waking-dream_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/101000/101872/6593&dgt=3&ext=jpg&frm=065&tl=139" }
+ ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      }
+    ]
+    },
+    {
+      logo: "https://assets.blackedraw.com/img/blackedraw-white.svg",
+      // logo: "https://assets.blackedraw.com/img/blackedraw-white.svg",
+      items: [
+      {
+        img: "https://cdn.blackedraw.com/scene/videoimages/103721/mainLandscape/1666706332535/blackedraw-suite-after-party_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/103721_BH9htQ6ScUJ8UInOjPJWQDh_us_dNjTBcUVfRJQkTjI_353P.mp4",
+        iframe: "",
+        name: "Suite After-Party",
+        altname: "Penny Barber blackedraw Suite After-Party Penny Barber, Armani Black & Jax Slayher",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blackedraw.com/scene/videoimages/103721/mainLandscape/1666706332535/blackedraw-suite-after-party_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Armani Black", link: "pab.html" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/93000/93720/5936.jpg&dgt=3&ext=jpg&frm=089&tl=167" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      }
+    ]
+    },
+    {
+      logo: "https://assets.slayed.com/img/slayed-white.svg",
+      // logo: "https://kolop.kolop.workers.dev/direct.aspx?id=16QK29N2Oj5ovoJfP_eIVzKE9we9owH-z",
+      items: [
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/105417/mainLandscape/1743573083971/slayed-milf-phoenix-rides-pussy-hungry-pennys-face_1920x1080.webp",
+        video: "",
+        iframe: "",
+        name: "MILF Phoenix Rides Pussy-Hungry Pennys Face",
+        altname: "Penny Barber Slayed MILF Phoenix Rides Pussy-Hungry Pennys Face Penny Barber & Phoenix Marie",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/105417/mainLandscape/1743573083971/slayed-milf-phoenix-rides-pussy-hungry-pennys-face_1920x1080.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Phoenix Marie", link: "ppm.html" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/161000/161104/11779&dgt=3&ext=jpg&frm=538&tl=603" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      }
+    ]
+    },
+    {
+      logo: "https://images.ctfassets.net/5mtb3zfzz1y7/5pQAKrYgoC7bFhSGIScwUb/b07c3908ccd466a8829659a9d8477ed4/puretaboo-hor-White.svg",
+      items: [
+      {
+        img: "https://transform.gammacdn.com/movies/125501/125501_01/previews/2/239/top_1_1920x1080/125501_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/254700.mp4",
+        iframe: "",
+        name: "Not Again",
+        altname: "Penny Barber puretaboo Not Again Charles Dera Kenna James Penny Barber",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/125501/125501_01/previews/2/239/top_1_1920x1080/125501_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Kenna James", link: "pkj.html" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/124015/124015_01/previews/2/239/top_1_1920x1080/124015_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/252738.mp4",
+        iframe: "",
+        name: "Future Darkly: Virtual Immorality",
+        altname: "Penny Barber puretaboo Future Darkly: Virtual Immorality Penny Barber Max Fills",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/124015/124015_01/previews/2/239/top_1_1920x1080/124015_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+ ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/101201/101201_01/previews/2/239/top_1_1920x1080/101201_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/218520.mp4",
+        iframe: "",
+        name: "Rock Bottom",
+        altname: "Penny Barber puretaboo Rock Bottom Robby Apples Penny Barber",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/101201/101201_01/previews/2/239/top_1_1920x1080/101201_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+ ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/110302/110302_01/previews/2/239/top_1_1920x1080/110302_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/227901.mp4",
+        iframe: "",
+        name: "Pampering Our Sitter",
+        altname: "Penny Barber puretaboo Pampering Our Sitter Seth Gamble Penny Barber Coco Lovelock",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/110302/110302_01/previews/2/239/top_1_1920x1080/110302_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Coco Lovelock", link: "pcl.html" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/60190/60190_01/previews/2/239/top_1_1920x1080/60190_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/200065.mp4",
+        iframe: "",
+        name: "Nothing's Too Good For My Boy",
+        altname: "Penny Barber puretaboo Nothing's Too Good For My Boy Ricky Spanish Penny Barber Sophia Burns",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/60190/60190_01/previews/2/239/top_1_1920x1080/60190_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Sophia Burns", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/88000/88984/5543&dgt=3&ext=jpg&frm=123&tl=157" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/91943/91943_01/previews/2/239/top_1_1920x1080/91943_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/207304.mp4",
+        iframe: "",
+        name: "We Warned You Last Time",
+        altname: "Penny Barber puretaboo We Warned You Last Time John Strong Haley Reed Penny Barber",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/91943/91943_01/previews/2/239/top_1_1920x1080/91943_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Haley Reed", link: "phr.html" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/59625/59625_01/previews/2/239/top_1_1920x1080/59625_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/198382.mp4",
+        iframe: "",
+        name: "Some Ground Rules...",
+        altname: "Penny Barber puretaboo Some Ground Rules... Laney Grey Penny Barber John Legendary",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/59625/59625_01/previews/2/239/top_1_1920x1080/59625_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Laney Grey", link: "plg.html" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/58117/58117_01/previews/2/239/top_1_1920x1080/58117_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/192496.mp4",
+        iframe: "",
+        name: "Swapping Sexualities",
+        altname: "Penny Barber puretaboo Swapping Sexualities Draven Navarro Penny Barber Tony Sting",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/58117/58117_01/previews/2/239/top_1_1920x1080/58117_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/60000/60613/3315&dgt=3&ext=jpg&frm=686&tl=720" }
+ ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      }
+    ]
+    },
+    {
+      logo: "https://images.psmcdn.net/tsv4/networks/swpz.svg",
+      items: [
+      {
+        img: "https://images.mylfcdn.net/mylf/msw/penny_barber_shay_sights/shared/med.jpg",
+        video: "https://images.mylfcdn.net/msw/tour/pics/penny_barber_shay_sights/bio_small.mp4",
+        iframe: "",
+        name: "Our Stepsons Are Embarrassing Us! Only a Foursome Can Help",
+        altname: "Penny Barber Swappz Our Stepsons Are Embarrassing Us! Only a Foursome Can Help Mom Swap penny barber shay sights",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/msw/penny barber shay_sights/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Shay Sights", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/159000/159115/1162&dgt=4&ext=jpg&frm=3936&tl=4035" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/msw/charlie_forde_penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/msw/tour/pics/charlie_forde_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "NNN Challenge Day 21: Cum Inside, Make Mommy a Mommy",
+        altname: "Penny Barber Mom Swap NNN Challenge Day 21: Cum Inside, Make Mommy a Mommy swappz charlie forde penny barber ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/msw/charlie_forde penny barber /shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Charlie Forde", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/tsf/deep_analysis/shared/med.jpg",
+        video: "https://images.mylfcdn.net/tsf/tour/pics/deep_analysis/bio_small.mp4",
+        iframe: "",
+        name: "Deep Analysis: A Swap Movie",
+        altname: "Penny Barber Deep Analysis: A Swap Movie swappz mom swap swappz",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/tsf/deep_analysis/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/msw/aaliyah_love_and_penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/msw/tour/pics/aaliyah_love_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "A Transformative Session: A Deep Analysis Extended Cut",
+        altname: "Penny Barber swappz mom swap A Transformative Session: A Deep Analysis Extended Cut aaliyah love and penny barber ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/msw/aaliyah_love_and penny barber /shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Aaliyah Love", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/msw/penny_barber_and_rachael_cavalli/shared/med.jpg",
+        video: "https://images.mylfcdn.net/msw/tour/pics/penny_barber_and_rachael_cavalli/bio_small.mp4",
+        iframe: "",
+        name: "The Queens of Cream",
+        altname: "Penny Barber swappz mom swap The Queens of Cream penny barber and rachael cavalli",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/msw/penny barber and_rachael_cavalli/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Rachael Cavalli", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/msw/penny_barber_and_pristine_edge/shared/med.jpg",
+        video: "https://images.mylfcdn.net/msw/tour/pics/penny_barber_and_pristine_edge/bio_small.mp4",
+        iframe: "",
+        name: "Swappin’ Amish",
+        altname: "Penny Barber swappz mom swap Swappin’ Amish penny barber and pristine edge",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/msw/penny barber and_pristine_edge/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Pristine Edge", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/msw/ashley_wolf_and_penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/msw/tour/pics/ashley_wolf_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Holier Than Thou",
+        altname: "Penny Barber swappz mom swap Holier Than Thou ashley wolf and penny barber ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/msw/ashley_wolf_and penny barber /shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Ashley Wolf", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/msw/jessica_ryan_and_penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/msw/tour/pics/jessica_ryan_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Stepmommy Pies",
+        altname: "Penny Barber swappz mom swap Stepmommy Pies jessica ryan and penny barber",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/msw/jessica_ryan_and penny barber /shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Jessica Ryan", link: "pjr.html" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://assets.mylfcdn.net/tsv4/public/images/mylf_logo_white.svg",
+      items: [
+      {
+        img: "https://images.mylfcdn.net/mylf/mwd/penny_barber3/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mwd/tour/pics/penny_barber3/bio_small.mp4",
+        iframe: "",
+        name: "50 Shades of Milf",
+        altname: "Penny Barber Mylf 50 Shades of Milf Mylfwood ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mwd/penny_barber3/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mlb/penny_barber2/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mlb/tour/pics/penny_barber2/bio_small.mp4",
+        iframe: "",
+        name: "Concept: Virgin Mommy",
+        altname: "Penny Barber Mylf Concept: Virgin Mommy Mylf Labs ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mlb/penny_barber2/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/160000/160070/1170&dgt=4&ext=jpg&frm=1983&tl=2071" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/160000/160070/1170&dgt=4&ext=jpg&frm=1983&tl=2071
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/lmf/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/lmf/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Thirsty MILF Squirter",
+        altname: "Penny Barber Mylf Thirsty MILF Squirter LoneMilf ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/lmf/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mwd/penny_barber2/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mwd/tour/pics/penny_barber2/bio_small.mp4",
+        iframe: "",
+        name: "Nurse Ratched",
+        altname: "Penny Barber Mylf Nurse Ratched Mylfwood ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mwd/penny_barber2/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/foj/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/foj/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Horny Babe Requires Semen",
+        altname: "Penny Barber Mylf Horny Babe Requires Semen FullOfJoi ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/foj/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/blo/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/blo/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Her Sexual Appetizer",
+        altname: "Penny Barber Mylf Her Sexual Appetizer MylfBlows ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/blo/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/shm/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/shm/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Perfect Roommate For The Job",
+        altname: "Penny Barber Mylf Perfect Roommate For The Job StayHomeMilf ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/shm/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mby/penny_barber2/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mby/tour/pics/penny_barber2/bio_small.mp4",
+        iframe: "",
+        name: "Better Late Than Never",
+        altname: "Penny Barber Mylf Better Late Than Never MilfBody ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mby/penny_barber2/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mby/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mby/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Tricky Poses",
+        altname: "Penny Barber Mylf Tricky Poses MilfBody ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mby/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/got/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/got/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Summoning the Maid",
+        altname: "Penny Barber Mylf Summoning the Maid GotMylf ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/got/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/alm/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/alm/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Punished by My Stepmom",
+        altname: "Penny Barber Mylf Punished by My Stepmom AnalMom ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/alm/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mfy/penny_barber3/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mfy/tour/pics/penny_barber3/bio_small.mp4",
+        iframe: "",
+        name: "Out of Touch",
+        altname: "Penny Barber Mylf Out of Touch Milfty ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mfy/penny_barber3/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mfy/penny_barber2/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mfy/tour/pics/penny_barber2/bio_small.mp4",
+        iframe: "",
+        name: "Don't Leave Me",
+        altname: "Penny Barber Mylf Don't Leave Me Milfty ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mfy/penny_barber2/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mfy/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mfy/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Championship Prize",
+        altname: "Penny Barber Mylf Championship Prize Milfty ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mfy/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/drp/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/drp/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Won't Let Go",
+        altname: "Penny Barber Mylf Won't Let Go MomDrips ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/drp/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mlb/penny_barber_and_reese_robbins/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mlb/tour/pics/penny_barber_and_reese_robbins/bio_small.mp4",
+        iframe: "",
+        name: "Concept: Tales of Taboo #2",
+        altname: "Penny Barber Mylf Concept: Tales of Taboo #2 Mylf Labs ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mlb/penny_barber_and_reese_robbins/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mlb/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mlb/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "oncept: ASMR",
+        altname: "Penny Barber Mylf oncept: ASMR Mylf Labs ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mlb/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mlb/penny_barber_and_tristan_summers/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mlb/tour/pics/penny_barber_and_tristan_summers/bio_small.mp4",
+        iframe: "",
+        name: "Concept: Perv Therapy",
+        altname: "Penny Barber Mylf Concept: Perv Therapy Mylf Labs ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mlb/penny_barber_and_tristan_summers/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.mylfcdn.net/mylf/mom/penny_barber/shared/med.jpg",
+        video: "https://images.mylfcdn.net/mom/tour/pics/penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Modern Cowgirl 2022",
+        altname: "Penny Barber Mylf Modern Cowgirl 2022 Mylf Of The Month ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.mylfcdn.net/mylf/mom/penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/cls/penny_barber2/shared/med.jpg",
+        video: "https://images.mylfcdn.net/cls/tour/pics/penny_barber2/bio_small.mp4",
+        iframe: "",
+        name: "Sticky Situations",
+        altname: "Penny Barber Mylf Sticky Situations TeamSkeet Classics",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/cls/penny_barber2/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://sm.naughtycdn.com/images/newTour/nalogo-2x.webp",
+      items: [
+      {
+        img: "https://images1.naughtycdn.com/cms/nacmscontent/v1/scenes/ihw/pennywill/scene/horizontal/1000x563c.webp",
+        video: "https://images3.naughtycdn.com/ihw/tiles/pennywill/ihwpennywill_desktop10sec.mp4",
+        iframe: "",
+        name: "I Have a Wife",
+        altname: "Penny Barber Naughtyamerica Naughty America I Have a Wife Penny Barber, Will Pounder  Penny Barber wants the married AC repair man to check her temperature",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images1.naughtycdn.com/cms/nacmscontent/v1/scenes/ihw/pennywill/scene/horizontal/1000x563c.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/118000/118073/7952&dgt=3&ext=jpg&frm=214&tl=313" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images1.naughtycdn.com/cms/nacmscontent/v1/scenes/mfhm/pennytyler/scene/horizontal/1000x563c.webp",
+        video: "https://images3.naughtycdn.com/mfhm/tiles/pennytyler/mfhmpennytyler_desktop10sec.mp4",
+        iframe: "",
+        name: "My Friend's Hot Mom",
+        altname: "Penny Barber Naughtyamerica Naughty America Penny Barber, Tyler Cruise My Friend's Hot Mom Sexy MILF Penny Barber takes real good care of a swollen cock",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images1.naughtycdn.com/cms/nacmscontent/v1/scenes/mfhm/pennytyler/scene/horizontal/1000x563c.webp&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://sinfamilies.com/logo.png",
+      items: [
+      {
+        img: "https://media-public-ht.project1content.com/m=eaSaaTbWx/fa6/8d1/a74/5de/4bd/ea8/28b/84c/528/3ca/fc/poster/poster_01.jpg",
+        video: "https://prog-public-ht.project1content.com/fa6/8d1/a74/5de/4bd/ea8/28b/84c/528/3ca/fc/mediabook/mediabook_720p.mp4",
+        iframe: "",
+        name: "Taboo Series Episode 3 - Off Limits",
+        altname: "Penny Barber Familysinners Family Sinners Penny Barber, Vince Karter Taboo Series Episode 3 - Off Limits mom milf taboo incest mother son family amateur ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+ ]
+      },
+      {
+        img: "https://media-public-ht.project1content.com/m=eaSaaTbWx/9df/e27/418/719/479/0a5/fc0/505/9f6/5fe/db/poster/poster_01.jpg",
+        video: "https://prog-public-ht.project1content.com/9df/e27/418/719/479/0a5/fc0/505/9f6/5fe/db/mediabook/mediabook_720p.mp4",
+        iframe: "",
+        name: "Mothers-In-Law Episode 4",
+        altname: "Penny Barber Familysinners Family Sinners enny Barber, Van Wylde Mothers-In-Law Episode 4 ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+ ]
+      },
+      {
+        img: "https://media-public-ht.project1content.com/m=eaSaaTbWx/3c1/18c/a08/1bd/4f0/5ab/cd8/52d/0de/5ff/63/poster/poster_01.jpg",
+        video: "https://prog-public-ht.project1content.com/3c1/18c/a08/1bd/4f0/5ab/cd8/52d/0de/5ff/63/mediabook/mediabook_720p.mp4",
+        iframe: "",
+        name: "Peeping Tom",
+        altname: "Penny Barber Familysinners Family Sinners Penny Barber, Dante Colle Peeping Tom mom milf taboo incest mother son family amateur",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+ ]
+      }
+    ]
+    },
+    {
+      logo: "https://static.oopsfamily.com/img/logo.svg?v1",
+      items: [
+      {
+        img: "https://static.oopsfamily.com/poster/7/1900/1.jpg",
+        video: "https://kolop.kolop.workers.dev/direct.aspx?id=1YtJEPRJ6_LyK_dK8CSb9ctVJtUlPnT3B",
+        iframe: "",
+        name: "Stepmom’s Bedtime Story",
+        altname: "Penny Barber Oopsfamily Stepmom’s Bedtime Story mom milf taboo incest mother son family amateur",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://static.oopsfamily.com/poster/7/1900/1.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/7/2500/&dgt=3&ext=jpg&frm=001&tl=212" }
+ ]
+        //HD Screenshots https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/7/2500/&dgt=3&ext=jpg&frm=001&tl=212
+        //SD Screenshots https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/7/320/&dgt=3&ext=jpg&frm=001&tl=212
+        //HD Poster https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/poster/7/1900/&dgt=1&ext=jpg&frm=1&tl=7       .... also you can add 600,700,800,1200,1900,2500
+      },
+      {
+        img: "https://static.oopsfamily.com/poster/21/1200/4.jpg",
+        video: "https://kolop.kolop.workers.dev/direct.aspx?id=1MdA-LxPUEMTDEQQDz2CqqnzFj-nzb3k-",
+        iframe: "",
+        name: "Family Boxing Day",
+        altname: "Penny Barber Oopsfamily Family Boxing Day Melody Marks, Penny Barber mom milf taboo incest mother son family amateur",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://static.oopsfamily.com/poster/21/1200/4.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Melody Marks", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/21/2500/&dgt=3&ext=jpg&frm=001&tl=335" }
+        ]
+        //HD Screenshots https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/21/2500/&dgt=3&ext=jpg&frm=001&tl=335
+        //SD Screenshots https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/21/320/&dgt=3&ext=jpg&frm=001&tl=335
+        //HD Posters https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/poster/21/1200/&dgt=1&ext=jpg&frm=1&tl=6
+      },
+      {
+        img: "https://static.oopsfamily.com/poster/79/1900/9.jpg",
+        video: "https://kolop.kolop.workers.dev/direct.aspx?id=1oPnqj6P34qR-n6WklXDjlYdGoBXKzU3c",
+        iframe: "",
+        name: "It’s Time For Christmas Orgy",
+        altname: "Penny Barber Oopsfamily It’s Time For Christmas Orgy  Melody Marks, Penny Barber mom milf taboo incest mother son family amateur",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://static.oopsfamily.com/poster/79/1900/9.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Melody Marks", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/79/2500/&dgt=3&ext=jpg&frm=001&tl=143" }
+        ]
+        //HD Screenshots https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/79/2500/&dgt=3&ext=jpg&frm=001&tl=143
+        //SD Screenshots https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/79/320/&dgt=3&ext=jpg&frm=001&tl=143
+        //HD Posters https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/poster/79/1900/&dgt=1&ext=jpg&frm=1&tl=9
+      },
+      {
+        img: "https://static.oopsfamily.com/poster/101/1900/4.jpg",
+        video: "https://kolop.kolop.workers.dev/direct.aspx?id=1SMCcPgTvlz94eaIlKBSpgcsRpI48ba1A",
+        iframe: "",
+        name: "Stepmom got busted",
+        altname: "Penny Barber Oopsfamily Stepmom got busted  mom milf taboo incest mother son family amateur",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://static.oopsfamily.com/poster/101/1900/4.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+{ name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/101/1900/&dgt=3&ext=jpg&frm=001&tl=115" }
+ ]
+        //HD Screenshots https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/101/1900/&dgt=3&ext=jpg&frm=001&tl=115
+        //SD Screenshots https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/gallery/101/320/&dgt=3&ext=jpg&frm=001&tl=115
+        //HD Posters https://imgext.onrender.com/imgext.html?imge=https://static.oopsfamily.com/poster/101/1900/&dgt=1&ext=jpg&frm=1&tl=7
+      }
+    ]
+    },
+    {
+      logo: "https://images.ctfassets.net/5mtb3zfzz1y7/4btAjpubXBAQTOYRpDxKLp/5d8769a23169399ebe338366babe8c71/MDS_Logo_Final_fix.svg",
+      items: [
+      {
+        img: "https://transform.gammacdn.com/movies/116932/116932_01/previews/2/573/top_1_1920x1080/116932_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/236407.mp4",
+        iframe: "",
+        name: "We Spank In This Household",
+        altname: "Penny Barber moderndaysins modern day sins We Spank In This Household Penny Barber Holly Day Ken Feels",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/116932/116932_01/previews/2/573/top_1_1920x1080/116932_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Holly Day", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/59602/59602_01/previews/2/573/top_1_1920x1080/59602_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/198347.mp4",
+        iframe: "",
+        name: "Idle Fantasies: Center Of Attention",
+        altname: "Penny Barber moderndaysins modern day sins Idle Fantasies: Center Of Attention Spencer Bradley Penny Barber",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/59602/59602_01/previews/2/573/top_1_1920x1080/59602_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Spencer Bradley", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://static.momlover.com/assets/momLover/images/logos/ml_logo.svg",
+      items: [
+      {
+        img: "https://images.momlover.com/videos/my_stepmom_really_cares/samples/cover1920.jpg",
+        video: "https://images.momlover.com/videos/my_stepmom_really_cares/videos/loops/momwantscreampie_my_stepmom_really_cares_loop_480.mp4",
+        iframe: "",
+        name: "My Stepmom Really Cares - S3:E4",
+        altname: "Penny Barber momlover mom wants creampie My Stepmom Really Cares - S3:E4 Max Fills Penny Barber",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.momlover.com/videos/my_stepmom_really_cares/samples/cover1920.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/118000/118405/7983&dgt=3&ext=jpg&frm=763&tl=840" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      }
+    ]
+    },
+    {
+      logo: "https://static.deeplush.com/assets/lightTheme/images/logos/dl_logo.svg",
+      items: [
+      {
+        img: "https://images.deeplush.com/videos/intimate_exchange_with_penny_barber/samples/cover1920.jpg",
+        video: "https://images.deeplush.com/videos/intimate_exchange_with_penny_barber/videos/loops/deeplush_intimate_exchange_loop_480.mp4",
+        iframe: "",
+        name: "Intimate Exchange",
+        altname: "Penny Barber Deeplush Intimate Exchange ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.deeplush.com/videos/intimate_exchange_with_penny_barber/samples/cover1920.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      }
+    ]
+    },
+    {
+      logo: "https://images.ctfassets.net/5mtb3zfzz1y7/2zWwD6nj3f362wg9WGaQs0/5d516bfa49ffc3321b166ba69e85391a/mommysgirl-logo-hor_W-cropped.svg",
+      items: [
+      {
+        img: "https://transform.gammacdn.com/movies/119401/119401_01/previews/2/189/top_1_1920x1080/119401_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/246437.mp4",
+        iframe: "",
+        name: "Sugar Step-Mamas",
+        altname: "Penny Barber mommys girl Sugar Step-Mamas Lexi Luna Penny Barber Natalie Brooks",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/119401/119401_01/previews/2/189/top_1_1920x1080/119401_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/116928/116928_01/previews/2/189/top_1_1920x1080/116928_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/236403.mp4",
+        iframe: "",
+        name: "Stepsister Solidarity",
+        altname: "Penny Barber mommys girl Stepsister Solidarity Jill Kassidy Liz Jordan Penny Barber",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/116928/116928_01/previews/2/189/top_1_1920x1080/116928_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/114118/114118_01/previews/2/189/top_1_1920x1080/114118_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/232655.mp4",
+        iframe: "",
+        name: "Book Club Sapphic Seduction",
+        altname: "Penny Barber mommys girl Book Club Sapphic Seduction Misty Stone Penny Barber Jennifer White Destiny Mira",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/114118/114118_01/previews/2/189/top_1_1920x1080/114118_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/110296/110296_01/previews/2/189/top_1_1920x1080/110296_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/227895.mp4",
+        iframe: "",
+        name: "Sitting On A Secret",
+        altname: "Penny Barber mommys girl Sitting On A Secret Penny Barber Chloe Surreal",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/110296/110296_01/previews/2/189/top_1_1920x1080/110296_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/112126/112126_01/previews/2/189/top_1_1920x1080/112126_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/229948.mp4",
+        iframe: "",
+        name: "Our Way Of Saying Thanks",
+        altname: "Penny Barber mommys girl Our Way Of Saying Thanks Jane Wilde Maya Woulfe Penny Barber Maddy May",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/112126/112126_01/previews/2/189/top_1_1920x1080/112126_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/101234/101234_01/previews/2/189/top_1_1920x1080/101234_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/218556.mp4",
+        iframe: "",
+        name: "Out Of Hot Water",
+        altname: "Penny Barber mommys girl Out Of Hot Water Lexi Lore Kylie Rocket Penny Barber",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/101234/101234_01/previews/2/189/top_1_1920x1080/101234_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/99470/99470_01/previews/2/189/top_1_1920x1080/99470_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/215987.mp4",
+        iframe: "",
+        name: "Your Stepsister's In Charge",
+        altname: "Penny Barber mommys girl Your Stepsister's In Charge Aften Opal Penny Barber Summer Col",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/99470/99470_01/previews/2/189/top_1_1920x1080/99470_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://transform.gammacdn.com/movies/59956/59956_01/previews/2/189/top_1_1920x1080/59956_01_01.jpg?width=1920",
+        video: "https://videothumb.gammacdn.com/500x281/199235.mp4",
+        iframe: "",
+        name: "Wingwoman",
+        altname: "Penny Barber mommys girl Wingwoman Haley Reed Sabina Rouge Penny Barber",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://transform.gammacdn.com/movies/59956/59956_01/previews/2/189/top_1_1920x1080/59956_01_01.jpg?width=1920&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      }
+    ]
+    },
+    {
+      logo: "https://images.psmcdn.net/design/tour/pvt/logo/pvt_logo.svg",
+      items: [
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/jewell_marceau_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/jewell_marceau_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "How To Help a Perv",
+        altname: "Penny Barber pervtherapy How To Help a Perv ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/jewell_marceau_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/penelope_woods_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/penelope_woods_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Mutual Masturbation Experiment",
+        altname: "Penny Barber pervtherapy Mutual Masturbation Experiment ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/penelope_woods_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/lilly_james_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/lilly_james_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Sexual Beings",
+        altname: "Penny Barber pervtherapy Sexual Beings ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/lilly_james_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/jessica_starling_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/jessica_starling_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Releasing The Tension",
+        altname: "Penny Barber pervtherapy Releasing The Tension ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/jessica_starling_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/minxx_marley_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/minxx_marley_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "A Man Like Me",
+        altname: "Penny Barber pervtherapy A Man Like Me ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/minxx_marley_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/jamie_michelle_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/jamie_michelle_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Just My Type",
+        altname: "Penny Barber pervtherapy Just My Type ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/jamie_michelle_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/maya_farrell_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/maya_farrell_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Building up Oliver",
+        altname: "Penny Barber pervtherapy Building up Oliver ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/maya_farrell_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/april_olsen_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/april_olsen_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "A Supportive Stepdad",
+        altname: "Penny Barber pervtherapy A Supportive Stepdad ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/april_olsen_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/kenzie_reeves_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/kenzie_reeves_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Stepbrother on My Mind",
+        altname: "Penny Barber pervtherapy Stepbrother on My Mind ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/kenzie_reeves_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/penny_barber_and_sophia_burns/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/penny_barber_and_sophia_burns/bio_small.mp4",
+        iframe: "",
+        name: "Alex Says",
+        altname: "Penny Barber pervtherapy Alex Says ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/penny_barber_and_sophia_burns/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/penelope_kay_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/penelope_kay_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "The Jealous Stepsister",
+        altname: "Penny Barber pervtherapy The Jealous Stepsister ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/penelope_kay_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/penny_barber_and_syren_de_mer/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/penny_barber_and_syren_de_mer/bio_small.mp4",
+        iframe: "",
+        name: "Freudian Slip",
+        altname: "Penny Barber pervtherapy  Freudian Slip ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/penny_barber_and_syren_de_mer/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://images.psmcdn.net/teamskeet/pvt/haley_spades_and_penny_barber/shared/med.jpg",
+        video: "https://images.psmcdn.net/pvt/tour/pics/haley_spades_and_penny_barber/bio_small.mp4",
+        iframe: "",
+        name: "Stepdaddy's Approval",
+        altname: "Penny Barber pervtherapy Stepdaddy's Approval ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://images.psmcdn.net/teamskeet/pvt/haley_spades_and_penny_barber/shared/med.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://images.psmcdn.net/tours/shl/img/logo.jpg",
+      items: [
+      {
+        img: "https://images.psmcdn.net/teamskeet/shl/penny_barber_and_serena_santos/shared/med.jpg",
+        video: "https://images.psmcdn.net/shl/tour/pics/penny_barber_and_serena_santos/bio_small.mp4",
+        iframe: "",
+        name: "Case No. 7906146 - The Right Way To Search A Girl",
+        altname: "Penny Barber Case No. 7906146 - The Right Way To Search A Girl Shoplyfter Serena Santos",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Serena Santos", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://static-landing-assets.project1content.com/P1TOUR/SHV/shv_default_v0/logos/PC/logo.png",
+      items: [
+      {
+        img: "https://media-public-ht.project1content.com/m=eaSaaTbWx/988/ae8/271/a16/47d/58c/844/8e6/464/c21/b8/poster/poster_01.jpg",
+        video: "https://prog-public-ht.project1content.com/988/ae8/271/a16/47d/58c/844/8e6/464/c21/b8/mediabook/mediabook_720p.mp4",
+        iframe: "",
+        name: "Lesbian Adventures Strap-On Specialists 15 Scene 2 - Back on The Scene",
+        altname: "Penny Barber Sweetheartvideo Lesbian Adventures Strap-On Specialists 15 Scene 2 - Back on The Scene Penny Barber, Romi Rain",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://media-public-ht.project1content.com/m=eaSaaTbWx/988/ae8/271/a16/47d/58c/844/8e6/464/c21/b8/poster/poster_01.jpg&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+        actors: [
+          { name: "Penny Barber", link: "ppb.html" },
+          { name: "Romi Rain", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/21000/21589/1086&dgt=3&ext=jpg&frm=022&tl=099" }
+        ]
+      }
+    ]
+    },
+  //   {
+  //     logo: "https://static-landing-assets.project1content.com/P1TOUR/SHV/shv_default_v0/logos/PC/logo.png",
+  //     items: [
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     }
+  //   ]
+  //   },
+  //   {
+  //     logo: "",
+  //     items: [
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     }
+  //   ]
+  //   },
+  //   {
+  //     logo: "",
+  //     items: [
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     //HD Screenshots https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=
+  //     },
+  //     {
+  //       img: "",
+  //       video: "",
+  //       iframe: "",
+  //       name: "",
+  //       altname: "Penny Barber ",
+  //       link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/",
+  //       actors: [
+  //         { name: "Penny Barber", link: "ppb.html" },
+  //         { name: "", link: "" },
+  //         { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+  //       ]
+  //     }
+  //   ]
+  // }
+];
+
+const container = document.getElementById("main-container");
+
+sections.forEach((section, sectionIndex) => {
+  const sectionDiv = document.createElement("div");
+  sectionDiv.classList.add("section");
+
+  const logo = document.createElement("img");
+  logo.src = section.logo;
+  logo.alt = "Logo";
+  logo.classList.add("logo");
+  logo.onclick = () => {
+    const itemsDiv = sectionDiv.querySelector(".posters");
+    const isVisible = itemsDiv.classList.contains("visible-items");
+    itemsDiv.classList.toggle("visible-items", !isVisible);
+    itemsDiv.classList.toggle("hidden-items", isVisible);
+  };
+  sectionDiv.appendChild(logo);
+
+  sectionDiv.appendChild(document.createElement("div")).classList.add("divider");
+
+  const postersDiv = document.createElement("div");
+  postersDiv.classList.add("posters", sectionIndex === 0 ? "visible-items" : "hidden-items");
+
+  section.items.forEach(item => {
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("poster-wrapper");
+
+    const anchor = document.createElement("a");
+    anchor.href = item.link;
+    anchor.setAttribute("altname", item.altname);
+    anchor.style.position = "relative";
+
+    const loadingBar = document.createElement("div");
+    loadingBar.style.position = "absolute";
+    loadingBar.style.top = "0";
+    loadingBar.style.left = "0";
+    loadingBar.style.height = "4px";
+    loadingBar.style.width = "0%";
+    loadingBar.style.background = "#00bcd4";
+    loadingBar.style.transition = "width 1s ease";
+    anchor.appendChild(loadingBar);
+
+    const img = document.createElement("img");
+    img.src = item.img;
+    img.alt = item.altname;
+    anchor.appendChild(img);
+
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    anchor.appendChild(overlay);
+
+    let videoElement = null;
+    let touchStartTime = 0;
+
+    anchor.addEventListener("mouseenter", () => {
+      wrapper.classList.add("touch-active");
+      showOverlay();
+    });
+
+    anchor.addEventListener("mouseleave", () => {
+      wrapper.classList.remove("touch-active");
+      hideOverlay();
+    });
+
+    anchor.addEventListener("touchstart", (e) => {
+      touchStartTime = Date.now();
+    });
+
+    anchor.addEventListener("touchend", (e) => {
+      const tapDuration = Date.now() - touchStartTime;
+      if (tapDuration < 300) {
+        if (!wrapper.classList.contains("touch-active")) {
+          e.preventDefault();
+          document.querySelectorAll(".poster-wrapper.touch-active").forEach(w => {
+            if (w !== wrapper) {
+              w.classList.remove("touch-active");
+              const ov = w.querySelector(".overlay");
+              const vid = ov.querySelector("video");
+              if (vid) {
+                vid.pause();
+                vid.src = "";
+                vid.load();
+              }
+              ov.innerHTML = "";
+              ov.style.display = "none";
+            }
+          });
+          wrapper.classList.add("touch-active");
+          showOverlay();
+        }
+      }
+    });
+
+    function showOverlay() {
+      if (overlay.childNodes.length > 0) return;
+      loadingBar.style.width = "100%";
+      setTimeout(() => {
+        loadingBar.style.width = "0%";
+        overlay.innerHTML = "";
+        if (item.video) {
+          videoElement = document.createElement("video");
+          videoElement.src = item.video;
+          videoElement.muted = true;
+          videoElement.loop = true;
+          videoElement.autoplay = true;
+          videoElement.playsInline = true;
+          overlay.appendChild(videoElement);
+          videoElement.play();
+        }
+        if (item.iframe) {
+          const iframe = document.createElement("iframe");
+          iframe.src = item.iframe;
+          iframe.setAttribute("frameborder", "0");
+          overlay.appendChild(iframe);
+        }
+        overlay.style.display = "block";
+      }, 1000);
+    }
+
+    function hideOverlay() {
+      if (videoElement) {
+        videoElement.pause();
+        videoElement.src = "";
+        videoElement.load();
+        videoElement = null;
+      }
+      overlay.innerHTML = "";
+      overlay.style.display = "none";
+      loadingBar.style.width = "0%";
+    }
+
+    const overlay2 = document.createElement("div");
+    overlay2.classList.add("overlay2");
+    const name = document.createElement("h3");
+    name.textContent = item.name;
+    overlay2.appendChild(name);
+    anchor.appendChild(overlay2);
+    wrapper.appendChild(anchor);
+
+    if (item.actors?.length) {
+      const actorList = document.createElement("div");
+      actorList.classList.add("actor-list");
+      item.actors.forEach((actor, index) => {
+        const link = document.createElement("a");
+        link.href = actor.link;
+        link.textContent = actor.name;
+        link.target = "_blank";
+        actorList.appendChild(link);
+        if (index < item.actors.length - 1) {
+          actorList.appendChild(document.createTextNode(", "));
+        }
+      });
+      wrapper.appendChild(actorList);
+    }
+
+    postersDiv.appendChild(wrapper);
+  });
+
+  sectionDiv.appendChild(postersDiv);
+  sectionDiv.appendChild(document.createElement("div")).classList.add("divider");
+  container.appendChild(sectionDiv);
+});
+</script>
+
+</body>
+</html>
