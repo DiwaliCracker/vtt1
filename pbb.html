@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Media Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .site-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 10px;
+      transition: background 0.3s, color 0.3s;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffcc00;
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .site-name {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .navbar {
+        justify-content: flex-start;
+      }
+    }
+
+    /* Backdrop */
+    .backdrop {
+      position: relative;
+      width: 100%;
+      height: calc(100vw / 16 * 9);
+      background-size: cover;
+      background-position: top;
+      margin-top: 60px;
+    }
+
+    .poster-container {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      bottom: 20px;
+      width: 29%;
+      aspect-ratio: 2 / 3;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .poster-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .main-container {
+      padding-top: 20px;
+    }
+
+    .divider {
+      border-top: 1px solid #444;
+      margin: 20px 0;
+    }
+
+    .section {
+      margin: 20px 0;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .logo {
+      cursor: pointer;
+      display: block;
+      margin: 0 auto 20px;
+      width: 200px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    .hidden-items {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+    }
+
+    .visible-items {
+      max-height: 2000px;
+      opacity: 1;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+    }
+
+    .posters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .poster-wrapper {
+      flex: 1 1 calc(33.333% - 40px);
+      max-width: calc(33.333% - 40px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: 1024px) {
+      .poster-wrapper {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .poster-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    .poster-wrapper a {
+      width: 100%;
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .poster-wrapper a img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay video,
+    .overlay iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    }
+
+    .poster-wrapper a:hover .overlay video,
+    .poster-wrapper a:hover .overlay iframe,
+    .poster-wrapper.touch-active .overlay video,
+    .poster-wrapper.touch-active .overlay iframe {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .overlay2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      display: none;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .poster-wrapper a:hover .overlay2,
+    .poster-wrapper.touch-active .overlay2 {
+      display: block;
+    }
+
+    .overlay2 h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .actor-list {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      font-size: 14px;
+      color: #ccc;
+      text-align: center;
+      margin-top: 5px;
+      width: 100%;
+      line-height: 1.4;
+    }
+
+    .poster-wrapper:hover .actor-list,
+    .poster-wrapper.touch-active .actor-list {
+      max-height: 100px;
+      opacity: 1;
+    }
+
+    .actor-list a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 5px;
+      word-break: break-word;
+    }
+
+    .actor-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header" id="header">
+  <div class="header-content">
+    <div class="site-name">Blake Blossom</div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="movies.html">Movies</a>
+      <a href="series.html">Series</a>
+      <a href="p.html">Pornstars</a>
+      <a href="#about">About</a>
+      <a href="TermsAndCondition.html">Terms and Conditions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<div class="backdrop" id="backdrop" style="background-image: url('https://qu.ax/WLTCs.jpg');">
+  <div class="poster-container">
+    <img src="https://qu.ax/mVkEM.jpg" alt="Poster">
+    <!-- <img src="https://simp6.jpg5.su/images3/Blake.Blossom.Front157a936469c909f2.jpg" alt="Poster"> -->
+  </div>
+</div><hr>
+
+<div class="main-container" id="main-container"></div>
+
+<script>
+const sections = [
+  {
+    logo: "https://assets.vixen.com/img/vixen-white.svg",
+    items: [
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/104989/mainLandscape/1728637979410/vixen-061924-bl-bl_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/104989_cd90dZ1kiltgqgqcE2diU4PpvugpDpR5s6Yj4Ww3muc_353P.mp4",
+        iframe: "",
+        name: "Busty Blonde Blake Blossom Most Intense Orgasms",
+        altname: "Blake Blossom Vixen Busty Blonde Blake Blossom Most Intense Orgasms Blake Blossom & Matthew Meier",
+        link: "https://playerjs3.onrender.com/player.html?file=[1080p]https://pixeldrain.com/api/file/Hzinmwrg,[2160p]https://pixeldrain.com/api/file/e9HMYGr8&poster=https://cdn.vixen.com/scene/videoimages/104989/mainLandscape/1728637979410/vixen-061924-bl-bl_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fqu.ax%2FPVWYE.jpeg%26img2%3Dhttps%3A%2F%2Fqu.ax%2FkYNoK.jpeg%26img3%3Dhttps%3A%2F%2Fqu.ax%2FpOymj.jpeg%26img4%3Dhttps%3A%2F%2Fqu.ax%2FAFUrY.jpeg%26img5%3Dhttps%3A%2F%2Fqu.ax%2FoSwoP.jpeg%26img6%3Dhttps%3A%2F%2Fqu.ax%2FLTBdW.jpeg%26img7%3Dhttps%3A%2F%2Fqu.ax%2FpsxXM.jpeg%26img8%3Dhttps%3A%2F%2Fqu.ax%2FYGtaW.jpeg%26img9%3Dhttps%3A%2F%2Fqu.ax%2FLhMlt.jpeg%26img10%3Dhttps%3A%2F%2Fqu.ax%2FWLJkY.jpeg%26img11%3Dhttps%3A%2F%2Fqu.ax%2FiKTmy.jpeg%26img12%3Dhttps%3A%2F%2Fqu.ax%2ForXtX.jpeg%26img13%3Dhttps%3A%2F%2Fqu.ax%2FTbxBM.jpeg%26img14%3Dhttps%3A%2F%2Fqu.ax%2FtytYO.jpeg%26img15%3Dhttps%3A%2F%2Fqu.ax%2FFUTOh.jpeg%26img16%3Dhttps%3A%2F%2Fqu.ax%2FRxucW.jpeg%26img17%3Dhttps%3A%2F%2Fqu.ax%2FgOjUq.jpeg%26img18%3Dhttps%3A%2F%2Fqu.ax%2FBUMJE.jpeg%26img19%3Dhttps%3A%2F%2Fqu.ax%2FuoQJa.jpeg%26img20%3Dhttps%3A%2F%2Fqu.ax%2FLKsTC.jpeg%26img21%3Dhttps%3A%2F%2Fqu.ax%2FuYdNJ.jpeg%26img22%3Dhttps%3A%2F%2Fqu.ax%2FLBlsk.jpeg%26img23%3Dhttps%3A%2F%2Fqu.ax%2FLSzHR.jpeg%26img24%3Dhttps%3A%2F%2Fqu.ax%2FyKPqE.jpeg%26w%3D320%26h%3D180%26r%3D3%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/149000/149457/10771&dgt=3&ext=jpg&frm=596&tl=695" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/104721/mainLandscape/1718861283635/vixen-121823-bl-bl-dd_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/104721_IofSDIHwLSk3XEHyu4ziJJgR5F0XavqqbgVAMMKJ6pw_353P.mp4",
+        iframe: "",
+        name: "Dream Girlfriend Blake Loves To Please Her Man",
+        altname: "Blake Blossom Vixen Dream Girlfriend Blake Loves To Please Her Man Dan Damage",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/104721/mainLandscape/1718861283635/vixen-121823-bl-bl-dd_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/140000/140708/9977&dgt=3&ext=jpg&frm=536&tl=612" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/104605/mainLandscape/1715250059256/vixen-double-take_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/104605_yaDhLdi74zunkBClkI--rhTk9aNAZvqwPyEZj43bP3o_353P.mp4",
+        iframe: "",
+        name: "Double Take",
+        altname: "Blake Blossom Vixen Double Take Gizelle Blanco & Christian Clay",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/104605/mainLandscape/1715250059256/vixen-double-take_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "Gizelle Blanco", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/104409/mainLandscape/1707374487808/vixen-082323-bl-bl-vc_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/104409_T0icoOOsZ4Hoxlr6zzBVcSuwBNK9bYWo3saLThlvhbc_353P.mp4",
+        iframe: "",
+        name: "Voluptuous Blonde Blake Rewards Her Boyfriend",
+        altname: "Blake Blossom Vixen Voluptuous Blonde Blake Rewards Her Boyfriend ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/104409/mainLandscape/1707374487808/vixen-082323-bl-bl-vc_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/130000/130009/9015&dgt=3&ext=jpg&frm=013&tl=093" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/103703/mainLandscape/1666256243472/vixen-worth-the-wait_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103703_n-ubr2bcvz85TWNuZ0Uwe2IKBJdMJE9ZYxbroXfqfOU_353P.mp4",
+        iframe: "",
+        name: "Worth The Wait",
+        altname: "Blake Blossom Vixen Worth The Wait",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/103703/mainLandscape/1666256243472/vixen-worth-the-wait_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/93000/93719/5932&dgt=3&ext=jpg&frm=030&tl=116" }
+        ]
+      },
+      {
+        img: "https://cdn.vixen.com/scene/videoimages/102443/mainLandscape/1605793477986/vixen-daydreams_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102443_daydreams_353P.mp4",
+        iframe: "",
+        name: "Daydreams",
+        altname: "Blake Blossom Vixen Daydreams ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.vixen.com/scene/videoimages/102443/mainLandscape/1605793477986/vixen-daydreams_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/38000/38491/2000&dgt=3&ext=jpg&frm=428&tl=503" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://assets.deeper.com/img/deeper-white.svg",
+      items: [
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/105634/mainLandscape/1749620565072/deeper-sore-loser_1920x1080.webp",
+        video: "https://qu.ax/LADLo.mp4",
+        iframe: "",
+        name: "Sore Loser",
+        altname: "Blake Blossom Deeper Sore Loser ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/105634/mainLandscape/1749620565072/deeper-sore-loser_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/104868/mainLandscape/1724913621749/deeper-iron-cord-kink_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/104868_nwdYzURvU08fiLPyr9WbZGg8PfBi86nRLQFIuM60l4g_353P.mp4",
+        iframe: "",
+        name: "Iron Cord Kink",
+        altname: "Blake Blossom Deeper Iron Cord Kink Christian Clay",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/104868/mainLandscape/1724913621749/deeper-iron-cord-kink_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/145000/145925/10449&dgt=3&ext=jpg&frm=453&tl=528" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/104363/mainLandscape/1704722634029/deeper-host_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/104363_hs9Q1aykSsKYqYnGbr1tKmyScFgwLvP_vv1nrDr52h8_353P.mp4",
+        iframe: "",
+        name: "Host",
+        altname: "Blake Blossom Deeper Host ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/104363/mainLandscape/1704722634029/deeper-host_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/126000/126812/8730&dgt=3&ext=jpg&frm=919&tl=981" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/104319/mainLandscape/1701958807520/deeper-selfish-brat_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/104319_NTEysQLxzqgzSjwK8o0C3ksAxZYvN-10IHQvoSjTvZg_353P.mp4",
+        iframe: "",
+        name: "Selfish Brat",
+        altname: "Blake Blossom Deeper Selfish Brat ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/104319/mainLandscape/1701958807520/deeper-selfish-brat_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/124000/124693/8545&dgt=3&ext=jpg&frm=326&tl=396" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/104206/mainLandscape/1695289984575/deeper-balancing-act_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/104206_jAwBngfilr7wN__JIY9XfsQ8QbQo9r05FM5B8pAT6S4_353P.mp4",
+        iframe: "",
+        name: "Balancing Act",
+        altname: "Blake Blossom Deeper Balancing Act ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/104206/mainLandscape/1695289984575/deeper-balancing-act_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/119000/119238/8056&dgt=3&ext=jpg&frm=419&tl=485" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/104068/mainLandscape/1687189544860/deeper-found-out_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/104068_eJEZO8V5ADn0IWennqG-yr7Kesguj_3ZGMUa4B3t0yI_353P.mp4",
+        iframe: "",
+        name: "Found Out",
+        altname: "Blake Blossom Deeper Found Out",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/104068/mainLandscape/1687189544860/deeper-found-out_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/111000/111618/7371&dgt=3&ext=jpg&frm=163&tl=223" }
+        ]
+      },
+      {
+        img: "https://cdn.deeper.com/scene/videoimages/102610/mainLandscape/1617293183069/deeper-skirt-scale_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102610_skirt-scale_353P.mp4",
+        iframe: "",
+        name: "Skirt Scale",
+        altname: "Blake Blossom Deeper Skirt Scale",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.deeper.com/scene/videoimages/102610/mainLandscape/1617293183069/deeper-skirt-scale_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/47000/47773/2535&dgt=3&ext=jpg&frm=297&tl=359" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://assets.milfy.com/img/milfy-white.svg",
+      items: [
+      {
+        img: "https://cdn.milfy.com/scene/videoimages/104330/mainLandscape/1702375572573/milfy-sex-ed-teacher-fucks-timid-young-couple_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/milfy-sex-ed-teacher-fucks-timid-young-couple.mp4",
+        iframe: "",
+        name: "Sex Ed Teacher Fucks Timid Young Couple",
+        altname: "Blake Blossom milfy Sex Ed Teacher Fucks Timid Young Couple  Sarah Jessie & Apollo Banks",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.milfy.com/scene/videoimages/104330/mainLandscape/1702375572573/milfy-sex-ed-teacher-fucks-timid-young-couple_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "Sarah Jessie", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/126000/126846/8736&dgt=3&ext=jpg&frm=444&tl=537" }
+        ]
+      },
+    ]
+    },
+    {
+      logo: "https://assets.blacked.com/img/blacked-white.svg",
+      items: [
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/105299/mainLandscape/1738144047911/blacked-111624-bl-bl_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/105299_uERz-_udTfEYX01x0xvNsvCi1qZLo8Q7oiLuVohkRRg_353P.mp4",
+        iframe: "",
+        name: "BBC Goddess Blake Takes It All",
+        altname: "Blake Blossom blacked BBC Goddess Blake Takes It All Damion Dayski ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/105299/mainLandscape/1738144047911/blacked-111624-bl-bl_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/105148/mainLandscape/1734087500326/blacked-blake-blossom-first-ever-bbc-threesome_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/105148_YMRaI8Mhdmgc0LTrpIEX9FALXYaVnWUSjGtSj5JW6m0_353P.mp4",
+        iframe: "",
+        name: "Blake Blossom First Ever BBC Threesome",
+        altname: "Blake Blossom blacked Blake Blossom First Ever BBC Threesome Dimitri Shadow & Mannie Coco",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/105148/mainLandscape/1734087500326/blacked-blake-blossom-first-ever-bbc-threesome_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/104370/mainLandscape/1705053551010/blacked-stacked-blonde-wifey-blake-begs-for-his-thick-bbc_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/104370_6OLzyxcWYJv1D2AhuVNP-49WgLM1REu4gxGUvJk4w7c_353P.mp4",
+        iframe: "",
+        name: "Stacked Blonde Wifey Blake Begs For His Thick BBC ",
+        altname: "Blake Blossom Blacked Stacked Blonde Wifey Blake Begs For His Thick BBC",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/104370/mainLandscape/1705053551010/blacked-stacked-blonde-wifey-blake-begs-for-his-thick-bbc_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/127000/127893/8825&dgt=3&ext=jpg&frm=187&tl=256" }
+        ]
+      },
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/103887/mainLandscape/1676368399748/blacked-on-top_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103887_BAMgeMh32oFKRQZh3VHuEkH-lkPi0mmo2mp-dlmX41k_353P.mp4",
+        iframe: "",
+        name: "On Top",
+        altname: "Blake Blossom Blacked On Top ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/103887/mainLandscape/1676368399748/blacked-on-top_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/103000/103903/6753&dgt=3&ext=jpg&frm=651&tl=731" }
+        ]
+      },
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/103002/mainLandscape/1637754706269/blacked-party-hard_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103002_OYbtszzj8T6qSujfnVfJIgJ1XzBLYTOA7lt3wUSfaAI_353P.mp4",
+        iframe: "",
+        name: "Party Hard",
+        altname: "Blake Blossom Blacked Party Hard ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/103002/mainLandscape/1637754706269/blacked-party-hard_1920x1080.webp&thumbnails=https://qu.ax/GczvT.vtt",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/65000/65277/3639&dgt=3&ext=jpg&frm=373&tl=463" }
+        ]
+      },
+      {
+        img: "https://cdn.blacked.com/scene/videoimages/102479/mainLandscape/1608740534170/blacked-coping_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102479_coping_353P.mp4",
+        iframe: "",
+        name: "Coping",
+        altname: "Blake Blossom Blacked Coping ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blacked.com/scene/videoimages/102479/mainLandscape/1608740534170/blacked-coping_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/40000/40790/2141&dgt=3&ext=jpg&frm=644&tl=706" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://assets.blackedraw.com/img/blackedraw-white.svg",
+      items: [
+      {
+        img: "https://cdn.blackedraw.com/scene/videoimages/103197/mainLandscape/1645446137151/blackedraw-7121_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103197_4QaomTmbAmC0ZpETUflMdZs4ynegrxhno5YFgKRVf6M_353P.mp4",
+        iframe: "",
+        name: "Party Of Three",
+        altname: "Blake Blossom Blackedraw Party Of Three",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blackedraw.com/scene/videoimages/103197/mainLandscape/1645446137151/blackedraw-7121_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/72000/72673/4213&dgt=3&ext=jpg&frm=435&tl=505" }
+        ]
+      },
+      {
+        img: "https://cdn.blackedraw.com/scene/videoimages/102878/mainLandscape/1633606811133/blackedraw-its-on_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/102878_gwZPzZ1g8OH2km2tBdd_4MU5AL2aFCDkk_MR6wtRIEQ_353P.mp4",
+        iframe: "",
+        name: "It's On",
+        altname: "Blake Blossom Blackedraw It's On ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.blackedraw.com/scene/videoimages/102878/mainLandscape/1633606811133/blackedraw-its-on_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://assets.slayed.com/img/slayed-white.svg",
+      items: [
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/104480/mainLandscape/1712215093681/slayed-natural-beauty-kendra-ravishes-blakes-curvy-body_1920x1080.webp",
+        video: "https://cdn.porndiff.com/tubes/videos/104480_FiwB3JJ91VRZFrpoX8t7RzLWR1H7Q1yLOlJSMSxBo90_353P.mp4",
+        iframe: "",
+        name: "Natural Beauty Kendra Ravishes Blakes Curvy Body",
+        altname: "Blake Blossom Slayed Natural Beauty Kendra Ravishes Blakes Curvy Body Kendra Sunderland ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/104480/mainLandscape/1712215093681/slayed-natural-beauty-kendra-ravishes-blakes-curvy-body_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "Kendra Sunderland ", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/134000/134759/9440&dgt=3&ext=jpg&frm=914&tl=991" }
+        ]
+      },
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/103884/mainLandscape/1676451807560/slayed-exclusive_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103884_Ch0v8q_Y7LSJuEOD6yIC3OKLOWiZCm9TyzVJRbIPPI4_353P.mp4",
+        iframe: "",
+        name: "Exclusive",
+        altname: "Blake Blossom Slayed Exclusive ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/103884/mainLandscape/1676451807560/slayed-exclusive_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/103824/mainLandscape/1671705976093/slayed-camera-ready_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103824_glIT8zdJmcYrWJe9QhqzY2xDuAl1_GLi5DGffoNHmD8_353P.mp4",
+        iframe: "",
+        name: "In Too Deep",
+        altname: "Blake Blossom Slayed In Too Deep ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/103824/mainLandscape/1671705976093/slayed-camera-ready_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "psv.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/98000/98499/6327&dgt=3&ext=jpg&frm=873&tl=960" }
+        ]
+      },
+      {
+        img: "https://cdn.slayed.com/scene/videoimages/103768/mainLandscape/1669798813906/slayed-071322-sb_1920x1080.webp",
+        video: "https://en.porndiff.com/tubes/videos/103768_n5whCe9ek6VqJxn_gQDddOSsL5MxIwwkLyq2MD4VhTE_353P.mp4",
+        iframe: "",
+        name: "Power Outage",
+        altname: "Blake Blossom Power Outage ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://cdn.slayed.com/scene/videoimages/103768/mainLandscape/1669798813906/slayed-071322-sb_1920x1080.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/96000/96404/616&dgt=4&ext=jpg&frm=4968&tl=5038" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://www.mrluckypov.com/img/logo-header.svg",
+      items: [
+      {
+        img: "https://mrluckypov.com/content/beautifulblakeblossomcumsback/3.jpg?",
+        video: "https://qu.ax/znYBh.mp4",
+        iframe: "",
+        name: "Beautiful Blake Blossom Cums Back",
+        altname: "Blake Blossom mrluckypov Beautiful Blake Blossom Cums Back ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://mrluckypov.com/content/beautifulblakeblossomcumsback/3.jpg?&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://mrluckypov.com/content/bigboobblondedreamcumtrue/3.jpg",
+        video: "https://qu.ax/GRYyn.mp4",
+        iframe: "",
+        name: "Big Boob Blonde Dream Cum True",
+        altname: "Blake Blossom mrluckypov Big Boob Blonde Dream Cum True Kylie Page.",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://mrluckypov.com/content/bigboobblondedreamcumtrue/3.jpg&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "Kylie Page", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://mrluckypov.com/content/blondeblakeblossomcontinuouslycums/3.jpg",
+        video: "https://qu.ax/GhHoK.mp4",
+        iframe: "",
+        name: "Blonde Baddie Blake Blossom Continuously Cums",
+        altname: "Blake Blossom mrluckypov Blonde Baddie Blake Blossom Continuously Cums ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://mrluckypov.com/content/blondeblakeblossomcontinuouslycums/0.jpg&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://mrluckypov.com/content/deepcreampieforblakeblossom/3.jpg",
+        video: "https://qu.ax/wpmVX.mp4",
+        iframe: "",
+        name: "Deep Creampie For Blake Blossom",
+        altname: "Blake Blossom mrluckypov Deep Creampie For Blake Blossom ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://mrluckypov.com/content/deepcreampieforblakeblossom/0.jpg&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://c75b2e96f7.mjedge.net//assets/656a404912316_logo_inline-200x0.png",
+      items: [
+      {
+        img: "https://c760ce372b.mjedge.net/6/5/6/5/a/6565afbbe86ec/lf00009_ult_ep5_blakeblossom_player_thumb-c1280x720.jpg",
+        video: "https://cdn.porndiff.com/tubes/videos/lucidflix-ultimacy-episode-5-the-theater-blake-blossom.mp4",
+        iframe: "",
+        name: "Ultimacy Episode 5. The Theater : Blake Blossom",
+        altname: "Blake Blossom LucidFlix Ultimacy Episode 5. The Theater : Blake Blossom Seth Gamble ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://c760ce372b.mjedge.net/6/5/6/5/a/6565afbbe86ec/lf00009_ult_ep5_blakeblossom_player_thumb-c1280x720.jpg&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://pics-storage-1.ok.porn/contents/albums/main/1920x1080/144000/144175/10297&dgt=3&ext=jpg&frm=595&tl=629" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://qu.ax/HAHrj.png",
+      items: [
+      {
+        img: "https://www.shegg.com/images//parasited-the-futa-parasite-pt-1-with-blake-blossom-cherry-kiss/the-futa-parasite-pt-1-10.webp",
+        video: "https://www.shegg.com/images/parasited-the-futa-parasite-pt-1-with-blake-blossom-cherry-kiss/the-futa-parasite-pt-1.mp4",
+        iframe: "",
+        name: "Parasited The Futa Parasite Pt. 1",
+        altname: "Blake Blossom Hentaied Parasited Parasited The Futa Parasite Pt. 1 Blake Blossom & Cherry Kiss",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=https://www.shegg.com/images//parasited-the-futa-parasite-pt-1-with-blake-blossom-cherry-kiss/the-futa-parasite-pt-1-10.webp&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "Cherry Kiss", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://www.shegg.com/images//peculiar-gifts-by-parasited-with-blake-blossom-vanna-bardot/peculiar-gifts-05.webp",
+        video: "https://www.shegg.com/images/peculiar-gifts-by-parasited-with-blake-blossom-vanna-bardot/peculiar-gifts.mp4",
+        iframe: "",
+        name: "Peculiar Gifts",
+        altname: "Blake Blossom Hentaied Parasited Peculiar Gifts Vanna Bardot",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "Vanna Bardot", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "https://www.shegg.com/images//blake-blossom-kendra-sunderland-natasha-nice-at-parasited-in-make-it-dirtier/make-it-dirtier-4.webp",
+        video: "https://www.shegg.com/images/blake-blossom-kendra-sunderland-natasha-nice-at-parasited-in-make-it-dirtier/make-it-dirtier.mp4",
+        iframe: "",
+        name: "Make it Dirtier",
+        altname: "Blake Blossom Hentaied Parasited Make it Dirtier Blake Blossom, Kendra Sunderland & Natasha Nice",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F21206524.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "Natasha Nice", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "https://qu.ax/HAHrj.png",
+      items: [
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Blake Blossom ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Blake Blossom ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Blake Blossom ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+    },
+    {
+      logo: "",
+      items: [
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Blake Blossom ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Blake Blossom ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      },
+      {
+        img: "",
+        video: "",
+        iframe: "",
+        name: "",
+        altname: "Blake Blossom ",
+        link: "https://playerjs3.onrender.com/player.html?file=&poster=&thumbnails=https%3A%2F%2Fvttgen.diwalicracker8.workers.dev%2Fvttgen.vtt%3Fimg1%3Dhttps%3A%2F%2Fbanal.cc%2Fimages%2Fpreviews%2F.jpg%26w%3D320%26h%3D180%26r%3D102%26c%3D3%26interval%3D10",
+        actors: [
+          { name: "Blake Blossom", link: "pbb2.html" },
+          { name: "", link: "" },
+          { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=&dgt=3&ext=jpg&frm=&tl=" }
+        ]
+      }
+    ]
+  }
+];
+
+const container = document.getElementById("main-container");
+
+sections.forEach((section, sectionIndex) => {
+  const sectionDiv = document.createElement("div");
+  sectionDiv.classList.add("section");
+
+  const logo = document.createElement("img");
+  logo.src = section.logo;
+  logo.alt = "Logo";
+  logo.classList.add("logo");
+  logo.onclick = () => {
+    const itemsDiv = sectionDiv.querySelector(".posters");
+    const isVisible = itemsDiv.classList.contains("visible-items");
+    itemsDiv.classList.toggle("visible-items", !isVisible);
+    itemsDiv.classList.toggle("hidden-items", isVisible);
+  };
+  sectionDiv.appendChild(logo);
+
+  sectionDiv.appendChild(document.createElement("div")).classList.add("divider");
+
+  const postersDiv = document.createElement("div");
+  postersDiv.classList.add("posters", sectionIndex === 0 ? "visible-items" : "hidden-items");
+
+  section.items.forEach(item => {
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("poster-wrapper");
+
+    const anchor = document.createElement("a");
+    anchor.href = item.link;
+    anchor.setAttribute("altname", item.altname);
+    anchor.style.position = "relative";
+
+    const loadingBar = document.createElement("div");
+    loadingBar.style.position = "absolute";
+    loadingBar.style.top = "0";
+    loadingBar.style.left = "0";
+    loadingBar.style.height = "4px";
+    loadingBar.style.width = "0%";
+    loadingBar.style.background = "#00bcd4";
+    loadingBar.style.transition = "width 1s ease";
+    anchor.appendChild(loadingBar);
+
+    const img = document.createElement("img");
+    img.src = item.img;
+    img.alt = item.altname;
+    anchor.appendChild(img);
+
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    anchor.appendChild(overlay);
+
+    let videoElement = null;
+    let touchStartTime = 0;
+
+    anchor.addEventListener("mouseenter", () => {
+      wrapper.classList.add("touch-active");
+      showOverlay();
+    });
+
+    anchor.addEventListener("mouseleave", () => {
+      wrapper.classList.remove("touch-active");
+      hideOverlay();
+    });
+
+    anchor.addEventListener("touchstart", (e) => {
+      touchStartTime = Date.now();
+    });
+
+    anchor.addEventListener("touchend", (e) => {
+      const tapDuration = Date.now() - touchStartTime;
+      if (tapDuration < 300) {
+        if (!wrapper.classList.contains("touch-active")) {
+          e.preventDefault();
+          document.querySelectorAll(".poster-wrapper.touch-active").forEach(w => {
+            if (w !== wrapper) {
+              w.classList.remove("touch-active");
+              const ov = w.querySelector(".overlay");
+              const vid = ov.querySelector("video");
+              if (vid) {
+                vid.pause();
+                vid.src = "";
+                vid.load();
+              }
+              ov.innerHTML = "";
+              ov.style.display = "none";
+            }
+          });
+          wrapper.classList.add("touch-active");
+          showOverlay();
+        }
+      }
+    });
+
+    function showOverlay() {
+      if (overlay.childNodes.length > 0) return;
+      loadingBar.style.width = "100%";
+      setTimeout(() => {
+        loadingBar.style.width = "0%";
+        overlay.innerHTML = "";
+        if (item.video) {
+          videoElement = document.createElement("video");
+          videoElement.src = item.video;
+          videoElement.muted = true;
+          videoElement.loop = true;
+          videoElement.autoplay = true;
+          videoElement.playsInline = true;
+          overlay.appendChild(videoElement);
+          videoElement.play();
+        }
+        if (item.iframe) {
+          const iframe = document.createElement("iframe");
+          iframe.src = item.iframe;
+          iframe.setAttribute("frameborder", "0");
+          overlay.appendChild(iframe);
+        }
+        overlay.style.display = "block";
+      }, 1000);
+    }
+
+    function hideOverlay() {
+      if (videoElement) {
+        videoElement.pause();
+        videoElement.src = "";
+        videoElement.load();
+        videoElement = null;
+      }
+      overlay.innerHTML = "";
+      overlay.style.display = "none";
+      loadingBar.style.width = "0%";
+    }
+
+    const overlay2 = document.createElement("div");
+    overlay2.classList.add("overlay2");
+    const name = document.createElement("h3");
+    name.textContent = item.name;
+    overlay2.appendChild(name);
+    anchor.appendChild(overlay2);
+    wrapper.appendChild(anchor);
+
+    if (item.actors?.length) {
+      const actorList = document.createElement("div");
+      actorList.classList.add("actor-list");
+      item.actors.forEach((actor, index) => {
+        const link = document.createElement("a");
+        link.href = actor.link;
+        link.textContent = actor.name;
+        link.target = "_blank";
+        actorList.appendChild(link);
+        if (index < item.actors.length - 1) {
+          actorList.appendChild(document.createTextNode(", "));
+        }
+      });
+      wrapper.appendChild(actorList);
+    }
+
+    postersDiv.appendChild(wrapper);
+  });
+
+  sectionDiv.appendChild(postersDiv);
+  sectionDiv.appendChild(document.createElement("div")).classList.add("divider");
+  container.appendChild(sectionDiv);
+});
+</script>
+
+</body>
+</html>
