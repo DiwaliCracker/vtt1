@@ -2,8 +2,8 @@
 
 # --- MOVIES SECTION ---
 
-#EXTINF:-1 tvg-id="tt0111161" tvg-name="The Shawshank Redemption" tvg-logo="https://image.tmdb.org/t/p/w500/q6y0Go1tsYKoB9q6mgr7C3q0r0v.jpg" group-title="Top Rated Movies",The Shawshank Redemption (1994)
-http://your-server.com/movies/shawshank.mp4
+#EXTINF:-1 tvg-id="tt0111161" tvg-name="Vanity" tvg-logo="https://imgs1cdn.adultempire.com/products/89/4541689h.jpg" group-title="Top Rated Movies",The Shawshank Redemption (1994)
+https://soski.tv/mp4/files/98646198/1080
 
 #EXTINF:-1 tvg-id="tt1375666" tvg-name="Inception" tvg-logo="https://image.tmdb.org/t/p/w500/edv5bs1pSdfS2Sfyopsas8vCZ0f.jpg" group-title="Sci-Fi Movies",Inception (2010)
 http://your-server.com/movies/inception.mkv
