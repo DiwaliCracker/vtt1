@@ -1,0 +1,34 @@
+#EXTM3U
+
+# --- MOVIES SECTION ---
+#EXTINF:-1 tvg-id="tt0111161" tvg-name="Vanity" tvg-logo="https://soski.tv/images/thumbnails/545/69484744.jpg" group-title="Top Rated Movies",The Shawshank Redemption (1994)
+https://cloudstorage.bar/7625633529749045388/Hazel%20Moore%20-%20%5BFutanari.XXX%5D%20-%20%5B2024%5D%20-%20Mess%20In%20The%20Classroom%20-%20Melody%20Marks.mp4
+
+#EXTINF:-1 tvg-id="tt1375666" tvg-name="Vanity" tvg-logo="https://imgs1cdn.adultempire.com/products/89/4541689h.jpg" group-title="Sci-Fi Movies",Vanity -Wicked Pictures (2023)
+https://soski.tv/mp4/files/98646198/1080?list=.mp4
+#EXTINF:-1 tvg-id="tt1375666" tvg-name="Washing Away My Step-Daughter's Sins" tvg-logo="https://imgs1cdn.adultempire.com/products/02/1969202h.jpg" group-title="Sci-Fi Movies",I
+https://soski.tv/mp4/files/69484744/720?list=.mp4
+#EXTINF:-1 tvg-id="tt1375666" tvg-name="Creep" tvg-logo="https://imgs1cdn.adultempire.com/products/94/3055294h.jpg" group-title="Sci-Fi Movies",I
+https://soski.tv/mp4/files/69541575/1080?list=.mp4
+#EXTINF:-1 tvg-id="tt1375666" tvg-name="Massage With A Busty Ending" tvg-logo="https://imgs1cdn.adultempire.com/products/84/4631184h.jpg" group-title="Sci-Fi Movies",I
+https://playerjs3.onrender.com/player.html?file=[360p]https://soski.tv/mp4/files/98646150/360,[480p]https://soski.tv/mp4/files/98646150/480,[720p]https://soski.tv/mp4/files/98646150/720?list=.mp4
+#EXTINF:-1 tvg-id="tt1375666" tvg-name="" tvg-logo="https://imgs1cdn.adultempire.com/products/89/4541689h.jpg" group-title="Sci-Fi Movies",I
+https://soski.tv/mp4/files/98646198/1080?list=.mp4
+
+# --- SERIES SECTION ---
+#EXTINF:-1 tvg-id="tt0944947" tvg-name="Game of Thrones" tvg-logo="https://image.tmdb.org/t/p/w500/7WsyChvRStv9OidaxPFEj7v9oW2.jpg" group-title="TV Series" series-name="Game of Thrones" season="1" episode="1",Game of Thrones - S01E01
+https://your-server.com/series/got_s01e01.mp4
+
+# --- VIDEOS / CLIPS SECTION ---
+
+#EXTINF:-1 tvg-logo="https://soski.tv/images/thumbnails/545/69484744.jpg" group-title="General Videos",Washing Away My Step-Daughter's Sins - Girlsway (2018)
+https://soski.tv/mp4/files/69484744/720?list=.mp4
+
+#EXTINF:-1 tvg-logo="https://example.com/thumbnails/music_video.jpg" group-title="Music Videos",Top Hits 2026 Mix
+https://your-server.com/videos/music_clip.mp4
+
+#EXTINF:-1 tvg-logo="https://example.com/thumbnails/tutorial.jpg" group-title="Tutorials",How to Setup XP IPTV
+https://your-server.com/videos/guide.mp4
+
+#EXTINF:-1 tvg-logo="https://example.com/thumbnails/trailer.jpg" group-title="Trailers",Upcoming Movie Trailer
+https://your-server.com/videos/trailer_01.mp4
