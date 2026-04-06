@@ -1,0 +1,35 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://imgs1cdn.adultempire.com/products/43/1587243h.jpg" group-title="Movies", Sex and Corruption: Episode 3 (2011)
+https://kebab.bunkr.ru/Digital-Playground-Kayden-Kross-Sex-And-Corruption-TUyppuvieztOhtV3XwUiZzljpWBEDada.mp4
+#EXTINF:-1,Sex and Corruption: Episode 3 (2011) Info
+https://fetch-ycwn.onrender.com/fetch.html?title=Sex%20and%20Corruption:%20Episode%203
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:play-and-exit
+#EXTINF:-1, #EXTVLCOPT:customplayer=https://playerjs3.onrender.com/player.html?file=https://kebab.bunkr.ru/Digital-Playground-Kayden-Kross-Sex-And-Corruption-TUyppuvieztOhtV3XwUiZzljpWBEDada.mp4&thumbnails=https://raw.githubusercontent.com/DiwaliCracker/vtt1/main/Digital.Playground.Kayden.Kross.Sex.And.Corruption.vtt&poster=https://imgs1cdn.adultempire.com/galleries/40/68864533787225440_800.jpg
+#EXTINF:-0, Movie 2 DP : La Boutique
+#EXTVTT:https://www.example.com/movie2-thumbnails.vtt
+#EXTIMG:https://imgs1cdn.adultempire.com/products/89/1647289h.jpg
+https://pizza.bunkr.ru/Digital-Playground-La-Boutique-720p-sVBBTE1tsedsDslYLF4BvSWkhVkBJJ0b.mp4
+
+#EXTINF:-0,Borderlands (2024)
+https://pizza.bunkr.ru/Digital-Playground-La-Boutique-720p-sVBBTE1tsedsDslYLF4BvSWkhVkBJJ0b.mp4
+
+#EXTINF:-0,Vanity - Wicked Pictures (2023)
+https://soski.tv/mp4/files/98646198/1080
+
+#EXTINF:-1 tvg-id="tt0848228" tvg-name="The Avengers" tvg-logo="https://imgs1cdn.adultempire.com/products/89/4541689h.jpg" group-title="Action Movies",Vanity 2 (2012)
+https://soski.tv/mp4/files/98646198/1080
+
+#EXTINF:-1 tvg-logo="https://imgs1cdn.adultempire.com/products/90/1674590h.jpg" group-title="Movies", Spread (2013)
+https://pizza.bunkr.ru/Spread--Robby-D--Digital-Playground---2013--BDRip-AVC-mkv-baaT3wl2nw5kZlhb1NYWIHdUIGa5Ed8D.mp4
+
+# TV Series Section
+#EXTINF:-1, TV Series 1 Episode 1
+#EXTVTT:https://www.example.com/series1-episode1-thumbnails.vtt
+#EXTIMG:https://www.example.com/series1-episode1-thumbnail.jpg
+https://www.example.com/series1-episode1.mp4
+
+#EXTINF:-1, TV Series 1 Episode 2
+#EXTVTT:https://www.example.com/series1-episode2-thumbnails.vtt
+#EXTIMG:https://www.example.com/series1-episode2-thumbnail.jpg
+https://www.example.com/series1-episode2.mp4
