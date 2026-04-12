@@ -1,0 +1,30 @@
+#EXTM3U
+
+# ==========================================
+# LIVE TV SECTION
+# ==========================================
+#EXTINF:-1 tvg-id="CNN.us" tvg-logo="https://example.com/logos/cnn.png" group-title="Live News",CNN International
+https://example.com/live/cnn.m3u8
+
+#EXTINF:-1 tvg-id="ESPN.us" tvg-logo="https://example.com/logos/espn.png" group-title="Live Sports",ESPN HD
+https://example.com/live/espn.m3u8
+
+
+# ==========================================
+# MOVIES SECTION (VOD)
+# ==========================================
+#EXTINF:-1 tvg-id="tt0133093" tvg-name="The Matrix" group-title="Movies",The Matrix (1999)
+https://example.com/movies/matrix.mp4
+
+#EXTINF:-1 tvg-id="tt0468569" tvg-name="The Dark Knight" group-title="Movies",The Dark Knight (2008)
+https://example.com/movies/dark_knight.mkv
+
+
+# ==========================================
+# SERIES SECTION
+# ==========================================
+#EXTINF:-1 tvg-name="Breaking Bad" group-title="Series" series-name="Breaking Bad" season="1" episode="1",Breaking Bad - S01E01 - Pilot
+https://example.com/series/bb_s01e01.mp4
+
+#EXTINF:-1 tvg-name="Breaking Bad" group-title="Series" series-name="Breaking Bad" season="1" episode="2",Breaking Bad - S01E02 - Cat's in the Bag
+https://example.com/series/bb_s01e02.mp4
