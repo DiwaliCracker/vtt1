@@ -449,8 +449,13 @@ https://cloudstorage.bar/7628727357901111312/DP.Ghosted.mp4
 https://cloudstorage.bar/7628947646773723200/DP.The%20Last%20Resort.mp4
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
 https://soski.tv/mp4/files/98083077/1080?list=.mp4
+
+
+#EXTINF:-1 tvg-id="37265" tvg-name="All Ladies Do It" tvg-logo="https://media.themoviedb.org/t/p/original/fVLwjwThhwvxSNGYu2rFO47yaQ9.jpg" group-title="Adult Movies",All Ladies Do It
+https://pixeldrain.com/api/file/mXNpwnXj?list=.mp4
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
 https://soski.tv/mp4/files/98083077/1080?list=.mp4
+
 
 # --- SERIES SECTION ---
 #EXTINF:-1 tvg-id="46296" tvg-name="Spartacus" tvg-logo="https://media.themoviedb.org/t/p/original/eb4fWyoQfwxB1bzoeQuyZV3Nuyj.jpg" group-title="StarZ" series-name="Spartacus" season="1" episode="1",Spartacus - S01E01
