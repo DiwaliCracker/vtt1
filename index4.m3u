@@ -687,7 +687,23 @@ https://hub.toxix.buzz/e119e19f23d71ff650927b7770afc4c2?token=1776281688?url=.mp
 #EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/fCxsqLoo131dHi1koR9j6TdEabP.jpg" group-title="Netflix" series-name="Elite" season="7" episode="8",Elite - S07E08
 https://hub.shipcdn.buzz/7bb0333b6cefd1f333e55cb0ecdf6b5a?token=1776281713?url=.mp4
 
-#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="" group-title="Netflix" series-name="Elite" season="7" episode="2",Elite - S07E02
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="1",The Deuce - S01E01
+https://cloudstorage.bar/7629296746010509356/The%20Deuce%20S01E01%20Pilot.mkv
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="2",The Deuce - S01E02
+https?url=.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="3",The Deuce - S01E03
+https?url=.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="4",The Deuce - S01E04
+https?url=.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="5",The Deuce - S01E05
+https?url=.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="6",The Deuce - S01E06
+https?url=.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="7",The Deuce - S01E07
+https?url=.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="8",The Deuce - S01E08
+https?url=.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="2" episode="1",The Deuce - S02E01
 https?url=.mp4
 
 
