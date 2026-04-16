@@ -453,8 +453,12 @@ https://soski.tv/mp4/files/98083077/1080?list=.mp4
 
 #EXTINF:-1 tvg-id="37265" tvg-name="All Ladies Do It" tvg-logo="https://media.themoviedb.org/t/p/original/fVLwjwThhwvxSNGYu2rFO47yaQ9.jpg" group-title="Adult Movies",All Ladies Do It
 https://pixeldrain.com/api/file/mXNpwnXj?list=.mp4
+#EXTINF:-1 tvg-id="30287" tvg-name="Fallo" tvg-logo="https://media.themoviedb.org/t/p/original/C5HakXfAFQMDZX0HplcjZIdv0i.jpg" group-title="Adult Movies",Fallo
+https://pixeldrain.com/api/file/VsA8YjVQ?list=.mp4
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
-https://soski.tv/mp4/files/98083077/1080?list=.mp4
+https?list=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
+https?list=.mp4
 
 
 # --- SERIES SECTION ---
@@ -631,6 +635,41 @@ https://video-downloads.googleusercontent.com/ADGPM2lxjm6isW4-e-QsK2-gbotmBL6SoT
 #EXTINF:-1 tvg-id="229962" tvg-name="Burning Body" tvg-logo="https://media.themoviedb.org/t/p/original/paMh9WMgWpvRit7A3a83pyeA4E2.jpg" group-title="Netflix" series-name="Burning Body" season="1" episode="8",Burning Body - S01E08
 https://vcloud.zip/re.php?l=aHR0cHM6Ly81NTYxMzhkY2E3MzY3NzYzZWQ0NmVlY2FhNDI4NGVjYS5yMi5jbG91ZGZsYXJlc3RvcmFnZS5jb20vaHViMi9CdXJuaW5nLkJvZHkuUzAxRTA4Lk1heS4xc3QuMjAxNy4xMDgwcC5ORi5XRUItREwuRERQNS4xLkguMjY0LVZlZ2Ftb3ZpZXMudG8ubWt2P1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9MjZiNmNmOGEwMzk5YjU4ODA2NDNmNTg1YzhjM2RiZTUlMkYyMDI2MDQxNSUyRmF1dG8lMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNDE1VDE4NTA1OVomWC1BbXotRXhwaXJlcz0xMDgwMCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1CdXJuaW5nLkJvZHkuUzAxRTA4Lk1heS4xc3QuMjAxNy4xMDgwcC5ORi5XRUItREwuRERQNS4xLkguMjY0LVZlZ2Ftb3ZpZXMudG8ubWt2JlgtQW16LVNpZ25hdHVyZT00OTFiOWQ4NTk3ZjE2NDU4NGU4NDU0ZTUwMTEzZWJlMWRhMWY3YmQyOWJkNjJhMTI0NjA0OTBhMWEyNDcyNDFj?url=.mp4
 
+
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/cBmF9rdO52rajyI0bBZFiKEC4Uf.jpg" group-title="Netflix" series-name="Elite" season="1" episode="1",Elite - S01E01
+https://cdn.pixeldrain.eu.cc/73hvSKXy?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/pQMNMFCJf4qbMcIVDyTMrqVM5Lj.jpg" group-title="Netflix" series-name="Elite" season="1" episode="2",Elite - S01E02
+https://cdn.pixeldrain.eu.cc/UCKwc6U1?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/cpYPesxOMm6vjX5YZ3XcKVdRctP.jpg" group-title="Netflix" series-name="Elite" season="1" episode="3",Elite - S01E03
+https://cdn.pixeldrain.eu.cc/HtLdXG4w?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/qh1MC6YEIhjG0AICDdqwdGlEc3q.jpg" group-title="Netflix" series-name="Elite" season="1" episode="4",Elite - S01E04
+https://cdn.pixeldrain.eu.cc/49KsAQdA?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/rlpwEgvgyJoNCnkvi8EvzDtISEk.jpg" group-title="Netflix" series-name="Elite" season="1" episode="5",Elite - S01E05
+https://cdn.pixeldrain.eu.cc/4jzGSx7h?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/vhsqIcLWnZOVMGpmS1rEFEP91fp.jpg" group-title="Netflix" series-name="Elite" season="1" episode="6",Elite - S01E06
+https://cdn.pixeldrain.eu.cc/pnP9hzTH?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/iDf0bshxtZ54Ayzxcp4lTcM0zAN.jpg" group-title="Netflix" series-name="Elite" season="1" episode="7",Elite - S01E07
+https://cdn.pixeldrain.eu.cc/UCetUcDt?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/k3BwKfdW9yKAkBAR509DB3Za4Re.jpg" group-title="Netflix" series-name="Elite" season="1" episode="8",Elite - S01E08
+https://cdn.pixeldrain.eu.cc/Fmyq5feT?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/50bCRSkM2rLx4nEGnijqhAQgBOL.jpg" group-title="Netflix" series-name="Elite" season="2" episode="1",Elite - S02E01
+https://cdn.pixeldrain.eu.cc/5U25UdYV?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/tOomU1t5ZGqw1VNWgIzYRmNCbjs.jpg" group-title="Netflix" series-name="Elite" season="2" episode="2",Elite - S02E02
+https://cdn.pixeldrain.eu.cc/QG8FkLzY?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/sjsGePPjklecdtspcWcymllnVhB.jpg" group-title="Netflix" series-name="Elite" season="2" episode="3",Elite - S02E03
+https://cdn.pixeldrain.eu.cc/dvigBfPx?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/1DmsrYDuHZNQ7rjaMGxqm9j1fDj.jpg" group-title="Netflix" series-name="Elite" season="2" episode="4",Elite - S02E04
+https?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/qkkkIpVhx7wwLNgJIJJAEXDRdsn.jpg" group-title="Netflix" series-name="Elite" season="2" episode="5",Elite - S02E05
+https?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/fKNgMdTJHmrrBMUvdtSoOPOKoiE.jpg" group-title="Netflix" series-name="Elite" season="2" episode="6",Elite - S02E06
+https://cdn.pixeldrain.eu.cc/Yp19UrrL?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/cyZqaYrhFfHcNNrRvpIcTtFFLgM.jpg" group-title="Netflix" series-name="Elite" season="2" episode="7",Elite - S02E07
+https?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/bo3qq7F4lFOEqfDLMobsadLD42v.jpg" group-title="Netflix" series-name="Elite" season="2" episode="8",Elite - S02E08
+https?list=.mp4
+#EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="" group-title="Netflix" series-name="Elite" season="3" episode="1",Elite - S03E01
+https?list=.mp4
 #EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/hkVWuQwxXM15Y2KZyyKeFVnhoy4.jpg" group-title="Netflix" series-name="Elite" season="7" episode="1",Elite - S07E01
 https://hub.shipcdn.buzz/09b6f5edf6e34440753c96b69c305ef3?token=1776281142?url=.mp4
 #EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/625fef04ERtAIkU0RgzhY3PapYe.jpg" group-title="Netflix" series-name="Elite" season="7" episode="2",Elite - S07E02
