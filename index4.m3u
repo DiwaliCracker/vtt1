@@ -658,7 +658,7 @@ https://hub.yummy.monster/2dc633f28487bc11362e0ef8d320ac40?token=177636799613?li
 #EXTINF:-1 tvg-id="227371" tvg-name="Fake Profile" tvg-logo="" group-title="Netflix" series-name="Fake Profile" season="3" episode="1",Fake Profile - S03E01
 https?list=.mp4
 
-#EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="https://media.themoviedb.org/t/p/w94_and_h141_face/sdJLbucggwGj8NdX0UN2zt1Vwmn.jpg" group-title="HBO" series-name="56 Days",56 Days
+#EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="https://media.themoviedb.org/t/p/original/sdJLbucggwGj8NdX0UN2zt1Vwmn.jpg" group-title="HBO" series-name="56 Days" season="1" episode="0",56 Days - S01E00
 #EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="" group-title="HBO" series-name="56 Days" season="1" episode="1",56 Days - S01E01
 https://hub.shipcdn.buzz/4b1b9bacc03c7fafc4134e880a2220c5?token=177636816216?list=.mp4
 #EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="" group-title="HBO" series-name="56 Days" season="1" episode="2",56 Days - S01E02
