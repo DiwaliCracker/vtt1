@@ -978,4 +978,16 @@ https?url=.mp4
 #EXTINF:-1 tvg-id="62917" tvg-name="Hidden Truths" tvg-logo="" group-title="Tvglobo" series-name="Hidden Truths" season="1" episode="11",Hidden Truths - S01E11
 https?url=.mp4
 
+
+#EXTINF:-1 tvg-id="" tvg-name="Locust" tvg-logo="https://media.themoviedb.org/t/p/original/aFLyXgEDev89ykpHcwQfI6KXKjs.jpg" group-title="Chanel One" series-name="Locust" season="1" episode="1",Locust - S01E01
+https://pixeldrain.dev/api/file/TMfVfnue?url=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="Locust" tvg-logo="" group-title="Chanel One" series-name="Locust" season="1" episode="2",Locust - S01E02
+https://pixeldrain.dev/api/file/7GDiXD2N?url=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="Locust" tvg-logo="" group-title="Chanel One" series-name="Locust" season="1" episode="3",Locust - S01E03
+https://cloudstorage.bar/7629624383295717428/S01E03.mkv
+#EXTINF:-1 tvg-id="" tvg-name="Locust" tvg-logo="" group-title="Chanel One" series-name="Locust" season="1" episode="4",Locust - S01E04
+https://pixeldrain.dev/api/file/d5bXKCtE?url=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="Locust" tvg-logo="" group-title="Chanel One" series-name="Locust" season="1" episode="5",Locust - S01E05
+https?url=.mp4
+
 # --- VIDEOS / CLIPS SECTION ---
