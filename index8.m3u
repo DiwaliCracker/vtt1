@@ -118,7 +118,7 @@ https://file-cdn.indexer.eu.org/dl/AgADsScAAmrdiUo/BQACAgIAAyEFAATVwhzuAAKQbmnjY
 #EXTINF:-1 tvg-id="" tvg-name="Spider-Man 3 2007" tvg-logo="https://media.themoviedb.org/t/p/original/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg" group-title="Marvel",Spider-Man 3 2007
 https://file-cdn.indexer.eu.org/dl/AgADqD8AAlQaeUs/BQACAgIAAyEFAATB8uxkAAKRBmnjYdQhuIwp2ZrDh7_XRJfWop5XAAKoPwACVBp5Sz39gy3xARJSHgQ/2275967720/SpiderMan_2_2004_1080p_Dual_Audio_Hin_Eng_MoviesFlix_NeT.mkv
 #EXTINF:-1 tvg-id="" tvg-name="Kaale Dhandhe 2026" tvg-logo="" group-title="",Kaale Dhandhe
-https://cloudstorage.bar/7630055606602170368/Kaale_Dhande_Episode_1.Telly.mp4
+
 #EXTINF:-1 tvg-id="" tvg-name=" 2026" tvg-logo="" group-title="",
 ?list=.mp4
 #EXTINF:-1 tvg-id="" tvg-name=" 2026" tvg-logo="" group-title="",
@@ -216,7 +216,25 @@ https://pixeldrain.dev/api/file/FRPHQLVq?url=.mp4
 #EXTINF:-1 tvg-id="249766" tvg-name="Daldal" tvg-logo="" group-title="Prime Video India" series-name="Daldal" season="1" episode="7",Daldal - S01E07
 https://pixeldrain.dev/api/file/ihFy5mBq?url=.mp4
 
-#EXTINF:-1 tvg-id="" tvg-name=" 2026" tvg-logo="" group-title="Anime" series-name="" season="1" episode="1", - S01E01
+#EXTINF:-1 tvg-id="99351" tvg-name="Kaale Dhande" tvg-logo="" group-title="Marathi" series-name="Kaale Dhande" season="1" episode="1",Kaale Dhande - S01E01
+https://cloudstorage.bar/7630055606602170368/Kaale_Dhande_Episode_1.Telly.mp4
+#EXTINF:-1 tvg-id="99351" tvg-name="Kaale Dhande" tvg-logo="" group-title="Marathi" series-name="Kaale Dhande" season="1" episode="2",Kaale Dhande - S01E02
+https://cloudstorage.bar/7630055653846810660/Kaale_Dhande_Episode_2.Telly.mp4
+#EXTINF:-1 tvg-id="99351" tvg-name="Kaale Dhande" tvg-logo="" group-title="Marathi" series-name="Kaale Dhande" season="1" episode="3",Kaale Dhande - S01E03
+https://cloudstorage.bar/7630055705386418288/Kaale_Dhande_Episode_3.Telly.mp4
+#EXTINF:-1 tvg-id="99351" tvg-name="Kaale Dhande" tvg-logo="" group-title="Marathi" series-name="Kaale Dhande" season="1" episode="4",Kaale Dhande - S01E04
+https://cloudstorage.bar/7630055756926025992/Kaale_Dhande_Episode_4.Telly.mp4
+#EXTINF:-1 tvg-id="99351" tvg-name="Kaale Dhande" tvg-logo="" group-title="Marathi" series-name="Kaale Dhande" season="1" episode="5",Kaale Dhande - S01E05
+https://cloudstorage.bar/7630055808465633332/Kaale_Dhande_Episode_5.Telly.mp4
+#EXTINF:-1 tvg-id="99351" tvg-name="Kaale Dhande" tvg-logo="" group-title="Marathi" series-name="Kaale Dhande" season="1" episode="6",Kaale Dhande - S01E06
+https://cloudstorage.bar/7630055868595175440/Kaale_Dhande_Episode_6.Telly.mp4
+#EXTINF:-1 tvg-id="99351" tvg-name="Kaale Dhande" tvg-logo="" group-title="Marathi" series-name="Kaale Dhande" season="1" episode="7",Kaale Dhande - S01E07
+https://cloudstorage.bar/7630055920134783072/Kaale_Dhande_Episode_7.Telly.mp4
+#EXTINF:-1 tvg-id="99351" tvg-name="Kaale Dhande" tvg-logo="" group-title="Marathi" series-name="Kaale Dhande" season="1" episode="8",Kaale Dhande - S01E08
+https://cloudstorage.bar/7630055975969357868/Kaale_Dhande_Episode_8.Telly.mp4
+
+
+#EXTINF:-1 tvg-id="" tvg-name="Kaale Dhandhe" tvg-logo="" group-title="Marathi" series-name="Kaale Dhandhe" season="1" episode="1",Kaale Dhandhe - S01E01
 https?url=.mp4
 #EXTINF:-1 tvg-id="" tvg-name=" 2026" tvg-logo="" group-title="Anime" series-name="" season="1" episode="1", - S01E01
 https?url=.mp4
