@@ -686,8 +686,8 @@ https://cdn.pixeldrain.eu.cc/ZQUFVRqS?list=.mp4
 https://cdn.pixeldrain.eu.cc/bqhUCpsV?list=.mp4
 #EXTINF:-1 tvg-id="" tvg-name="365 Days" tvg-logo="https://media.themoviedb.org/t/p/original/6KwrHucIE3CvNT7kTm2MAlZ4fYF.jpg" group-title="Adult Movies",365 Days //https://cloudstorage.bar/7631488089864536072/365.Days.mp4
 https://cdn.pixeldrain.eu.cc/yQSutMRj?list=.mp4
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
-https?list=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="Text1" tvg-logo="" group-title="Text1",Text1
+https://pandacdn.app/cdn/hls/3d93c3195c2b8804a8e68739da5fe4f1/master.txt
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
 https?list=.mp4
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
