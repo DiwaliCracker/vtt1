@@ -1093,26 +1093,6 @@ https://hub.toxix.buzz/0f22b9fa141bc909f97ecf370d25e108?token=1776367335?list=.m
 #EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="" group-title="Netflix" series-name="Elite" season="9" episode="1",Elite - S09E01
 https?list=.mp4
 
-#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="https://media.themoviedb.org/t/p/original/tKFUwmue5g45rthZOyYWd7l931y.jpg" group-title="HBO" series-name="The Deuce" season="1" episode="1",The Deuce - S01E01
-https://cloudstorage.bar/7629296746010509356/The%20Deuce%20S01E01%20Pilot.mkv
-#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="2",The Deuce - S01E02
-https?url=.mp4
-#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="3",The Deuce - S01E03
-https://cloudstorage.bar/7629309175645863940/The%20Deuce%20S01E03%20The%20Principle%20Is%20All.mkv
-#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="4",The Deuce - S01E04
-https://cloudstorage.bar/7629318319631237132/The%20Deuce%20S01E04%20I%20See%20Money.mkv
-#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="5",The Deuce - S01E05
-https?url=.mp4
-#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="6",The Deuce - S01E06
-https?url=.mp4
-#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="7",The Deuce - S01E07
-https?url=.mp4
-#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="1" episode="8",The Deuce - S01E08
-https?url=.mp4
-#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="The Deuce" season="2" episode="1",The Deuce - S02E01
-https?url=.mp4
-
-
 #EXTINF:-1 tvg-id="298893" tvg-name="Naked" tvg-logo="https://media.themoviedb.org/t/p/original/4sALwFbEvQNumPbwHVYiU9NGhe.jpg" group-title="Fandango" series-name="Naked" season="1" episode="1",Naked - S01E01
 https://cdn.pixeldrain.eu.cc/BDZhTiBw?url=.mp4
 #EXTINF:-1 tvg-id="298893" tvg-name="Naked" tvg-logo="" group-title="Fandango" series-name="Naked" season="1" episode="2",Naked - S01E02
@@ -1433,6 +1413,58 @@ https://fileredirect3.diwalicracker8.workers.dev/?url=https://webxseries.tv/1055
 https://fileredirect3.diwalicracker8.workers.dev/?url=https://webxseries.tv/10559/the-bull-of-dalal-street-episode-11/
 #EXTINF:-1 tvg-id="105595" tvg-name="The Bull Of Dalal Street" tvg-logo="" group-title="Ullu" series-name="The Bull Of Dalal Street" season="1" episode="12",The Bull Of Dalal Street - S01E12
 https://fileredirect3.diwalicracker8.workers.dev/?url=https://webxseries.tv/10561/the-bull-of-dalal-street-episode-12/
+
+
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="https://media.themoviedb.org/t/p/original/tKFUwmue5g45rthZOyYWd7l931y.jpg" group-title="HBO" series-name="" season="1" episode="1",The Deuce - S01E01
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277383.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="1" episode="2",The Deuce - S01E02
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277384.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="1" episode="3",The Deuce - S01E03
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277385.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="1" episode="4",The Deuce - S01E04
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277386.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="1" episode="5",The Deuce - S01E05
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277387.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="1" episode="6",The Deuce - S01E06
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277388.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="1" episode="7",The Deuce - S01E07
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277389.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="1" episode="8",The Deuce - S01E08
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277390.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="2" episode="1",The Deuce - S02E01
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277391.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="2" episode="2",The Deuce - S02E02
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277392.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="2" episode="3",The Deuce - S02E03
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277393.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="2" episode="4",The Deuce - S02E04
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277394.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="2" episode="5",The Deuce - S02E05
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277395.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="2" episode="6",The Deuce - S02E06
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277396.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="2" episode="7",The Deuce - S02E07
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277397.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="2" episode="8",The Deuce - S02E08
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277398.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="2" episode="9",The Deuce - S02E09
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277399.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="3" episode="1",The Deuce - S03E01
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277505.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="3" episode="2",The Deuce - S03E02
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277506.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="3" episode="3",The Deuce - S03E03
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277507.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="3" episode="4",The Deuce - S03E04
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277508.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="3" episode="5",The Deuce - S03E05
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277509.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="3" episode="6",The Deuce - S03E06
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277510.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="3" episode="7",The Deuce - S03E07
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277511.mp4
+#EXTINF:-1 tvg-id="65817" tvg-name="The Deuce" tvg-logo="" group-title="HBO" series-name="" season="3" episode="8",The Deuce - S03E08
+http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/277512.mp4
 
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" series-name="" season="1" episode="1", - S01E01
 https?url=.mp4
