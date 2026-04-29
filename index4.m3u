@@ -1,4 +1,396 @@
 #EXTM3U
+#--- Live TV ---
+#EXTINF:-1 tvg-id="travelchannel.us" tvg-name="USA | Travel Channel" tvg-logo="http://sunset-app.com/picons/entertainment/traveltv.jpg" group-title="Entertainment",USA | Travel Channel
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36814.m3u8
+#EXTINF:-1 tvg-id="megatv.us" tvg-name="PR | MegaTV" tvg-logo="http://sunset-app.com/picons/puertorico/megatv.jpg" group-title="Puerto Rico",PR | MegaTV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/31140.m3u8
+#EXTINF:-1 tvg-id="telemundowkaq.us" tvg-name="PR | Telemundo San Juan" tvg-logo="http://sunset-app.com/picons/puertorico/telemundo.jpg" group-title="Puerto Rico",PR | Telemundo San Juan
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/31144.m3u8
+#EXTINF:-1 tvg-id="univisionwlii.us" tvg-name="PR | Tele 11" tvg-logo="http://sunset-app.com/picons/puertorico/tele11.jpg" group-title="Puerto Rico",PR | Tele 11
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/31145.m3u8
+#EXTINF:-1 tvg-id="wapatv.us" tvg-name="PR | WAPA" tvg-logo="http://sunset-app.com/picons/puertorico/wapa.jpg" group-title="Puerto Rico",PR | WAPA
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/31146.m3u8
+#EXTINF:-1 tvg-id="wapa2deportes.us" tvg-name="PR | WAPA 2" tvg-logo="http://sunset-app.com/picons/puertorico/wapa2.jpg" group-title="Puerto Rico",PR | WAPA 2
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/31147.m3u8
+#EXTINF:-1 tvg-id="comedycentral.us" tvg-name="USA | Comedy Central" tvg-logo="http://sunset-app.com/picons/entertainment/comedycentral.jpg" group-title="Entertainment",USA | Comedy Central
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36771.m3u8
+#EXTINF:-1 tvg-id="fxx.us" tvg-name="USA | FXX" tvg-logo="https://www.rbr.com/wp-content/uploads/FXX.jpg" group-title="Entertainment",USA | FXX
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36774.m3u8
+#EXTINF:-1 tvg-id="tvlandeast.us" tvg-name="USA | TV Land" tvg-logo="http://sunset-app.com/picons/entertainment/tvland.jpg" group-title="Entertainment",USA | TV Land
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36790.m3u8
+#EXTINF:-1 tvg-id="andtv.us" tvg-name="USA | OWN" tvg-logo="http://sunset-app.com/picons/entertainment/owntv.jpg" group-title="Entertainment",USA | OWN
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36791.m3u8
+#EXTINF:-1 tvg-id="syfy.us" tvg-name="USA | SyFy" tvg-logo="http://sunset-app.com/picons/entertainment/syfy.jpg" group-title="Entertainment",USA | SyFy
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36795.m3u8
+#EXTINF:-1 tvg-id="destinationamerica.us" tvg-name="USA | Destination America" tvg-logo="http://sunset-app.com/picons/entertainment/destinationamerica.jpg" group-title="Entertainment",USA | Destination America
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36796.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="USA | IFC" tvg-logo="http://sunset-app.com/picons/entertainment/ifgc.jpg" group-title="Entertainment",USA | IFC
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36797.m3u8
+#EXTINF:-1 tvg-id="wetv.us" tvg-name="USA | WE TV" tvg-logo="https://media.glassdoor.com/sqll/317277/we-tv-squarelogo-1429797307757.png" group-title="Entertainment",USA | WE TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36798.m3u8
+#EXTINF:-1 tvg-id="bbcamerica.us" tvg-name="USA | BBC AMERICA" tvg-logo="http://sunset-app.com/picons/news/bbcamerica.jpg" group-title="News",USA | BBC AMERICA
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36801.m3u8
+#EXTINF:-1 tvg-id="poptv.us" tvg-name="USA | POP" tvg-logo="http://sunset-app.com/picons/entertainment/poptv.jpg" group-title="Entertainment",USA | POP
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36813.m3u8
+#EXTINF:-1 tvg-id="viceland.us" tvg-name="USA | Viceland" tvg-logo="https://apprecs.org/ios/images/app-icons/256/be/1075922366.jpg" group-title="Entertainment",USA | Viceland
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36816.m3u8
+#EXTINF:-1 tvg-id="fusetv.us" tvg-name="USA | Fuse" tvg-logo="http://sunset-app.com/picons/entertainment/fuse.jpg" group-title="Entertainment",USA | Fuse
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36818.m3u8
+#EXTINF:-1 tvg-id="eentertainment.us" tvg-name="USA | E! Entertainment" tvg-logo="http://sunset-app.com/picons/entertainment/eentertainment.jpg" group-title="Entertainment",USA | E! Entertainment
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36820.m3u8
+#EXTINF:-1 tvg-id="fyi.us" tvg-name="USA | FYI" tvg-logo="http://sunset-app.com/picons/entertainment/fyi.jpg" group-title="Entertainment",USA | FYI
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36821.m3u8
+#EXTINF:-1 tvg-id="americanheroeschannel.us" tvg-name="USA | American Heroes" tvg-logo="http://sunset-app.com/picons/entertainment/americanheroes.jpg" group-title="Entertainment",USA | American Heroes
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36825.m3u8
+#EXTINF:-1 tvg-id="aande.us" tvg-name="USA | A&E" tvg-logo="http://sunset-app.com/picons/entertainment/a&e.jpg" group-title="Entertainment",USA | A&E
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36826.m3u8
+#EXTINF:-1 tvg-id="telemundowtmo.us" tvg-name="USA | Telemundo 51 Miami" tvg-logo="http://sunset-app.com/picons/TELEMUNDOS/51MIAMI.jpg" group-title="Telemundos",USA | Telemundo 51 Miami
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36874.m3u8
+#EXTINF:-1 tvg-id="telemundokxtx.us" tvg-name="USA | Telemundo 39 Dallas" tvg-logo="http://sunset-app.com/picons/TELEMUNDOS/39DALLAS.jpg" group-title="Telemundos",USA | Telemundo 39 Dallas
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36888.m3u8
+#EXTINF:-1 tvg-id="telemundoksts.us" tvg-name="USA | Telemundo 48 San Francisco" tvg-logo="http://sunset-app.com/picons/TELEMUNDOS/48SANFRANCISCO.jpg" group-title="Telemundos",USA | Telemundo 48 San Francisco
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/37194.m3u8
+#EXTINF:-1 tvg-id="outsidetv.us" tvg-name="USA | Outside TV" tvg-logo="http://sunset-app.com/picons/entertainment/outsidetv.jpg" group-title="Entertainment",USA | Outside TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36913.m3u8
+#EXTINF:-1 tvg-id="gameshownetwork.us" tvg-name="USA | Game Show" tvg-logo="http://sunset-app.com/picons/entertainment/gameshow.jpg" group-title="Entertainment",USA | Game Show
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43026.m3u8
+#EXTINF:-1 tvg-id="usanetwork.us" tvg-name="USA | USA Network" tvg-logo="http://sunset-app.com/picons/entertainment/usanetwork.jpg" group-title="Entertainment",USA | USA Network
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43015.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AR | A24" tvg-logo="http://sunset-app.com/picons/sudamerica/a24.jpg" group-title="Argentina",AR | A24
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67525.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AR | Canal 26" tvg-logo="https://i.postimg.cc/xjM6543q/canal26.jpg" group-title="Argentina",AR | Canal 26
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67523.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="AR | Telefe" tvg-logo="https://i.postimg.cc/Bbhz71MG/telefe.jpg" group-title="Argentina",AR | Telefe
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/181625.m3u8
+#EXTINF:-1 tvg-id="doityourselfnetwork.us" tvg-name="USA | Magnolia Network" tvg-logo="https://m.media-amazon.com/images/G/01/digital/video/merch/subs/benefit-id/m-r/magnolianetwork/heroes/featured-offer-tile_1920x1080._UR1920,1080_SX1440_FMjpg_.jpg" group-title="Entertainment",USA | Magnolia Network
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67763.m3u8
+#EXTINF:-1 tvg-id="bravo.us" tvg-name="USA | Bravo" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bravo_TV.svg/1200px-Bravo_TV.svg.png" group-title="Entertainment",USA | Bravo
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67784.m3u8
+#EXTINF:-1 tvg-id="amc.us" tvg-name="USA | AMC" tvg-logo="http://sunset-app.com/picons/entertainment/amc.jpg" group-title="Entertainment",USA | AMC
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/148821.m3u8
+#EXTINF:-1 tvg-id="cmctv.us" tvg-name="USA | CMT" tvg-logo="http://sunset-app.com/picons/entertainment/cmt.jpg" group-title="Entertainment",USA | CMT
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/148822.m3u8
+#EXTINF:-1 tvg-id="lifetimenetwork.us" tvg-name="USA | Lifetime" tvg-logo="http://sunset-app.com/picons/entertainment/lifetime.jpg" group-title="Entertainment",USA | Lifetime
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/148826.m3u8
+#EXTINF:-1 tvg-id="sundancetv.us" tvg-name="USA | Sundance" tvg-logo="http://sunset-app.com/picons/entertainment/sundancetv.jpg" group-title="Entertainment",USA | Sundance
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/148827.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="SV | Canal 2" tvg-logo="https://i.postimg.cc/d3hLvzJH/canal2.jpg" group-title="El Salvador",SV | Canal 2
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/130757.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="SV | Canal 4" tvg-logo="https://i.postimg.cc/8cxsCt51/canal4.jpg" group-title="El Salvador",SV | Canal 4
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/130758.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="SV | Canal 21" tvg-logo="https://i.postimg.cc/RFVWpWyz/canal21.jpg" group-title="El Salvador",SV | Canal 21
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/130761.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CR | Canal 4" tvg-logo="https://i.postimg.cc/6qpdWkr9/canal4.jpg" group-title="Costa Rica",CR | Canal 4
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68297.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CR | Canal 6" tvg-logo="https://i.postimg.cc/66MrjQKT/canal6.jpg" group-title="Costa Rica",CR | Canal 6
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68298.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CR | TD+" tvg-logo="https://i.postimg.cc/MH31v951/tdmas.jpg" group-title="Costa Rica",CR | TD+
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68303.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CR | Telered" tvg-logo="https://i.postimg.cc/G2QF1Ls7/telered.jpg" group-title="Costa Rica",CR | Telered
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68306.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CR | Teletica" tvg-logo="http://sunset-app.com/picons/sudamerica/teletica7.jpg" group-title="Costa Rica",CR | Teletica
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68310.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CR | Teletica HD" tvg-logo="http://sunset-app.com/picons/sudamerica/teletica7.jpg" group-title="Costa Rica",CR | Teletica HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68295.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CR | Tigo Sports" tvg-logo="http://sunset-app.com/picons/Deportes/tigosports.jpg" group-title="Costa Rica",CR | Tigo Sports
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/181731.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CR | Tigo Sports HD" tvg-logo="http://sunset-app.com/picons/Deportes/tigosports.jpg" group-title="Costa Rica",CR | Tigo Sports HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68299.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EC | Ecuador TV" tvg-logo="https://i.postimg.cc/Z5gj7bjy/ecuadortv.jpg" group-title="Ecuador",EC | Ecuador TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67615.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EC | Ecuavisa" tvg-logo="https://i.postimg.cc/439PjDF2/ecuavisa.jpg" group-title="Ecuador",EC | Ecuavisa
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67613.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EC | Ecuavisa Internacional" tvg-logo="https://i.postimg.cc/439PjDF2/ecuavisa.jpg" group-title="Ecuador",EC | Ecuavisa Internacional
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67622.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EC | Gamavision" tvg-logo="https://i.postimg.cc/DZ36hx9v/gamavision.jpg" group-title="Ecuador",EC | Gamavision
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67612.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EC | GolTV" tvg-logo="https://i.postimg.cc/Jn3qzb8b/goltv.jpg" group-title="Ecuador",EC | GolTV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67611.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EC | TC Televisión" tvg-logo="https://i.postimg.cc/xjR5rytQ/tctelevision.jpg" group-title="Ecuador",EC | TC Televisión
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67624.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EC | Teleamazonas" tvg-logo="https://i.postimg.cc/CLxNwBQq/teleamazonas.jpg" group-title="Ecuador",EC | Teleamazonas
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67610.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EC | RTS" tvg-logo="https://i.postimg.cc/5ynSwb6y/rts.jpg" group-title="Ecuador",EC | RTS
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67616.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="EC | TVC" tvg-logo="https://i.postimg.cc/15vvFcqB/tvc.jpg" group-title="Ecuador",EC | TVC
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67620.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CL | TV Chile" tvg-logo="https://i.postimg.cc/DfCxtXSG/tvchile.jpg" group-title="Chile",CL | TV Chile
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67557.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CL | La Red" tvg-logo="https://i.postimg.cc/SN3DKb7N/lared.jpg" group-title="Chile",CL | La Red
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67560.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CL | Rec TV" tvg-logo="https://i.postimg.cc/8PjZDzv0/rectv.jpg" group-title="Chile",CL | Rec TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67561.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CL | CDO Basico" tvg-logo="https://i.postimg.cc/Qd7S9Y0g/cdo.jpg" group-title="Chile",CL | CDO Basico
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67562.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CL | Teletrak" tvg-logo="https://i.postimg.cc/7LMVXGvf/teletrak.jpg" group-title="Chile",CL | Teletrak
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67564.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CL | CDO Premium" tvg-logo="https://i.postimg.cc/Qd7S9Y0g/cdo.jpg" group-title="Chile",CL | CDO Premium
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67567.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CL | Mega" tvg-logo="https://i.postimg.cc/CKV7jCQ3/mega.jpg" group-title="Chile",CL | Mega
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67568.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CL | ESPN" tvg-logo="http://sunset-app.com/picons/Deportes/espn.jpg" group-title="Chile",CL | ESPN
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67571.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CL | Canal 13" tvg-logo="https://i.postimg.cc/QxDhFv8s/canal13.jpg" group-title="Chile",CL | Canal 13
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67572.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CL | TV+" tvg-logo="https://i.postimg.cc/wvYhK6pn/tevemas.jpg" group-title="Chile",CL | TV+
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67573.m3u8
+#EXTINF:-1 tvg-id="foxnews.us" tvg-name="USA | FOX News" tvg-logo="http://sunset-app.com/picons/news/FOXNEWS.jpg" group-title="News",USA | FOX News
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/33993.m3u8
+#EXTINF:-1 tvg-id="weatherchannel.us" tvg-name="USA | The Weather Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Weather_Channel_logo_2005-present.svg/1200px-The_Weather_Channel_logo_2005-present.svg.png" group-title="News",USA | The Weather Channel
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67765.m3u8
+#EXTINF:-1 tvg-id="foxbusiness.us" tvg-name="USA | FOX Business" tvg-logo="http://sunset-app.com/picons/news/FOXBUSINESS.jpg" group-title="News",USA | FOX Business
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67933.m3u8
+#EXTINF:-1 tvg-id="bbcworldnewsnorthamerica.us" tvg-name="USA | BBC World News FHD" tvg-logo="http://sunset-app.com/picons/news/BBCWORLD.jpg" group-title="News",USA | BBC World News FHD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/121408.m3u8
+#EXTINF:-1 tvg-id="espn.us" tvg-name="USA | ESPN " tvg-logo="http://sunset-app.com/picons/sports/espntv.jpg" group-title="Sports",USA | ESPN 
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36748.m3u8
+#EXTINF:-1 tvg-id="espnnews.us" tvg-name="USA | ESPN News" tvg-logo="http://sunset-app.com/picons/sports/espnnews.jpg" group-title="Sports",USA | ESPN News
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36756.m3u8
+#EXTINF:-1 tvg-id="espn2.us" tvg-name="USA | ESPN 2 " tvg-logo="http://sunset-app.com/picons/sports/espn2.jpg" group-title="Sports",USA | ESPN 2 
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43574.m3u8
+#EXTINF:-1 tvg-id="foxsports1.us" tvg-name="USA | FOX Sports 1" tvg-logo="http://sunset-app.com/picons/sports/foxsports1.jpg" group-title="Sports",USA | FOX Sports 1
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36904.m3u8
+#EXTINF:-1 tvg-id="foxsports2.us" tvg-name="USA | FOX Sports 2" tvg-logo="http://sunset-app.com/picons/sports/foxsports2.jpg" group-title="Sports",USA | FOX Sports 2
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36905.m3u8
+#EXTINF:-1 tvg-id="ballysportsmidwestkansascity.us" tvg-name="USA | Bally Sports Kansas" tvg-logo="http://sunset-app.com/picons/sports/BALLY/KANSAS.jpg" group-title="Sports",USA | Bally Sports Kansas
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43575.m3u8
+#EXTINF:-1 tvg-id="ballysportsdetroit.us" tvg-name="USA | Bally Sports Detroit" tvg-logo="http://sunset-app.com/picons/sports/BALLY/DETROIT.jpg" group-title="Sports",USA | Bally Sports Detroit
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43577.m3u8
+#EXTINF:-1 tvg-id="ballysportsneworleans.us" tvg-name="USA | Bally Sports New Orleans" tvg-logo="http://sunset-app.com/picons/sports/BALLY/NEWORLEANS.jpg" group-title="Sports",USA | Bally Sports New Orleans
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43578.m3u8
+#EXTINF:-1 tvg-id="ballysportsnorth.us" tvg-name="USA | Bally Sports North" tvg-logo="http://sunset-app.com/picons/sports/BALLY/NORTH.jpg" group-title="Sports",USA | Bally Sports North
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43579.m3u8
+#EXTINF:-1 tvg-id="ballysportssandiego.us" tvg-name="USA | Bally Sports San Diego" tvg-logo="http://sunset-app.com/picons/sports/BALLY/SANDIEGO.jpg" group-title="Sports",USA | Bally Sports San Diego
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43580.m3u8
+#EXTINF:-1 tvg-id="ballysportssouth.us" tvg-name="USA | Bally Sports South" tvg-logo="http://sunset-app.com/picons/sports/BALLY/SOUTHSNANTONIO.jpg" group-title="Sports",USA | Bally Sports South
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43581.m3u8
+#EXTINF:-1 tvg-id="ballysportssun.us" tvg-name="USA | Bally Sports Sun " tvg-logo="http://sunset-app.com/picons/sports/BALLY/SUNMIAMI.jpg" group-title="Sports",USA | Bally Sports Sun 
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43584.m3u8
+#EXTINF:-1 tvg-id="ballysportsohio.us" tvg-name="USA | Bally Sports Ohio" tvg-logo="http://sunset-app.com/picons/sports/BALLY/OHIO.jpg" group-title="Sports",USA | Bally Sports Ohio
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43598.m3u8
+#EXTINF:-1 tvg-id="cbssportsnetworkusa.us" tvg-name="USA | CBS Sports" tvg-logo="http://sunset-app.com/picons/sports/cbssports.jpg" group-title="Sports",USA | CBS Sports
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36901.m3u8
+#EXTINF:-1 tvg-id="yesnetwork.us" tvg-name="USA | YES NETWork" tvg-logo="http://sunset-app.com/picons/sports/yesnet.jpg" group-title="Sports",USA | YES NETWork
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/123867.m3u8
+#EXTINF:-1 tvg-id="spectrumsportsnet.us" tvg-name="USA | SNY" tvg-logo="http://sunset-app.com/picons/sports/sny.jpg" group-title="Sports",USA | SNY
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/123861.m3u8
+#EXTINF:-1 tvg-id="newenglandsportsnetworkplus.us" tvg-name="USA | NESN" tvg-logo="http://sunset-app.com/picons/sports/nesns.jpg" group-title="Sports",USA | NESN
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43599.m3u8
+#EXTINF:-1 tvg-id="nhlnetwork.us" tvg-name="USA | NHL Network" tvg-logo="http://sunset-app.com/picons/sports/nhl.jpg" group-title="Sports",USA | NHL Network
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43590.m3u8
+#EXTINF:-1 tvg-id="newenglandsportsnetworkplus.us" tvg-name="USA | NESN Plus " tvg-logo="http://sunset-app.com/picons/sports/nesnplus.jpg" group-title="Sports",USA | NESN Plus 
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43585.m3u8
+#EXTINF:-1 tvg-id="tennischannel.us" tvg-name="USA | Tennis Channel" tvg-logo="http://sunset-app.com/picons/sports/tennischann.jpg" group-title="Sports",USA | Tennis Channel
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36917.m3u8
+#EXTINF:-1 tvg-id="goltv.us" tvg-name="USA | Gol TV" tvg-logo="http://sunset-app.com/picons/sports/goltv.jpg" group-title="Sports",USA | Gol TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36916.m3u8
+#EXTINF:-1 tvg-id="sportsmanchannel.us" tvg-name="USA | Sportsman" tvg-logo="http://sunset-app.com/picons/sports/sportsman.jpg" group-title="Sports",USA | Sportsman
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36915.m3u8
+#EXTINF:-1 tvg-id="worldfishingnetwork.us" tvg-name="USA | World Fishing Network" tvg-logo="http://sunset-app.com/picons/sports/worldfishing.jpg" group-title="Sports",USA | World Fishing Network
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36914.m3u8
+#EXTINF:-1 tvg-id="outdoorchannel.us" tvg-name="USA | Outdoor" tvg-logo="http://sunset-app.com/picons/entertainment/outdoorchann.jpg" group-title="Sports",USA | Outdoor
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36912.m3u8
+#EXTINF:-1 tvg-id="golfchannel.us" tvg-name="USA | The Golf Channel" tvg-logo="http://sunset-app.com/picons/sports/golfchann.jpg" group-title="Sports",USA | The Golf Channel
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36910.m3u8
+#EXTINF:-1 tvg-id="nflnetwork.us" tvg-name="USA | NFL Network" tvg-logo="http://sunset-app.com/picons/sports/nflnet.jpg" group-title="Sports",USA | NFL Network
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36908.m3u8
+#EXTINF:-1 tvg-id="nbatv.us" tvg-name="USA | NBA TV" tvg-logo="http://sunset-app.com/picons/sports/nbatv.jpg" group-title="Sports",USA | NBA TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36906.m3u8
+#EXTINF:-1 tvg-id="fightnetwork.us" tvg-name="USA | The Fight Network" tvg-logo="http://sunset-app.com/picons/sports/fightnetwork.jpg" group-title="Sports",USA | The Fight Network
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36903.m3u8
+#EXTINF:-1 tvg-id="oxygen.us" tvg-name="USA | Oxygen" tvg-logo="http://sunset-app.com/picons/movies/oxygen.jpg" group-title="Entertainment",USA | Oxygen
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154928.m3u8
+#EXTINF:-1 tvg-id="freeform.us" tvg-name="USA | Freeform" tvg-logo="http://sunset-app.com/picons/entertainment/freeform.jpg" group-title="Entertainment",USA | Freeform
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154907.m3u8
+#EXTINF:-1 tvg-id="axstv.us" tvg-name="USA | AxsTV" tvg-logo="http://sunset-app.com/picons/entertainment/axstv.jpg" group-title="Entertainment",USA | AxsTV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/155919.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GT | Guatevisión" tvg-logo="https://i.postimg.cc/s290s02r/guatevision.jpg" group-title="Guatemala",GT | Guatevisión
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68326.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GT | Canal Antigua" tvg-logo="https://i.postimg.cc/W1ZHf4Lt/canalantigua.jpg" group-title="Guatemala",GT | Canal Antigua
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68324.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GT | Canal 7" tvg-logo="https://i.postimg.cc/V6fZ6BSb/canal7.jpg" group-title="Guatemala",GT | Canal 7
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68323.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GT | Canal 3" tvg-logo="https://i.postimg.cc/VNcVycmg/canal3.jpg" group-title="Guatemala",GT | Canal 3
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68322.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="GT | Canal 11" tvg-logo="https://i.postimg.cc/qR1bChnD/canal11.jpg" group-title="Guatemala",GT | Canal 11
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/67515.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="PR | Punto 2" tvg-logo="http://sunset-app.com/picons/puertorico/punto2.jpg" group-title="Puerto Rico",PR | Punto 2
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68335.m3u8
+#EXTINF:-1 tvg-id="bbcworldnewsnorthamerica.us" tvg-name="USA | WOBI" tvg-logo="http://sunset-app.com/picons/news/wobi.jpg" group-title="News",USA | WOBI
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/156449.m3u8
+#EXTINF:-1 tvg-id="espnu.us" tvg-name="USA | ESPN U" tvg-logo="http://sunset-app.com/picons/sports/espnu.jpg" group-title="Sports",USA | ESPN U
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154889.m3u8
+#EXTINF:-1 tvg-id="accnetwork.us" tvg-name="USA | ESPN ACCN" tvg-logo="http://sunset-app.com/picons/sports/espnaccn.jpg" group-title="Sports",USA | ESPN ACCN
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154888.m3u8
+#EXTINF:-1 tvg-id="fxm.us" tvg-name="USA | FX Movie Channel" tvg-logo="http://sunset-app.com/picons/movies/fxmoviechann.jpg" group-title="Movies",USA | FX Movie Channel
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/148824.m3u8
+#EXTINF:-1 tvg-id="hallmark.us" tvg-name="USA | Hallmark" tvg-logo="http://sunset-app.com/picons/movies/hallmark.jpg" group-title="Movies",USA | Hallmark
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/148825.m3u8
+#EXTINF:-1 tvg-id="hallmarkmoviesmysteries.us" tvg-name="USA | Hallmark Movies & Mysteries" tvg-logo="https://cdn.blog.bendbroadband.com/wp-content/uploads/sites/3/2016/07/HMM_logo_black.jpg" group-title="Movies",USA | Hallmark Movies & Mysteries
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154968.m3u8
+#EXTINF:-1 tvg-id="paramountnetwork.us" tvg-name="USA | Paramount" tvg-logo="http://sunset-app.com/picons/movies/paramount.jpg" group-title="Movies",USA | Paramount
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36773.m3u8
+#EXTINF:-1 tvg-id="showtime.us" tvg-name="USA | Showtime" tvg-logo="http://sunset-app.com/picons/movies/showtimetv.jpg" group-title="Movies",USA | Showtime
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154952.m3u8
+#EXTINF:-1 tvg-id="showtime2.us" tvg-name="USA | Showtime 2" tvg-logo="http://sunset-app.com/picons/movies/showtime2.jpg" group-title="Movies",USA | Showtime 2
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154954.m3u8
+#EXTINF:-1 tvg-id="afizzionados.mx" tvg-name="USA | Showtime BET" tvg-logo="http://sunset-app.com/picons/movies/showtimebet.jpg" group-title="Movies",USA | Showtime BET
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162542.m3u8
+#EXTINF:-1 tvg-id="showtimeextreme.us" tvg-name="USA | Showtime Extreme" tvg-logo="http://sunset-app.com/picons/movies/showtimeextreme.jpg" group-title="Movies",USA | Showtime Extreme
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36930.m3u8
+#EXTINF:-1 tvg-id="showtimefamilyzone.us" tvg-name="USA | Showtime Family Zone" tvg-logo="http://sunset-app.com/picons/movies/showtimefamily.jpg" group-title="Movies",USA | Showtime Family Zone
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36831.m3u8
+#EXTINF:-1 tvg-id="showtimenext.us" tvg-name="USA | Showtime Next" tvg-logo="http://sunset-app.com/picons/movies/showtimenext.jpg" group-title="Movies",USA | Showtime Next
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36932.m3u8
+#EXTINF:-1 tvg-id="showtimewest.us" tvg-name="USA | Showtime West" tvg-logo="http://sunset-app.com/picons/movies/showtimewest.jpg" group-title="Movies",USA | Showtime West
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154953.m3u8
+#EXTINF:-1 tvg-id="showtimewomen.us" tvg-name="USA | Showtime Women" tvg-logo="http://sunset-app.com/picons/movies/showtimewomen.jpg" group-title="Movies",USA | Showtime Women
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154959.m3u8
+#EXTINF:-1 tvg-id="starzcinema.us" tvg-name="USA | Starz Cinema" tvg-logo="http://sunset-app.com/picons/movies/starzcinema.jpg" group-title="Movies",USA | Starz Cinema
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36844.m3u8
+#EXTINF:-1 tvg-id="starzencore.us" tvg-name="USA | Starz Encore" tvg-logo="http://sunset-app.com/picons/movies/starzencore.jpg" group-title="Movies",USA | Starz Encore
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36929.m3u8
+#EXTINF:-1 tvg-id="starzencoreaction.us" tvg-name="USA | Starz Encore Action" tvg-logo="http://sunset-app.com/picons/movies/starzencoreaction.jpg" group-title="Movies",USA | Starz Encore Action
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154962.m3u8
+#EXTINF:-1 tvg-id="starzencoreblack.us" tvg-name="USA | Starz Encore Black" tvg-logo="http://sunset-app.com/picons/movies/starzencoreblack.jpg" group-title="Movies",USA | Starz Encore Black
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154963.m3u8
+#EXTINF:-1 tvg-id="starzencoreclassics.us" tvg-name="USA | Starz Encore Classic" tvg-logo="http://sunset-app.com/picons/movies/starzencoreclassic.jpg" group-title="Movies",USA | Starz Encore Classic
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36836.m3u8
+#EXTINF:-1 tvg-id="starzencorefamily.us" tvg-name="USA | Starz Encore Family" tvg-logo="http://sunset-app.com/picons/movies/starzencorefamily.jpg" group-title="Movies",USA | Starz Encore Family
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154973.m3u8
+#EXTINF:-1 tvg-id="starzencoresuspense.us" tvg-name="USA | Starz Encore Suspense" tvg-logo="http://sunset-app.com/picons/movies/starzencoresuspense.jpg" group-title="Movies",USA | Starz Encore Suspense
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154965.m3u8
+#EXTINF:-1 tvg-id="starzencorewesterns.us" tvg-name="USA | Starz Encore Westerns" tvg-logo="http://sunset-app.com/picons/movies/starzencorewestern.jpg" group-title="Movies",USA | Starz Encore Westerns
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154961.m3u8
+#EXTINF:-1 tvg-id="starzinblack.us" tvg-name="USA | Starz in Black" tvg-logo="http://sunset-app.com/picons/movies/starzencoreblack.jpg" group-title="Movies",USA | Starz in Black
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154972.m3u8
+#EXTINF:-1 tvg-id="starzkidsfamily.us" tvg-name="USA | Starz Kids & Family" tvg-logo="http://sunset-app.com/picons/movies/starzkids.jpg" group-title="Movies",USA | Starz Kids & Family
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36842.m3u8
+#EXTINF:-1 tvg-id="disneyjunior.us" tvg-name="USA | Disney Junior" tvg-logo="http://sunset-app.com/picons/kidsUSA/disneyjr.jpg" group-title="Kids",USA | Disney Junior
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36741.m3u8
+#EXTINF:-1 tvg-id="disneychannel.us" tvg-name="USA | Disney Channel" tvg-logo="http://sunset-app.com/picons/kidsUSA/disneychannel.jpg" group-title="Kids",USA | Disney Channel
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162335.m3u8
+#EXTINF:-1 tvg-id="nickelodeon.us" tvg-name="USA | Nickelodeon" tvg-logo="http://sunset-app.com/picons/kidsUSA/nickelodeon.jpg" group-title="Kids",USA | Nickelodeon
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36745.m3u8
+#EXTINF:-1 tvg-id="nicktoons.us" tvg-name="USA | Nicktoons" tvg-logo="http://sunset-app.com/picons/kidsUSA/nicktoons.jpg" group-title="Kids",USA | Nicktoons
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36743.m3u8
+#EXTINF:-1 tvg-id="pbskids.us" tvg-name="USA | PBS Kids" tvg-logo="http://sunset-app.com/picons/kidsUSA/pbskids.jpg" group-title="Kids",USA | PBS Kids
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/43025.m3u8
+#EXTINF:-1 tvg-id="starzkidsfamily.us" tvg-name="USA | Starz Kids & Family" tvg-logo="http://sunset-app.com/picons/kidsUSA/starzkids.jpg" group-title="Kids",USA | Starz Kids & Family
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162421.m3u8
+#EXTINF:-1 tvg-id="teennick.us" tvg-name="USA | TeenNick" tvg-logo="http://sunset-app.com/picons/kidsUSA/teennick.jpg" group-title="Kids",USA | TeenNick
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36875.m3u8
+#EXTINF:-1 tvg-id="telemundo.mx" tvg-name="USA | Telemundo Internacional" tvg-logo="http://sunset-app.com/picons/TELEMUNDOS/INTERNACIONAL.jpg" group-title="Telemundos",USA | Telemundo Internacional
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/31130.m3u8
+#EXTINF:-1 tvg-id="telemundowneu.us" tvg-name="USA | Telemundo 62 Boston" tvg-logo="http://sunset-app.com/picons/TELEMUNDOS/BOSTON.jpg" group-title="Telemundos",USA | Telemundo 62 Boston
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36882.m3u8
+#EXTINF:-1 tvg-id="360northanchorage.us" tvg-name="USA | Telemundo 52 Denver" tvg-logo="http://sunset-app.com/picons/TELEMUNDOS/DENVER.jpg" group-title="Telemundos",USA | Telemundo 52 Denver
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36885.m3u8
+#EXTINF:-1 tvg-id="telemundoktmd.us" tvg-name="USA | Telemundo 47 Houston" tvg-logo="http://sunset-app.com/picons/TELEMUNDOS/HOUSTON.jpg" group-title="Telemundos",USA | Telemundo 47 Houston
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/37183.m3u8
+#EXTINF:-1 tvg-id="telemundokblr.us" tvg-name="USA | Telemundo 39 Las Vegas" tvg-logo="http://sunset-app.com/picons/TELEMUNDOS/LASVEGAS.jpg" group-title="Telemundos",USA | Telemundo 39 Las Vegas
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36880.m3u8
+#EXTINF:-1 tvg-id="aymsports.mx" tvg-name="+18 | Brazzers" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Brazzers
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/31149.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Playboy" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Playboy
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/32249.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Sextreme" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Sextreme
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/32260.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Taboo" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Taboo
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68758.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Sexmex" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Sexmex
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/148536.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Venus" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Venus
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/32509.m3u8
+#EXTINF:-1 tvg-id="starzencorewest.us" tvg-name="USA | Starz Encore West" tvg-logo="http://sunset-app.com/picons/movies/starzencorewestern.jpg" group-title="Movies",USA | Starz Encore West
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/154964.m3u8
+#EXTINF:-1 tvg-id="spectrumsportsnetla.us" tvg-name="USA | Spectrum SportsNet Dodgers" tvg-logo="http://sunset-app.com/picons/sports/spectrum%20dodgers.jpg" group-title="Sports",USA | Spectrum SportsNet Dodgers
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162851.m3u8
+#EXTINF:-1 tvg-id="goltv.us" tvg-name="USA | GolTV" tvg-logo="http://sunset-app.com/picons/sports/goltv.jpg" group-title="Sports",USA | GolTV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162362.m3u8
+#EXTINF:-1 tvg-id="wapaamerica.us" tvg-name="PR | WAPA America" tvg-logo="http://sunset-app.com/picons/puertorico/wapa.jpg" group-title="Puerto Rico",PR | WAPA America
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162298.m3u8
+#EXTINF:-1 tvg-id="bet.us" tvg-name="USA | BET" tvg-logo="http://sunset-app.com/picons/entertainment/betnetwork.jpg" group-title="Entertainment",USA | BET
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162313.m3u8
+#EXTINF:-1 tvg-id="mlbnetwork.us" tvg-name="USA | MLB Network HD" tvg-logo="http://sunset-app.com/picons/sports/mlbnet.jpg" group-title="Sports",USA | MLB Network HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162973.m3u8
+#EXTINF:-1 tvg-id="thecowboychannel.us" tvg-name="Cowboy Channel" tvg-logo="https://m.media-amazon.com/images/I/51wp3U6WWHL.png" group-title="Sports",Cowboy Channel
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/163705.m3u8
+#EXTINF:-1 tvg-id="accuweather.us" tvg-name="USA | AccuWeather" tvg-logo="http://sunset-app.com/picons/news/accuweather.jpg" group-title="News",USA | AccuWeather
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162302.m3u8
+#EXTINF:-1 tvg-id="plutotvcomedy.us" tvg-name="USA | Comedy TV" tvg-logo="http://sunset-app.com/picons/entertainment/comedytv.jpg" group-title="Entertainment",USA | Comedy TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162329.m3u8
+#EXTINF:-1 tvg-id="ovation.us" tvg-name="USA | Ovation" tvg-logo="http://sunset-app.com/picons/entertainment/ovation.jpg" group-title="Entertainment",USA | Ovation
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162397.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="PR | WIPR" tvg-logo="http://sunset-app.com/picons/puertorico/wipr.jpg" group-title="Puerto Rico",PR | WIPR
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/156921.m3u8
+#EXTINF:-1 tvg-id="stadium.us" tvg-name="USA | Stadium Plus" tvg-logo="http://sunset-app.com/picons/sports/stadiumplus.jpg" group-title="Sports",USA | Stadium Plus
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/166379.m3u8
+#EXTINF:-1 tvg-id="stadium.us" tvg-name="USA | Stadium" tvg-logo="http://sunset-app.com/picons/sports/stadiumtv.jpg" group-title="Sports",USA | Stadium
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/162558.m3u8
+#EXTINF:-1 tvg-id="starzedge.us" tvg-name="USA | Starz Edge" tvg-logo="http://sunset-app.com/picons/movies/starzedge.jpg" group-title="Movies",USA | Starz Edge
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/36841.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | POV" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | POV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68743.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Latina" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Latina
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68744.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Candy TV" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Candy TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68722.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | NetXXX" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | NetXXX
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68710.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | RedLigth" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | RedLigth
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68735.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Sextosenso" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Sextosenso
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68736.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Big Dick" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Big Dick
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68742.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Blue Huster TV" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Blue Huster TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68721.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="+18 | Extasis" tvg-logo="https://t4.ftcdn.net/jpg/05/65/56/49/360_F_565564992_4WdhtJe7pxhlZcDTuhvAhsrNp8S1jNaR.jpg" group-title="Adultos",+18 | Extasis
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68701.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BO | Red Uno" tvg-logo="https://i.postimg.cc/4xVpPHf7/reduno.jpg" group-title="Bolivia",BO | Red Uno
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68403.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| A&E HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/1280px-A%26E_Network_logo.svg.png" group-title="Canada",CAN| A&E HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68222.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| COOKING CHANNEL HD" tvg-logo="https://getvectorlogo.com/wp-content/uploads/2020/02/cooking-channel-vector-logo.png" group-title="Canada",CAN| COOKING CHANNEL HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68231.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| DISNEY JR  HD" tvg-logo="https://i.dlpng.com/static/png/488471_preview.png" group-title="Canada",CAN| DISNEY JR  HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68233.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| GLOBAL TORONTO HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Globaltoronto.svg/1200px-Globaltoronto.svg.png" group-title="Canada",CAN| GLOBAL TORONTO HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68236.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| SPORTS NET 360 HD" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/sn360.png" group-title="Canada",CAN| SPORTS NET 360 HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68244.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| SPORTS NET ONE HD" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/sportsnetone.png" group-title="Canada",CAN| SPORTS NET ONE HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68246.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| SUPER ECRAN 1 HD" tvg-logo="https://www.fibreop.ca/binaries/small/content/gallery/common_en/tv/channel-logos/superecran1.png" group-title="Canada",CAN| SUPER ECRAN 1 HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68251.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| SUPER ECRAN 2" tvg-logo="https://www.fibreop.ca/binaries/small/content/gallery/common_en/tv/channel-logos/superecran2.png" group-title="Canada",CAN| SUPER ECRAN 2
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68252.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| TSN 1 HD" tvg-logo="https://logodix.com/logo/1906199.png" group-title="Canada",CAN| TSN 1 HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68258.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| TSN 3 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/TSN3.svg/1280px-TSN3.svg.png" group-title="Canada",CAN| TSN 3 HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68260.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CAN| TSN 4 HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TSN4.svg/1280px-TSN4.svg.png" group-title="Canada",CAN| TSN 4 HD
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68261.m3u8
+#EXTINF:-1 tvg-id="atandtsportsnetsouthwest.us" tvg-name="Sports | AT&T SPORTS NET" tvg-logo="http://sunset-app.com/picons/sports/atsports.jpg" group-title="Sports",Sports | AT&T SPORTS NET
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/66944.m3u8
+#EXTINF:-1 tvg-id="cozitvla.us" tvg-name="USA | COZI" tvg-logo="http://sunset-app.com/picons/entertainment/cozi.jpg" group-title="Entertainment",USA | COZI
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/169101.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="PR | Buena TV" tvg-logo="http://sunset-app.com/picons/puertorico/buenatv.jpg" group-title="Puerto Rico",PR | Buena TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68337.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="PA | RCP TV" tvg-logo="https://i.postimg.cc/bvFRyWkH/rpc.jpg" group-title="Panama",PA | RCP TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68312.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="PA | Telemetro" tvg-logo="https://i.postimg.cc/rm0NKj96/telemetro.jpg" group-title="Panama",PA | Telemetro
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68313.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="PA | TVMax" tvg-logo="https://i.postimg.cc/ncvT4dfp/tvmax.jpg" group-title="Panama",PA | TVMax
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68314.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="PA | SERTV" tvg-logo="https://i.postimg.cc/nLLktpjh/sertv.jpg" group-title="Panama",PA | SERTV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/68315.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="BO | Bolivia TV" tvg-logo="https://i.postimg.cc/cLw0RdDM/boliviatv.jpg" group-title="Bolivia",BO | Bolivia TV
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/165174.m3u8
+#EXTINF:-1 tvg-id="telemundowsns.us" tvg-name="USA | Telemundo 44 Chicago" tvg-logo="http://sunset-app.com/picons/entretenimiento/telemundo.jpg" group-title="Telemundos",USA | Telemundo 44 Chicago
+http://tecnomolly.com:8080/live/Cmalagon/dWm87EDuu2TY/172081.m3u8
+
 
 # --- MOVIES SECTION ---
 #EXTINF:-1 tvg-id="tt1375666" tvg-name="Vanity" tvg-logo="https://imgs1cdn.adultempire.com/products/89/4541689h.jpg" group-title="Wicked",Vanity -Wicked Pictures (2023)
