@@ -277,8 +277,21 @@ https://cloudstorage.bar/7634510295141974072/Aquaman.and.the.Lost.Kingdom.2K.Blu
 https://backup-cdn.indexer.eu.org/dl/AgADuQsAAuRkqFU/BAACAgUAAyEFAATVzXGwAAMHafOihjMBmDm67jE6U3TpblKG41gAArkLAALkZKhVstiDGbq5vr0eBA/3503913451/The_Flash_2023_1080p_WEBRip_x264_Hindi_DDP5_1_384Kbps_+_English.mkv
 #EXTINF:-1 tvg-id="297762" tvg-name="Wonder Woman 2017" tvg-logo="https://media.themoviedb.org/t/p/original/v4ncgZjG2Zu8ZW5al1vIZTsSjqX.jpg" group-title="DC Movies",Wonder Woman
 https://cloudstorage.bar/7635013330301616128/Wonder.Woman.2017.1080p.Bluray.mkv
+#EXTINF:-1 tvg-id="464052" tvg-name="Wonder Woman 1984 2021" tvg-logo="https://media.themoviedb.org/t/p/original/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" group-title="DC Movies",Wonder Woman 1984
+https://cloudstorage.bar/7635013845697691704/Wonder.Woman.1984.1080p.Bluray.mp4
+#EXTINF:-1 tvg-id="297761" tvg-name="Suicide Squad 2016" tvg-logo="https://media.themoviedb.org/t/p/original/sk3FZgh3sRrmr8vyhaitNobMcfh.jpg" group-title="DC Movies",Suicide Squad
+https://cloudstorage.bar/7635014442698145900/Suicide.Squad.2016.Extended.1080p.Bluray.mp4
+#EXTINF:-1 tvg-id="436969" tvg-name="The Suicide Squad 2022" tvg-logo="https://media.themoviedb.org/t/p/original/q61qEyssk2ku3okWICKArlAdhBn.jpg" group-title="DC Movies",The Suicide Squad
+https://cloudstorage.bar/7635015005338861896/The.Suicide.Squad.2021.1080p.Bluray.mkv
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
 ?list=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
+?list=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
+?list=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
+?list=.mp4
+
 
 # --- SERIES SECTION ---
 #EXTINF:-1 tvg-id="202411" tvg-name="Monarch: Legacy of Monsters" tvg-logo="https://media.themoviedb.org/t/p/original/7LBbaEaLSbqdviBYaSS1rRPMnrs.jpg" group-title="Apple Studios" series-name="Monarch: Legacy of Monsters" season="1" episode="1",Monarch: Legacy of Monsters - S01E01
@@ -289,7 +302,8 @@ https://hub.yummy.monster/6a32e1b82ebf8910443b41f880b5740f?token=1776438953?url=
 https://hub.yummy.monster/1ba7ca790d43b380413295dea7cb4b2a?token=1776439039?url=.mp4
 #EXTINF:-1 tvg-id="202411" tvg-name="Monarch: Legacy of Monsters" tvg-logo="" group-title="Apple Studios" series-name="Monarch: Legacy of Monsters" season="1" episode="4",Monarch: Legacy of Monsters - S01E04
 https://hub.yummy.monster/0f02ccf170e2c8cb43c0710576ed6e66?token=1776439058?url=.mp4
-#EXTINF:-1 tvg-id="202411" tvg-name="Monarch: Legacy of Monsters" tvg-logo="" group-title="Apple Studios" series-name="Monarch: Legacy of Monsters" season="1" episode="5",Monarch: Legacy of Monsters - S01E05
+#EX
+TINF:-1 tvg-id="202411" tvg-name="Monarch: Legacy of Monsters" tvg-logo="" group-title="Apple Studios" series-name="Monarch: Legacy of Monsters" season="1" episode="5",Monarch: Legacy of Monsters - S01E05
 https://hub.yummy.monster/22a597afcd9bb9f3396d27fc766dc34e?token=1776439078?url=.mp4
 #EXTINF:-1 tvg-id="202411" tvg-name="Monarch: Legacy of Monsters" tvg-logo="" group-title="Apple Studios" series-name="Monarch: Legacy of Monsters" season="1" episode="6",Monarch: Legacy of Monsters - S01E06
 https://hub.yummy.monster/172b7a0a81c788270368a7c32451faa5?token=1776439104?url=.mp4
