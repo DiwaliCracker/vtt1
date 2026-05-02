@@ -283,6 +283,26 @@ https://cloudstorage.bar/7635013845697691704/Wonder.Woman.1984.1080p.Bluray.mp4
 https://cloudstorage.bar/7635014442698145900/Suicide.Squad.2016.Extended.1080p.Bluray.mp4
 #EXTINF:-1 tvg-id="436969" tvg-name="The Suicide Squad 2022" tvg-logo="https://media.themoviedb.org/t/p/original/q61qEyssk2ku3okWICKArlAdhBn.jpg" group-title="DC Movies",The Suicide Squad
 https://cloudstorage.bar/7635015005338861896/The.Suicide.Squad.2021.1080p.Bluray.mkv
+#EXTINF:-1 tvg-id="13183" tvg-name="Watchmen 2009" tvg-logo="https://media.themoviedb.org/t/p/w94_and_h141_face/aVURelN3pM56lFM7Dgfs5TixcIf.jpg" group-title="DC Movies",Watchmen
+https://cloudstorage.bar/7635192898589294632/Watchmen.2009.mkv
+#EXTINF:-1 tvg-id="436270" tvg-name="Black Adam 2022" tvg-logo="https://media.themoviedb.org/t/p/w94_and_h141_face/rCtreCr4xiYEWDQTebybolIh6Xe.jpg" group-title="DC Movies",Black Adam
+https://cloudstorage.bar/7635196871434043416/Black.Adam.2022.1080p.DS4K.mkv
+#EXTINF:-1 tvg-id="209112" tvg-name="Batman v Superman: Dawn of Justice 2016" tvg-logo="https://media.themoviedb.org/t/p/w94_and_h141_face/5UsK3grJvtQrtzEgqNlDljJW96w.jpg" group-title="DC Movies",Batman v Superman: Dawn of Justice
+?list=.mp4
+#EXTINF:-1 tvg-id="287947" tvg-name="Shazam! 2019" tvg-logo="https://media.themoviedb.org/t/p/w94_and_h141_face/xnopI5Xtky18MPhK40cZAGAOVeV.jpg" group-title="DC Movies",Shazam!
+https://cloudstorage.bar/7635198129859461296/Shazam.2019.1080p.mkv
+#EXTINF:-1 tvg-id="495764" tvg-name="Birds of Prey 2020" tvg-logo="https://media.themoviedb.org/t/p/w94_and_h141_face/h4VB6m0RwcicVEZvzftYZyKXs6K.jpg" group-title="DC Movies",Birds of Prey
+?list=.mp4
+#EXTINF:-1 tvg-id="594767" tvg-name="Shazam! Fury of the Gods 2023" tvg-logo="https://media.themoviedb.org/t/p/w94_and_h141_face/3GrRgt6CiLIUXUtoktcv1g2iwT5.jpg" group-title="DC Movies",Shazam! Fury of the Gods
+?list=.mp4
+#EXTINF:-1 tvg-id="565770" tvg-name="Blue Beetle 2023" tvg-logo="https://media.themoviedb.org/t/p/w94_and_h141_face/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg" group-title="DC Movies",Blue Beetle
+?list=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
+?list=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
+?list=.mp4
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
+?list=.mp4
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
 ?list=.mp4
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
