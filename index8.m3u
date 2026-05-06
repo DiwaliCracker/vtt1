@@ -1,5 +1,8 @@
 #EXTM3U
-
+#EXTINF:-1 tvg-id="StarSports2Hindi.in" tvg-name="IND | Starsports2 Hindi" tvg-logo="https://medianet.mv/media/channel/179x0-icon.png" group-title="Sports" tvg-type="live",IND | Starsports2 Hindi
+https
+#EXTINF:-1 tvg-id="f1.us" tvg-name="US | F1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f2/New_era_F1_logo.png" group-title="Sports" tvg-type="live",US | F1
+https
 # --- MOVIES SECTION ---
 #EXTINF:-1 tvg-id="" tvg-name="Do Deewane Seher Mein" tvg-logo="https://media.themoviedb.org/t/p/original/oAy3gPhFqNX5gV9RwaDAem1KQ3x.jpg" group-title="Bollywood Movies",Do Deewane Seher Mein
 https://hub.odyssey.surf/0cf11bd5b9be1d64339ae5268c6ffd8f?token=1776446411?list=.mp4
