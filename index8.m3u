@@ -658,8 +658,8 @@ https://cloudstorage.bar/7641605907532480632/Oppenheimer.2023.1080p.Bluray.mkv
 https://cloudstorage.bar/7642285221034852384/Bhool.Chuk.Maaf.2025.1080p.WebDL.mkv
 #EXTINF:-1 tvg-id="392271" tvg-name="Rangoon" tvg-logo="https://media.themoviedb.org/t/p/original/dJ7N9N3zjCCsPIP8nDVPEH6fvSo.jpg" group-title="Bollywood Movies",Rangoon
 https://cloudstorage.bar/fbed9073ee2a41fba513843758156929/Rangoon.2017.1080p.WeB-DL.DUAL.Hindi.or.Tamil.x264.AAC.ESub-SkymoviesHD.mkv
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
-
+#EXTINF:-1 tvg-id="1371023" tvg-name="Chand Mera Dil HDTC" tvg-logo="https://media.themoviedb.org/t/p/original/9LPkXJustudEBgPZEm9tgDx5KtC.jpg" group-title="Bollywood Movies",Chand Mera Dil
+https://cloudstorage.bar/7643881441335443468/Chand.Mera.Dil.2026.Hindi.HDTC.1080p.mkv
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
 
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
@@ -2165,6 +2165,23 @@ https://cloudstorage.bar/7641916562517000348/S01E06.mkv
 https://cloudstorage.bar/7641916708545888408/S01E07.mkv
 #EXTINF:-1 tvg-id="211116" tvg-name="Class" tvg-logo="" group-title="Netflix India" series-name="Class" season="1" episode="8",Class - S01E08
 https://cloudstorage.bar/7641916824510005324/S01E08.mkv
+
+#EXTINF:-1 tvg-id="273240" tvg-name="Off Campus" tvg-logo="https://media.themoviedb.org/t/p/original/cbODFqkcmRgrYH8NkG4Q4Hcg8Z1.jpg" group-title="Prime Video" series-name="Off Campus" season="1" episode="1",Off Campus - S01E01
+https://cloudstorage.bar/zip_7644101592769101860_1/Off.Campus.S01E01.mkv
+#EXTINF:-1 tvg-id="273240" tvg-name="Off Campus" tvg-logo="" group-title="Prime Video" series-name="Off Campus" season="1" episode="2",Off Campus - S01E02
+https://cloudstorage.bar/zip_7644101592769101860_5/Off.Campus.S01E02.mkv
+#EXTINF:-1 tvg-id="273240" tvg-name="Off Campus" tvg-logo="" group-title="Prime Video" series-name="Off Campus" season="1" episode="3",Off Campus - S01E03
+https://cloudstorage.bar/zip_7644101592769101860_6/Off.Campus.S01E03.mkv
+#EXTINF:-1 tvg-id="273240" tvg-name="Off Campus" tvg-logo="" group-title="Prime Video" series-name="Off Campus" season="1" episode="4",Off Campus - S01E04
+https://cloudstorage.bar/zip_7644101592769101860_4/Off.Campus.S01E04.mkv
+#EXTINF:-1 tvg-id="273240" tvg-name="Off Campus" tvg-logo="" group-title="Prime Video" series-name="Off Campus" season="1" episode="5",Off Campus - S01E05
+https://cloudstorage.bar/zip_7644101592769101860_7/Off.Campus.S01E05.mkv
+#EXTINF:-1 tvg-id="273240" tvg-name="Off Campus" tvg-logo="" group-title="Prime Video" series-name="Off Campus" season="1" episode="6",Off Campus - S01E06
+https://cloudstorage.bar/zip_7644101592769101860_0/Off.Campus.S01E06.mkv
+#EXTINF:-1 tvg-id="273240" tvg-name="Off Campus" tvg-logo="" group-title="Prime Video" series-name="Off Campus" season="1" episode="7",Off Campus - S01E07
+https://cloudstorage.bar/zip_7644101592769101860_2/Off.Campus.S01E07.mkv
+#EXTINF:-1 tvg-id="273240" tvg-name="Off Campus" tvg-logo="" group-title="Prime Video" series-name="Off Campus" season="1" episode="8",Off Campus - S01E08
+https://cloudstorage.bar/zip_7644101592769101860_3/Off.Campus.S01E08.mkv
 
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" series-name="" season="1" episode="1", - S01E01
 https
