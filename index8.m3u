@@ -5899,8 +5899,24 @@ https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/yomppoez0yp0osa
 #EXTINF:-1 tvg-id="226773" tvg-name="Senior High" tvg-logo="" group-title="Filipino" series-name="Senior High" season="1" episode="4",Senior High - S01E04
 https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/0qx1blh7laajc1h
 
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" series-name="" season="1" episode="1", - S01E01
-https
+#EXTINF:-1 tvg-id="" tvg-name="The Boroughs" tvg-logo="" group-title="Netflix" series-name="The Boroughs" season="1" episode="1",S01E01
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/lupmbnctxk2cttq
+#EXTINF:-1 tvg-id="" tvg-name="The Boroughs" tvg-logo="" group-title="Netflix" series-name="The Boroughs" season="1" episode="2",S01E02
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/lo3cxhh6nke6vto
+#EXTINF:-1 tvg-id="" tvg-name="The Boroughs" tvg-logo="" group-title="Netflix" series-name="The Boroughs" season="1" episode="3",S01E03
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/xm8vmv87a6gpyal
+#EXTINF:-1 tvg-id="" tvg-name="The Boroughs" tvg-logo="" group-title="Netflix" series-name="The Boroughs" season="1" episode="4",S01E04
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/htqtkd6d4cx2tp4
+#EXTINF:-1 tvg-id="" tvg-name="The Boroughs" tvg-logo="" group-title="Netflix" series-name="The Boroughs" season="1" episode="5",S01E05
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/scsfrlbxpfslsjd
+#EXTINF:-1 tvg-id="" tvg-name="The Boroughs" tvg-logo="" group-title="Netflix" series-name="The Boroughs" season="1" episode="6",S01E06
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/odotm1m5xw3hrbd
+#EXTINF:-1 tvg-id="" tvg-name="The Boroughs" tvg-logo="" group-title="Netflix" series-name="The Boroughs" season="1" episode="7",S01E07
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/11sk11ls1e0fgbp
+#EXTINF:-1 tvg-id="" tvg-name="The Boroughs" tvg-logo="" group-title="Netflix" series-name="The Boroughs" season="1" episode="8",S01E08
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/e4xophwbikocexx
+
+
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="Anime" series-name="" season="1" episode="1", - S01E01
 https?url=.mp4
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="Anime" series-name="" season="1" episode="1", - S01E01
