@@ -5468,17 +5468,17 @@ https://cloudstorage.bar/zip_7646260307756580920_9/S03E09.mkv
 #EXTINF:-1 tvg-id="124364" tvg-name="FROM" tvg-logo="" group-title="Prime Video" series-name="FROM" season="3" episode="10",FROM - S03E10
 https://cloudstorage.bar/zip_7646260307756580920_4/S03E10.mkv
 #EXTINF:-1 tvg-id="124364" tvg-name="FROM" tvg-logo="" group-title="Prime Video" series-name="FROM" season="4" episode="1",FROM - S04E01
-https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/et9vhcgdectwhjo
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/et9vhcgdectwhjo?file=.mp4
 #EXTINF:-1 tvg-id="124364" tvg-name="FROM" tvg-logo="" group-title="Prime Video" series-name="FROM" season="4" episode="2",FROM - S04E02
-https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/zznqrfh1sqfzcxz
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/zznqrfh1sqfzcxz?file=.mp4
 #EXTINF:-1 tvg-id="124364" tvg-name="FROM" tvg-logo="" group-title="Prime Video" series-name="FROM" season="4" episode="3",FROM - S04E03
-https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/easswlwcuevjyab
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/easswlwcuevjyab?file=.mp4
 #EXTINF:-1 tvg-id="124364" tvg-name="FROM" tvg-logo="" group-title="Prime Video" series-name="FROM" season="4" episode="4",FROM - S04E04
-https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/k5564enmi0j0fcb
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/k5564enmi0j0fcb?file=.mp4
 #EXTINF:-1 tvg-id="124364" tvg-name="FROM" tvg-logo="" group-title="Prime Video" series-name="FROM" season="4" episode="5",FROM - S04E05
-https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/jqqe3scsipustvq
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/jqqe3scsipustvq?file=.mp4
 #EXTINF:-1 tvg-id="124364" tvg-name="FROM" tvg-logo="" group-title="Prime Video" series-name="FROM" season="4" episode="6",FROM - S04E06
-https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/bs8e2hyaszcbb2o
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/bs8e2hyaszcbb2o?file=.mp4
 #EXTINF:-1 tvg-id="124364" tvg-name="FROM" tvg-logo="" group-title="Prime Video" series-name="FROM" season="4" episode="7",FROM - S04E07
 
 #EXTINF:-1 tvg-id="124364" tvg-name="FROM" tvg-logo="" group-title="Prime Video" series-name="FROM" season="4" episode="8",FROM - S04E08
@@ -5889,6 +5889,15 @@ https://cloudstorage.bar/zip_7646863879510687840_9/Twisted.Metal.S02E10.mkv
 https://cloudstorage.bar/zip_7646863879510687840_10/Twisted.Metal.S02E11.mkv
 #EXTINF:-1 tvg-id="133748" tvg-name="Twisted Metal" tvg-logo="" group-title="Prime Video" series-name="Twisted Metal" season="2" episode="12",Twisted Metal - S02E12
 https://cloudstorage.bar/zip_7646863879510687840_11/Twisted.Metal.S02E12.mkv
+
+#EXTINF:-1 tvg-id="226773" tvg-name="Senior High" tvg-logo="https://media.themoviedb.org/t/p/original/k285iD6gZIoLsVSczSjc4WIXkdc.jpg" group-title="Filipino" series-name="Senior High" season="1" episode="1",Senior High - S01E01
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/npnbq2qbvfhd5zg
+#EXTINF:-1 tvg-id="226773" tvg-name="Senior High" tvg-logo="" group-title="Filipino" series-name="Senior High" season="1" episode="2",Senior High - S01E02
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/fa1ulspf9cqta2i
+#EXTINF:-1 tvg-id="226773" tvg-name="Senior High" tvg-logo="" group-title="Filipino" series-name="Senior High" season="1" episode="3",Senior High - S01E03
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/yomppoez0yp0osa
+#EXTINF:-1 tvg-id="226773" tvg-name="Senior High" tvg-logo="" group-title="Filipino" series-name="Senior High" season="1" episode="4",Senior High - S01E04
+https://hub-d16.pages.dev/extract?url=https://hubcloud.foo/drive/0qx1blh7laajc1h
 
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" series-name="" season="1" episode="1", - S01E01
 https
