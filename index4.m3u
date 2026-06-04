@@ -800,8 +800,8 @@ https://soski.tv/mp4/files/70126772/1080?url=.mp4
 https://soski.tv/mp4/files/550803/1080?url=.mp4
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
 https://soski.tv/mp4/files/550803/1080?url=.mp4
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
-https?url=.mp4
+#EXTINF:-1 tvg-id="787" tvg-name="Mr. & Mrs. Smith" tvg-logo="https://media.themoviedb.org/t/p/original/kjD700RtyhveN3ZbOnSvUSne0Qj.jpg" group-title="Netflix",Mr. & Mrs. Smith
+https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/gppem00yjjzlpjo
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
 https?url=.mp4
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
@@ -1514,103 +1514,157 @@ https://hub.yummy.monster/fbe7fbd0eb5e892b6f66fe1af0f8c594?token=177636797412?li
 #EXTINF:-1 tvg-id="227371" tvg-name="Fake Profile" tvg-logo="" group-title="Netflix" series-name="Fake Profile" season="3" episode="10",Fake Profile - S03E10
 https://hub.yummy.monster/2dc633f28487bc11362e0ef8d320ac40?token=177636799613?list=.mp4
 
-#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="https://media.themoviedb.org/t/p/original/uxFNAo2A6ZRcgNASLk02hJUbybn.jpg" group-title="Netflix" series-name="Dark Desire" season="1" episode="1",Dark Desire - S01E01
-https://cdn.pixeldrain.eu.cc/9Jx7LyTD?list=.mp4
-#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="2",Dark Desire - S01E02
-https://cdn.pixeldrain.eu.cc/kgc2BPk9?list=.mp4
-#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="3",Dark Desire - S01E03
-https://cdn.pixeldrain.eu.cc/JxUQruj5?list=.mp4
-#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="4",Dark Desire - S01E04
-https://cdn.pixeldrain.eu.cc/eAftcTsJ?list=.mp4
-#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="5",Dark Desire - S01E05
-https://cloudstorage.bar/7631482712565481504/S01E05.mp4
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="https://media.themoviedb.org/t/p/original/uxFNAo2A6ZRcgNASLk02hJUbybn.jpg" group-title="Netflix" series-name="Dark Desire" season="1" episode="1",Dark Desire - S01E01 //https://cdn.pixeldrain.eu.cc/9Jx7LyTD?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_10/Dark.Desire.S01E01.Its.Just.Sex.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="2",Dark Desire - S01E02//https://cdn.pixeldrain.eu.cc/kgc2BPk9?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_6/Dark.Desire.S01E02.One.Last.Night.of.Passion.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="3",Dark Desire - S01E03//https://cdn.pixeldrain.eu.cc/JxUQruj5?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_4/Dark.Desire.S01E03.What.Common.People.Call.Love.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="4",Dark Desire - S01E04//https://cdn.pixeldrain.eu.cc/eAftcTsJ?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_5/Dark.Desire.S01E04.Love.That.Word.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="5",Dark Desire - S01E05//https://cloudstorage.bar/7631482712565481504/S01E05.mp4
+https://cloudstorage.bar/zip_7647069891912007724_11/Dark.Desire.S01E05.What.Do.You.Know.About.Dario.Guerra.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="6",Dark Desire - S01E06
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_12/Dark.Desire.S01E06.Are.You.Missing.The.Good.Old.Times.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="7",Dark Desire - S01E07
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_2/Dark.Desire.S01E07.You.Messed.With.The.Wrong.Woman.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="8",Dark Desire - S01E08
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_7/Dark.Desire.S01E08.The.Tell-Tale.Heart.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="9",Dark Desire - S01E09
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_3/Dark.Desire.S01E09.A.Wicked.Game.of.Mirrors.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="10",Dark Desire - S01E10
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_16/Dark.Desire.S01E10.The.Beauty.of.a.Sudden.Death.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="11",Dark Desire - S01E11
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_14/Dark.Desire.S01E11.Nothing.is.What.it.Seems.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="12",Dark Desire - S01E12
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_1/Dark.Desire.S01E12.Weve.Messed.Up.So.Much.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="13",Dark Desire - S01E13
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_9/Dark.Desire.S01E13.You.Were.Only.an.Innocent.Victim.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="14",Dark Desire - S01E14
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_15/Dark.Desire.S01E14.Two.Truths.and.One.Lie.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="15",Dark Desire - S01E15
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_13/Dark.Desire.S01E15.We.Never.Talked.About.Love.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="16",Dark Desire - S01E16
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_17/Dark.Desire.S01E16.Revelation.21.8.Fire.Is.Set.Upon.His.Anger.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="17",Dark Desire - S01E17
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_0/Dark.Desire.S01E17.We.Kill.What.We.Love.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="1" episode="18",Dark Desire - S01E18
-?list=.mp4
+https://cloudstorage.bar/zip_7647069891912007724_8/Dark.Desire.S01E18.The.Answer.Was.Always.There.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="1",Dark Desire - S02E01
+https://cloudstorage.bar/zip_7647070420192985092_3/Dark.Desire.S02E01.Eros.and.Psyche.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="2",Dark Desire - S02E02
+https://cloudstorage.bar/zip_7647070420192985092_11/Dark.Desire.S02E02.You.Can.Never.Escape.Something.Like.This.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="3",Dark Desire - S02E03
+https://cloudstorage.bar/zip_7647070420192985092_10/Dark.Desire.S02E03.No.One.Can.Run.From.Themselves.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="4",Dark Desire - S02E04
+https://cloudstorage.bar/zip_7647070420192985092_5/Dark.Desire.S02E04.The.Other.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="5",Dark Desire - S02E05
+https://cloudstorage.bar/zip_7647070420192985092_8/Dark.Desire.S02E05.Walking.on.Hot.Coals.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="6",Dark Desire - S02E06
+https://cloudstorage.bar/zip_7647070420192985092_4/Dark.Desire.S02E06.You.Were.Always.My.Mirror.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="7",Dark Desire - S02E07
+https://cloudstorage.bar/zip_7647070420192985092_0/Dark.Desire.S02E07.A.Dangerous.Cocktail.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="8",Dark Desire - S02E08
+https://cloudstorage.bar/zip_7647070420192985092_14/Dark.Desire.S02E08.Dont.Believe.a.Thing.You.Hear.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="9",Dark Desire - S02E09
+https://cloudstorage.bar/zip_7647070420192985092_7/Dark.Desire.S02E09.Youve.Become.Your.Own.Worst.Enemy.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="10",Dark Desire - S02E10
+https://cloudstorage.bar/zip_7647070420192985092_6/Dark.Desire.S02E10.Everyone.Reads.Their.Own.Story.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="11",Dark Desire - S02E11
+https://cloudstorage.bar/zip_7647070420192985092_13/Dark.Desire.S02E11.Who.the._.and.Are.You.Really.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="12",Dark Desire - S02E12
+https://cloudstorage.bar/zip_7647070420192985092_9/Dark.Desire.S02E12.The.Twins.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="13",Dark Desire - S02E13
+https://cloudstorage.bar/zip_7647070420192985092_12/Dark.Desire.S02E13.A.Perfect.and.Unbearable.Triangle.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="14",Dark Desire - S02E14
+https://cloudstorage.bar/zip_7647070420192985092_2/Dark.Desire.S02E14.It.Was.Always.You.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="105214" tvg-name="Dark Desire" tvg-logo="" group-title="Netflix" series-name="Dark Desire" season="2" episode="15",Dark Desire - S02E15
+https://cloudstorage.bar/zip_7647070420192985092_1/Dark.Desire.S02E15.Facing.the.Darkness.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 
 
 #EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="https://media.themoviedb.org/t/p/original/sdJLbucggwGj8NdX0UN2zt1Vwmn.jpg" group-title="HBO" series-name="56 Days" season="1" episode="1",56 Days - S01E01
-https://hub.shipcdn.buzz/4b1b9bacc03c7fafc4134e880a2220c5?token=177636816216?list=.mp4
+https://cloudstorage.bar/zip_7647071184697163884_2/56.Days.S01E01.1080p.AMZN.WEB-DL.Hindi.DDP5.1.English.DDP5.1.Atmos.H.264-4kHDHub.Com.mkv
 #EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="" group-title="HBO" series-name="56 Days" season="1" episode="2",56 Days - S01E02
-https://hub.shipcdn.buzz/c806ffedba55a030e610a9920f8945d9?token=177636833018?list=.mp4
+https://cloudstorage.bar/zip_7647071184697163884_3/56.Days.S01E02.1080p.AMZN.WEB-DL.Hindi.DDP5.1.English.DDP5.1.Atmos.H.264-4kHDHub.Com.mkv
 #EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="" group-title="HBO" series-name="56 Days" season="1" episode="3",56 Days - S01E03
-https://hub.shipcdn.buzz/8ec5ed572364e70aa01d63f468d4520b?token=177636835719?list=.mp4
+https://cloudstorage.bar/zip_7647071184697163884_0/56.Days.S01E03.1080p.AMZN.WEB-DL.Hindi.DDP5.1.English.DDP5.1.Atmos.H.264-4kHDHub.Com.mkv
 #EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="" group-title="HBO" series-name="56 Days" season="1" episode="4",56 Days - S01E04
-https://hub.shipcdn.buzz/19429e3d799828ad696eb9957049ee24?token=177636838019?list=.mp4
+https://cloudstorage.bar/zip_7647071184697163884_5/56.Days.S01E04.1080p.AMZN.WEB-DL.Hindi.DDP5.1.English.DDP5.1.Atmos.H.264-4kHDHub.Com.mkv
 #EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="" group-title="HBO" series-name="56 Days" season="1" episode="5",56 Days - S01E05
-https://hub.shipcdn.buzz/22fd846f4628ee170800106f976e670f?token=1776368402110?list=.mp4
+https://cloudstorage.bar/zip_7647071184697163884_7/56.Days.S01E05.1080p.AMZN.WEB-DL.Hindi.DDP5.1.English.DDP5.1.Atmos.H.264-4kHDHub.Com.mkv
 #EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="" group-title="HBO" series-name="56 Days" season="1" episode="6",56 Days - S01E06
-https://hub.shipcdn.buzz/3739c52b6fe3c980fe226e0df3020e2d?token=1776368427110?list=.mp4
+https://cloudstorage.bar/zip_7647071184697163884_4/56.Days.S01E06.1080p.AMZN.WEB-DL.Hindi.DDP5.1.English.DDP5.1.Atmos.H.264-4kHDHub.Com.mkv
 #EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="" group-title="HBO" series-name="56 Days" season="1" episode="7",56 Days - S01E07
-https://hub.hailmary.lat/12e816e273ac53e13d3a35bbdcd03873?token=1776368451110?list=.mp4
+https://cloudstorage.bar/zip_7647071184697163884_1/56.Days.S01E07.1080p.AMZN.WEB-DL.Hindi.DDP5.1.English.DDP5.1.Atmos.H.264-4kHDHub.Com.mkv
 #EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="" group-title="HBO" series-name="56 Days" season="1" episode="8",56 Days - S01E08
-https://hub.hailmary.lat/d8bef7c4c7e42a359b3eee7586f060ae?token=1776368484111?list=.mp4
-#EXTINF:-1 tvg-id="241372" tvg-name="56 Days" tvg-logo="" group-title="HBO" series-name="56 Days" season="1" episode="1",56 Days - S01E01
-https?list=.mp4
+https://cloudstorage.bar/zip_7647071184697163884_6/56.Days.S01E08.1080p.AMZN.WEB-DL.Hindi.DDP5.1.English.DDP5.1.Atmos.H.264-4kHDHub.Com.mkv
 
-
-#EXTINF:-1 tvg-id="tt1586680" tvg-name="Shameless" tvg-logo="https://media.themoviedb.org/t/p/original/ifo31fMWLmyOVpdak9K0kY4jldQ.jpg" group-title="Shameless" series-name="Shameless" season="1" episode="1",Shameless - S01E01
-https://data01-cdn.11cdn.org/fi2lm/48096e1816dc092f460ad57a49eb64a7/7f_Shameless.USA.s01.02.Alexfilm..Pilot.v1a1.17.03.24.mp4
-#EXTINF:-1 tvg-id="tt1586680" tvg-name="Shameless" tvg-logo="" group-title="Shameless" series-name="Shameless" season="1" episode="2",Shameless - S01E02
-https://data01-cdn.11cdn.org/fi2lm/48096e1816dc092f460ad57a49eb64a7/7f_Shameless.USA.s01.02.Alexfilm..Dubina.Frenk.v1a1.17.03.24.mp4
-#EXTINF:-1 tvg-id="tt1586680" tvg-name="Shameless" tvg-logo="" group-title="Shameless" series-name="Shameless" season="1" episode="3",Shameless - S01E03
-https://data01-cdn.11cdn.org/fi2lm/48096e1816dc092f460ad57a49eb64a7/7f_Shameless.USA.s01.03.Alexfilm..Tetya.Dzhindzher.v1a1.17.03.24.mp4
-#EXTINF:-1 tvg-id="tt1586680" tvg-name="Shameless" tvg-logo="" group-title="Shameless" series-name="Shameless" season="1" episode="4",Shameless - S01E04
-https://data05-cdn.11cdn.org/fi2lm/48096e1816dc092f460ad57a49eb64a7/7f_Shameless.USA.s01.04.Alexfilm..Keysi.Kasden.v1a1.17.03.24.mp4
-#EXTINF:-1 tvg-id="tt1586680" tvg-name="Shameless" tvg-logo="" group-title="Shameless" series-name="Shameless" season="1" episode="5",Shameless - S01E05
-https://data04-cdn.11cdn.org/fi2lm/48096e1816dc092f460ad57a49eb64a7/7f_Shameless.USA.s01.05.Alexfilm..Tri.parnishi.v1a1.17.03.24.mp4
-#EXTINF:-1 tvg-id="tt1586680" tvg-name="Shameless" tvg-logo="" group-title="Shameless" series-name="Shameless" season="1" episode="11",Shameless - S01E11
-https://cmlhz.com/movies-xxx/jun-24/Her-Sey-Yolunda-2026.mp4
-#EXTINF:-1 tvg-id="tt1586680" tvg-name="Shameless" tvg-logo="" group-title="Shameless" series-name="Shameless" season="1" episode="7", - S01E07
-https://video-downloads.googleusercontent.com/ADGPM2m9XGVqaltoFRk0q3wj-He4QO2bGCZTv_4DC2E5At-KRsd3prj9wFAsBhWQNKPaq4pHf3hIGnpWq7YB6jJkZ_7-Tw3jm48JOiiUsTVErVS_WiFEgKWB0wkEZyQpI8qlM19K_DftXgh3-vrTHE_ynWgFGQsFswBA0RG3kkpSsXfgp3fPdzGVexX4ZxyI0HhbOWH7dEL6M7O6R-9ezp-_yvUvv-Ka4CXRaaXeppQ_56nW2BgofEitm01yZixJpfXx4j2dCXBm
-#EXTINF:-1 tvg-id="tt1586680" tvg-name="" tvg-logo="" group-title="Netflix" series-name="" season="1" episode="8", - S01E08
-https
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="Netflix" series-name="" season="1" episode="7", - S01E07
-https
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="Netflix" series-name="" season="1" episode="8", - S01E08
-https
-
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="https://media.themoviedb.org/t/p/original/ifo31fMWLmyOVpdak9K0kY4jldQ.jpg" group-title="Showtime" series-name="Shameless" season="1" episode="1",Shameless - S01E01
+https://cloudstorage.bar/zip_7647195682914173004_0/Shameless%20%28US%29%20%282011%29%20-%20S01E01%20-%20Pilot%20%281080p%20BluRay%20x265%20afm72%29.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="2",Shameless - S01E02
+https://cloudstorage.bar/zip_7647195682914173004_1/S01E02.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="3",Shameless - S01E03
+https://cloudstorage.bar/zip_7647195682914173004_2/S01E03.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="4",Shameless - S01E04
+https://cloudstorage.bar/zip_7647195682914173004_3/S01E04.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="5",Shameless - S01E05
+https://cloudstorage.bar/zip_7647195682914173004_4/S01E05.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="6",Shameless - S01E06
+https://cloudstorage.bar/zip_7647195682914173004_5/S01E06.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="7",Shameless - S01E07
+https://cloudstorage.bar/zip_7647195682914173004_6/S01E07.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="8",Shameless - S01E08
+https://cloudstorage.bar/zip_7647195682914173004_7/S01E08.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="9",Shameless - S01E09
+https://cloudstorage.bar/zip_7647195682914173004_8/S01E09.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="10",Shameless - S01E10
+https://cloudstorage.bar/zip_7647195682914173004_9/S01E10.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="11",Shameless - S01E11
+https://cloudstorage.bar/zip_7647195682914173004_10/S01E11.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="1" episode="12",Shameless - S01E12
+https://cloudstorage.bar/zip_7647195682914173004_11/S01E12.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="1",Shameless - S02E01
+https://cloudstorage.bar/zip_7647191757314064432_1/Shameless%20%28US%29%20%282011%29%20-%20S02E01%20-%20Summertime%20%281080p%20BluRay%20x265%20afm72%29.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="2",Shameless - S02E02
+https://cloudstorage.bar/zip_7647191757314064432_2/S02E02.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="3",Shameless - S02E03
+https://cloudstorage.bar/zip_7647191757314064432_3/S02E03.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="4",Shameless - S02E04
+https://cloudstorage.bar/zip_7647191757314064432_4/S02E04.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="5",Shameless - S02E05
+https://cloudstorage.bar/zip_7647191757314064432_5/S02E05.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="6",Shameless - S02E06
+https://cloudstorage.bar/zip_7647191757314064432_6/S02E06.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="7",Shameless - S02E07
+https://cloudstorage.bar/zip_7647191757314064432_7/S02E07.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="8",Shameless - S02E08
+https://cloudstorage.bar/zip_7647191757314064432_8/S02E08.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="9",Shameless - S02E09
+https://cloudstorage.bar/zip_7647191757314064432_9/S02E09.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="10",Shameless - S02E10
+https://cloudstorage.bar/zip_7647191757314064432_10/S02E10.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="11",Shameless - S02E11
+https://cloudstorage.bar/zip_7647191757314064432_11/S02E11.mkv
+#EXTINF:-1 tvg-id="34307" tvg-name="Shameless" tvg-logo="" group-title="Showtime" series-name="Shameless" season="2" episode="12",Shameless - S02E12
+https://cloudstorage.bar/zip_7647191757314064432_12/S02E12.mkv
 
 
 #EXTINF:-1 tvg-id="229962" tvg-name="Burning Body" tvg-logo="https://media.themoviedb.org/t/p/original/ttUAM6vZ7IhLfEFeBtWKVom3LVQ.jpg" group-title="Netflix" series-name="Burning Body" season="1" episode="1",Burning Body - S01E01
-https://hub.shipcdn.buzz/60cee4f1cd556e034cd64b03eb91421c?token=1776278593?url=.mp4
+https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/ucu3jelcs3hdd15
 #EXTINF:-1 tvg-id="229962" tvg-name="Burning Body" tvg-logo="https://media.themoviedb.org/t/p/original/3LylD96g0AnjsHPkt5An1xdnuYd.jpg" group-title="Netflix" series-name="Burning Body" season="1" episode="2",Burning Body - S01E02
-https://hub.shipcdn.buzz/70b5e15a1fd877f9f7972e3153643d15?token=1776278869?url=.mp4
+https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/wfqrzhrxsevsnwf
 #EXTINF:-1 tvg-id="229962" tvg-name="Burning Body" tvg-logo="https://media.themoviedb.org/t/p/original/tjvCzLKo5C59PFp1tKVJSBcTVJ.jpg" group-title="Netflix" series-name="Burning Body" season="1" episode="3",Burning Body - S01E03
-https://hub.shipcdn.buzz/e22669cfc6d516408608f00ab7b37987?token=1776278889?url=.mp4
-#EXTINF:-1 tvg-id="229962" tvg-name="Burning Body" tvg-logo="https://media.themoviedb.org/t/p/original/x5IOHoFvnAJrcv3DSPNh61jHkaY.jpg" group-title="Netflix" series-name="Burning Body" season="1" episode="4",Burning Body - S01E04
-https://cdn.pixeldrain.eu.cc/GDtRGZQV?url=.mp4
+https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/cnlnp9vt946gawv
+#EXTINF:-1 tvg-id="229962" tvg-name="Burning Body" tvg-logo="https://media.themoviedb.org/t/p/original/x5IOHoFvnAJrcv3DSPNh61jHkaY.jpg" group-title="Netflix" series-name="Burning Body" season="1" episode="4",Burning Body - S01E04//https://cdn.pixeldrain.eu.cc/GDtRGZQV?url=.mp4
+https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/pftet217pmlpd42
 #EXTINF:-1 tvg-id="229962" tvg-name="Burning Body" tvg-logo="https://media.themoviedb.org/t/p/original/tJ6ZV2DJlt8AhqSNgw2WXTbSv7x.jpg" group-title="Netflix" series-name="Burning Body" season="1" episode="5",Burning Body - S01E05
-https://hub.shipcdn.buzz/7cc6c24e6b8dc41266c73b8b2d15b66a?token=1776278952?url=.mp4
+https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/giihulgokzkiteh
 #EXTINF:-1 tvg-id="229962" tvg-name="Burning Body" tvg-logo="https://media.themoviedb.org/t/p/original/gfst13EJIGlbJ09fFNtxoQlQdOh.jpg" group-title="Netflix" series-name="Burning Body" season="1" episode="6",Burning Body - S01E06
-https://hub.shipcdn.buzz/0110f1a0a024a7bbc310b9fb2278a451?token=1776278999?url=.mp4
+https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/yozvjqkozykoujo
 #EXTINF:-1 tvg-id="229962" tvg-name="Burning Body" tvg-logo="https://media.themoviedb.org/t/p/original/aP6xIjhg4Y60kbGcg6bZJys7jRN.jpg" group-title="Netflix" series-name="Burning Body" season="1" episode="7",Burning Body - S01E07
-https://video-downloads.googleusercontent.com/ADGPM2lxjm6isW4-e-QsK2-gbotmBL6SoTbs8XYPj_EHC3xrpadphoPca56KVJbfiV5XV0DRLjIC8YxsC3VZvOyvvCPkwhA8jk6OU_ZOUSAhnjtop6YUs1crBGEDdi2FMddjTHHpKxvZJrSgwNpCed3CC10lX_dErDlEPg7CO_WRcEiZ0D5qvUeHQA6vh5QiNMEFWvnvE5WN-MgONkT1yVFHUdTE68fJ1umXHOZmiLAXR-03K5cmQl4?url=.mp4
+https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/oq1vwfqw9u9tr96
 #EXTINF:-1 tvg-id="229962" tvg-name="Burning Body" tvg-logo="https://media.themoviedb.org/t/p/original/paMh9WMgWpvRit7A3a83pyeA4E2.jpg" group-title="Netflix" series-name="Burning Body" season="1" episode="8",Burning Body - S01E08
-https://vcloud.zip/re.php?l=aHR0cHM6Ly81NTYxMzhkY2E3MzY3NzYzZWQ0NmVlY2FhNDI4NGVjYS5yMi5jbG91ZGZsYXJlc3RvcmFnZS5jb20vaHViMi9CdXJuaW5nLkJvZHkuUzAxRTA4Lk1heS4xc3QuMjAxNy4xMDgwcC5ORi5XRUItREwuRERQNS4xLkguMjY0LVZlZ2Ftb3ZpZXMudG8ubWt2P1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9MjZiNmNmOGEwMzk5YjU4ODA2NDNmNTg1YzhjM2RiZTUlMkYyMDI2MDQxNSUyRmF1dG8lMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNDE1VDE4NTA1OVomWC1BbXotRXhwaXJlcz0xMDgwMCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1CdXJuaW5nLkJvZHkuUzAxRTA4Lk1heS4xc3QuMjAxNy4xMDgwcC5ORi5XRUItREwuRERQNS4xLkguMjY0LVZlZ2Ftb3ZpZXMudG8ubWt2JlgtQW16LVNpZ25hdHVyZT00OTFiOWQ4NTk3ZjE2NDU4NGU4NDU0ZTUwMTEzZWJlMWRhMWY3YmQyOWJkNjJhMTI0NjA0OTBhMWEyNDcyNDFj?url=.mp4
+https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/dkrrgwxfnt1kcck
 
 
 #EXTINF:-1 tvg-id="76669" tvg-name="Elite" tvg-logo="https://media.themoviedb.org/t/p/original/3NTAbAiao4JLzFQw6YxP1YZppM8.jpg" group-title="Netflix" series-name="Elite" season="1" episode="1",Elite - S01E01
@@ -2028,33 +2082,33 @@ http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/494511.mp4
 http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/494512.mp4
 
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="https://media.themoviedb.org/t/p/original/kfcJl5e8CRWDU7e4vX6uNABPRbS.jpg" group-title="Netflix" series-name="Sex/Life" season="1" episode="1",Sex/Life - S01E01
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/197532.mkv
+https://cloudstorage.bar/zip_7647017604980146176_4/Sex.-.Life.S01E01.The.Wives.Are.in.Connecticut.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="1" episode="2",Sex/Life - S01E02
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/197533.mkv
+https://cloudstorage.bar/zip_7647017604980146176_6/Sex.-.Life.S01E02.Down.in.the.Tube.Station.at.Midnight.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="1" episode="3",Sex/Life - S01E03
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/197534.mkv
+https://cloudstorage.bar/zip_7647017604980146176_7/Sex.-.Life.S01E03.Empire.State.of.Mind.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="1" episode="4",Sex/Life - S01E04
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/197904.mkv
+https://cloudstorage.bar/zip_7647017604980146176_0/Sex.-.Life.S01E04.New.New.York.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="1" episode="5",Sex/Life - S01E05
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/197905.mkv
+https://cloudstorage.bar/zip_7647017604980146176_5/Sex.-.Life.S01E05.The.Sound.of.the.Suburbs.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="1" episode="6",Sex/Life - S01E06
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/197906.mkv
+https://cloudstorage.bar/zip_7647017604980146176_2/Sex.-.Life.S01E06.Somewhere.Only.We.Know.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="1" episode="7",Sex/Life - S01E07
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/197907.mkv
+https://cloudstorage.bar/zip_7647017604980146176_3/Sex.-.Life.S01E07.Small.Town.Saturday.Night.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="1" episode="8",Sex/Life - S01E08
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/197908.mkv
+https://cloudstorage.bar/zip_7647017604980146176_1/Sex.-.Life.S01E08.This.Must.Be.the.Place.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="2" episode="1",Sex/Life - S02E01
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/276521.mp4
+https://cloudstorage.bar/zip_7647017879858053196_0/Sex.-.Life.S02E01.Welcome.to.New.York.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="2" episode="2",Sex/Life - S02E02
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/276522.mp4
+https://cloudstorage.bar/zip_7647017879858053196_3/Sex.-.Life.S02E02.Georgia.on.My.Mind.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="2" episode="3",Sex/Life - S02E03
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/276523.mp4
+https://cloudstorage.bar/zip_7647017879858053196_1/Sex.-.Life.S02E03.Seasons.of.Love.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="2" episode="4",Sex/Life - S02E04
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/276524.mp4
+https://cloudstorage.bar/zip_7647017879858053196_4/Sex.-.Life.S02E04.The.Weakness.in.Me.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="2" episode="5",Sex/Life - S02E05
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/276525.mp4
+https://cloudstorage.bar/zip_7647017879858053196_2/Sex.-.Life.S02E05.Future.Starts.Today.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="126280" tvg-name="Sex/Life" tvg-logo="" group-title="Netflix" series-name="Sex/Life" season="2" episode="6",Sex/Life - S02E06
-http://tecnomolly.com:8080/series/Cmalagon/dWm87EDuu2TY/276526.mp4
+https://cloudstorage.bar/zip_7647017879858053196_5/Sex.-.Life.S02E06.Heavenly.Day.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
 
 #EXTINF:-1 tvg-id="106320" tvg-name="Beer Boys and Vodka Girls" tvg-logo="https://images.ottplay.com/posters/bc08e02cef7bec35c2a646722bf5f576.jpg" group-title="PrimeFlix" series-name="Beer Boys and Vodka Girls" season="1" episode="1",Beer Boys and Vodka Girls - S01E01
 https://cloudstorage.bar/7631874039920722324/Beer%20Boys%20and%20Vodka%20Girls%20Part%201.mkv
@@ -10220,6 +10274,19 @@ https://cloudstorage.bar/zip_7646486987540529280_3/S01E04.mkv
 https://cloudstorage.bar/zip_7646486987540529280_4/S01E05.mkv
 #EXTINF:-1 tvg-id="313956" tvg-name="Dil Dhokha Aur Desire" tvg-logo="" group-title="Shemaroo" series-name="Dil Dhokha Aur Desire" season="1" episode="6",Dil Dhokha Aur Desire - S01E06
 https://cloudstorage.bar/zip_7646486987540529280_5/S01E06.mkv
+
+#EXTINF:-1 tvg-id="253376" tvg-name="The Girlfriend" tvg-logo="https://media.themoviedb.org/t/p/original/ktrp3tdZ5IQpFux4nLy8z70bt3n.jpg" group-title="Prime Video" series-name="The Girlfriend" season="1" episode="1",The Girlfriend - S01E01
+https://cloudstorage.bar/zip_7647018798981054532_3/The.Girlfriend.S01E01.1080p.AMZN.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="253376" tvg-name="The Girlfriend" tvg-logo="" group-title="Prime Video" series-name="The Girlfriend" season="1" episode="2",The Girlfriend - S01E02
+https://cloudstorage.bar/zip_7647018798981054532_1/The.Girlfriend.S01E02.1080p.AMZN.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="253376" tvg-name="The Girlfriend" tvg-logo="" group-title="Prime Video" series-name="The Girlfriend" season="1" episode="3",The Girlfriend - S01E03
+https://cloudstorage.bar/zip_7647018798981054532_5/The.Girlfriend.S01E03.1080p.AMZN.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="253376" tvg-name="The Girlfriend" tvg-logo="" group-title="Prime Video" series-name="The Girlfriend" season="1" episode="4",The Girlfriend - S01E04
+https://cloudstorage.bar/zip_7647018798981054532_0/The.Girlfriend.S01E04.1080p.AMZN.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="253376" tvg-name="The Girlfriend" tvg-logo="" group-title="Prime Video" series-name="The Girlfriend" season="1" episode="5",The Girlfriend - S01E05
+https://cloudstorage.bar/zip_7647018798981054532_4/The.Girlfriend.S01E05.1080p.AMZN.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="253376" tvg-name="The Girlfriend" tvg-logo="" group-title="Prime Video" series-name="The Girlfriend" season="1" episode="6",The Girlfriend - S01E06
+https://cloudstorage.bar/zip_7647018798981054532_2/The.Girlfriend.S01E06.1080p.AMZN.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
 
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" series-name="" season="1" episode="1", - S01E01
 https?url=.mp4
