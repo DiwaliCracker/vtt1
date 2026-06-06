@@ -6131,8 +6131,8 @@ https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/m50ppbdmyxvqq0
 #EXTINF:-1 tvg-id="226707" tvg-name="Inspector Avinash" tvg-logo="" group-title="JioHotstar" series-name="Inspector Avinash" season="2" episode="10",Inspector Avinash - S02E10
 
 
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="Anime" series-name="" season="1" episode="1", - S01E01
-https?url=.mp4
+#EXTINF:-1 tvg-id="247769" tvg-name="The Great Indian Kapil Show" tvg-logo="https://media.themoviedb.org/t/p/w780/3KMCmGDlYLlJ8zGOhCs6f3FZcnj.jpg" group-title="Netflix India" series-name="The Great Indian Kapil Show" season="4" episode="14",The Great Indian Kapil Show - S04E14
+https://cloudstorage.bar/7638553809282662504/S04E14.mkv
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="Anime" series-name="" season="1" episode="1", - S01E01
 https?url=.mp4
  
