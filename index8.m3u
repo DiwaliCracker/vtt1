@@ -794,8 +794,8 @@ https://hub-d16.pages.dev/extract2?url=
 https://hub-d16.pages.dev/extract2?url=
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
 https://hub-d16.pages.dev/extract2?url=
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
-
+#EXTINF:-1 tvg-id="1293550" tvg-name="Bandar" tvg-logo="https://media.themoviedb.org/t/p/w780/3TrQUHmnEL2tOYf4KKkXb01BQt2.jpg" group-title="Bollywood Movies",Bandar
+https://share.cloudstorage.bar/7648285178678214656/Bandar.2026.HQ.1080p.HDTC.Hindi-Clean.mkv
 #EXTINF:-1 tvg-id="1308553" tvg-name="Hai Jawani Toh Ishq Hona Hai" tvg-logo="" group-title="Bollywood Movies",Hai Jawani Toh Ishq Hona Hai
 https://hub.obsession.buzz/114a7c17235b704fb1aaeb366b90cd4e?token=1780733121?url=.mp4
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
@@ -6159,6 +6159,22 @@ https://hub-d16.pages.dev/extract2?url=https://hubcloud.foo/drive/m50ppbdmyxvqq0
 #EXTINF:-1 tvg-id="226707" tvg-name="Inspector Avinash" tvg-logo="" group-title="JioHotstar" series-name="Inspector Avinash" season="2" episode="9",Inspector Avinash - S02E09
 
 #EXTINF:-1 tvg-id="226707" tvg-name="Inspector Avinash" tvg-logo="" group-title="JioHotstar" series-name="Inspector Avinash" season="2" episode="10",Inspector Avinash - S02E10
+
+#EXTINF:-1 tvg-id="90669" tvg-name="1899" tvg-logo="https://media.themoviedb.org/t/p/w780/gZleGu1MQVBArH2dlpZ9CGi0hhy.jpg" group-title="Netflix" series-name="1899" season="1" episode="1",1899 - S01E01
+
+#EXTINF:-1 tvg-id="90669" tvg-name="1899" tvg-logo="" group-title="Netflix" series-name="1899" season="1" episode="2",1899 - S01E02
+
+#EXTINF:-1 tvg-id="90669" tvg-name="1899" tvg-logo="" group-title="Netflix" series-name="1899" season="1" episode="3",1899 - S01E03
+
+#EXTINF:-1 tvg-id="90669" tvg-name="1899" tvg-logo="" group-title="Netflix" series-name="1899" season="1" episode="4",1899 - S01E04
+
+#EXTINF:-1 tvg-id="90669" tvg-name="1899" tvg-logo="" group-title="Netflix" series-name="1899" season="1" episode="5",1899 - S01E05
+
+#EXTINF:-1 tvg-id="90669" tvg-name="1899" tvg-logo="" group-title="Netflix" series-name="1899" season="1" episode="6",1899 - S01E06
+
+#EXTINF:-1 tvg-id="90669" tvg-name="1899" tvg-logo="" group-title="Netflix" series-name="1899" season="1" episode="7",1899 - S01E07
+
+#EXTINF:-1 tvg-id="90669" tvg-name="1899" tvg-logo="" group-title="Netflix" series-name="1899" season="1" episode="8",1899 - S01E08
 
 
 #EXTINF:-1 tvg-id="247769" tvg-name="The Great Indian Kapil Show" tvg-logo="https://media.themoviedb.org/t/p/w780/3KMCmGDlYLlJ8zGOhCs6f3FZcnj.jpg" group-title="Netflix India" series-name="The Great Indian Kapil Show" season="4" episode="14",The Great Indian Kapil Show - S04E14
