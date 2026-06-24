@@ -1120,8 +1120,8 @@ https://cloudstorage.bar/7651476747401035784/Snow.White.And.The.Huntsman.2012.10
 https://cloudstorage.bar/7651477073818550432/Baywatch.2017.1080p.Bluray.mkv
 #EXTINF:-1 tvg-id="345940" tvg-name="The Meg" tvg-logo="https://image.tmdb.org/t/p/w780/eyWICPcxOuTcDDDbTMOZawoOn8d.jpg" group-title="Hollywood Movies",The Meg
 
-#EXTINF:-1 tvg-id="615656" tvg-name="Meg 2: The Trench" tvg-logo="https://image.tmdb.org/t/p/w780/4m1Au3YkjqsxF8iwQy0fPYSxE0h.jpg" group-title="Hollywood Movies",Meg 2: The Trench
-
+#EXTINF:-1 tvg-id="615656" tvg-name="Meg 2: The Trench" tvg-logo="https://image.tmdb.org/t/p/w780/4m1Au3YkjqsxF8iwQy0fPYSxE0h.jpg" tvg-sub="https://file.garden/aG0M3eyoAi7HijUP/SUBS/Movies/Hollywood/The%20Meg%202%20the%20Trench%20-Hindi.srt" tvg-audio="https://new.akshayy.workers.dev/0:/Meg.2.The.Trench.2023.ORG.GPLAY.Hindi.DDP5.1-384Kbps.Audio-YAGAMi.m4a" group-title="Hollywood Movies",Meg 2: The Trench
+https://new.akshayy.workers.dev/0:/Meg.2.The.Trench.2023.720p.AMZN.WEB-DL.DDP5.1.H.264-KEWP.mkv
 #EXTINF:-1 tvg-id="117251" tvg-name="White House Down" tvg-logo="https://image.tmdb.org/t/p/w780/6TeIVKPw7nXXWy2zKmDmlnSwzb7.jpg" group-title="Hollywood Movies",White House Down
 
 #EXTINF:-1 tvg-id="14161" tvg-name="2012" tvg-logo="https://image.tmdb.org/t/p/w780/zaqam2RNscH5ooYFWInV6hjx6y5.jpg" group-title="Hollywood Movies",2012
