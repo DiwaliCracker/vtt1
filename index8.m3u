@@ -1,8 +1,114 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="StarSports2Hindi.in" tvg-name="IND | Starsports2 Hindi" tvg-logo="https://medianet.mv/media/channel/179x0-icon.png" tvg-type="live" group-title="Sports" tvg-type="live",IND | Starsports2 Hindi
+#EXTINF:-1 tvg-id="StarSports2Hindi.in" tvg-name="IND | Starsports2 Hindi" tvg-logo="https://medianet.mv/media/channel/179x0-icon.png" group-title="Sports" tvg-type="live",IND | Starsports2 Hindi
 http://103.157.248.140:8000/play/a01m/index.m3u8
-#EXTINF:-1 tvg-id="f1.us" tvg-name="US | F1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f2/New_era_F1_logo.png" tvg-type="live" group-title="Sports" tvg-type="live",US | F1
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="f1.us" tvg-name="US | F1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f2/New_era_F1_logo.png" group-title="Sports" tvg-type="live",US | F1
 https://amg12058-c15studio-amg12058c1-lg-us-5787.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="4TV News" tvg-logo="https://i.imgur.com/QsfYi9v.png" group-title="News" tvg-type="live",4TV News
+https://cdn-4.pishow.tv/live/1007/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="6 TV Telugu" tvg-logo="https://i.imgur.com/l3EcRnZ.png" group-title="News" tvg-type="live",6 TV Telugu
+https://cdn-1.pishow.tv/live/232/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="7S Music" tvg-logo="https://i.imgur.com/zDiIhdN.png" group-title="Music" tvg-type="live",7S Music
+https://mumt03.tangotv.in/Dsly5z3H7SMUSIC/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="9X Jalwa" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_9X_JALWA/images/LOGO_HD/image.png" group-title="Music" tvg-type="live",9X Jalwa
+https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="9X Jhakaas" tvg-logo="https://dtil.tmsimg.com/assets/s90012_ld_h15_aa.png?lock=720x540" group-title="Music" tvg-type="live",9X Jhakaas
+https://cdn-3.pishow.tv/live/6/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="9X Tashan" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_9X_TASHAN/images/LOGO_HD/image.png" group-title="Music" tvg-type="live",9X Tashan
+https://cdn-2.pishow.tv/live/1613/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="9XM" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_9XM/images/LOGO_HD/image.png" group-title="Music" tvg-type="live",9XM
+https://9xjio.wiseplayout.com/9XM/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="&pictures" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG002FYK4V.png?lock=720x540" group-title="Movies" tvg-type="live",&pictures
+https://trs1.aynaott.com/andpictureshd/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="&pictures HD" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0022J67R.png?lock=720x540" group-title="Movies" tvg-type="live",&pictures HD
+http://103.72.101.252:8080/live/185.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="&TV HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMAND_TV_HD/images/LOGO_HD/LOGO_HD_image.png" group-title="Movies" tvg-type="live",&TV HD
+https://trs1.aynaott.com/andtvhd/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="&TV International" tvg-logo="" group-title="Movies" tvg-type="live",&TV International
+https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="&xplor HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDXPLOR_HD/images/LOGO_HD/LOGO_HD_image.png" group-title="Movies" tvg-type="live",&xplor HD
+http://149.71.34.166:8000/play/a001/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="Movies" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="Movies" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="News" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="Aaj Tak HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AAJ_TAK_HD/images/LOGO_HD/image.png" group-title="News" tvg-type="live",Aaj Tak HD
+https://feeds.intoday.in/aajtak/api/aajtakhd/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Aaj Tak" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AAJ_TAK/images/LOGO_HD/image.png" group-title="News" tvg-type="live",Aaj Tak
+https://aajtaklive-amd.akamaized.net/hls/live/2014416/aajtak/aajtaklive/live_404p/chunks.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Colors Marathi" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_MARATHI/images/LOGO_HD/image.png" group-title="Television" tvg-type="live",Colors Marathi
+http://103.72.101.252:8080/live/755.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+
 # --- MOVIES SECTION ---
 #EXTINF:-1 tvg-id="1241693" tvg-name="Do Deewane Seher Mein" tvg-logo="https://image.tmdb.org/t/p/w780/oAy3gPhFqNX5gV9RwaDAem1KQ3x.jpg" group-title="Bollywood Movies",Do Deewane Seher Mein
 https://cloudstorage.bar/7639088713099640832/Do.Deewane.Seher.Mein.1080p.mkv
@@ -20382,7 +20488,7 @@ https://cloudstorage.bar/7656467430679511048/Alliance.S01E03.mp4
 #EXTINF:-1 tvg-id="326367" tvg-name="Alliance" tvg-logo="" group-title="Prime Video India" series-name="Alliance" season="1" episode="4",Alliance - S01E04
 https://cloudstorage.bar/7656852160964984832/Alliance.S01E04.mkv
 #EXTINF:-1 tvg-id="326367" tvg-name="Alliance" tvg-logo="" group-title="Prime Video India" series-name="Alliance" season="1" episode="5",Alliance - S01E05
-
+https://cloudstorage.bar/7657259405469024408/Alliance.S01E05.mp4
 #EXTINF:-1 tvg-id="326367" tvg-name="Alliance" tvg-logo="" group-title="Prime Video India" series-name="Alliance" season="1" episode="6",Alliance - S01E06
 
 #EXTINF:-1 tvg-id="326367" tvg-name="Alliance" tvg-logo="" group-title="Prime Video India" series-name="Alliance" season="1" episode="7",Alliance - S01E07
@@ -20465,7 +20571,7 @@ https://cloudstorage.bar/7656852620526485552/S02E02.mp4
 #EXTINF:-1 tvg-id="158282" tvg-name="Lock Upp" tvg-logo="" group-title="Netflix India" series-name="Lock Upp" season="1" episode="3",Lock Upp - S01E03
 https://cloudstorage.bar/7656852392893218848/S02E03.mp4
 #EXTINF:-1 tvg-id="158282" tvg-name="Lock Upp" tvg-logo="" group-title="Netflix India" series-name="Lock Upp" season="1" episode="4",Lock Upp - S01E04
-
+https://cloudstorage.bar/7657270108527525964/S01E04.mp4
 #EXTINF:-1 tvg-id="158282" tvg-name="Lock Upp" tvg-logo="" group-title="Netflix India" series-name="Lock Upp" season="1" episode="5",Lock Upp - S01E05
 
 #EXTINF:-1 tvg-id="158282" tvg-name="Lock Upp" tvg-logo="" group-title="Netflix India" series-name="Lock Upp" season="1" episode="6",Lock Upp - S01E06
