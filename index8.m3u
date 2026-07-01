@@ -41,42 +41,160 @@ https://feeds.intoday.in/aajtak/api/aajtakhd/master.m3u8
 https://aajtaklive-amd.akamaized.net/hls/live/2014416/aajtak/aajtaklive/live_404p/chunks.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Colors Marathi" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_MARATHI/images/LOGO_HD/image.png" group-title="Television" tvg-type="live",Colors Marathi
 http://103.72.101.252:8080/live/755.m3u8
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
+#EXTINF:-1 tvg-id="" tvg-name="ABP Majha" tvg-logo="https://dtil.tmsimg.com/assets/s142521_ld_h15_aa.png?lock=720x540" group-title="News" tvg-type="live",ABP Majha
+https://yupprestreamliveus.akamaized.net/vglive-sk-355289/majha/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="All Time Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ALL_TIME_MOVIES/images/LOGO_HD/image.png" group-title="Movies" tvg-type="live",All Time Movies
+https://mumt03.tangotv.in/Dsly5z3HALLTIMEMOVIES/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Anmol Cinema" tvg-logo="https://i.imgur.com/DjzFjod.png" group-title="Movies" tvg-type="live",Anmol Cinema
+http://103.175.73.12:8080/live/271/271_0.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="B4U Movies" tvg-logo="https://i.imgur.com/M9kMFJl.png" group-title="Movies" tvg-type="live",B4U Movies
+https://cdn-2.pishow.tv/live/419/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="B4U Kadak" tvg-logo="https://dtil.tmsimg.com/assets/s142695_ld_h15_aa.png?lock=720x540" group-title="Movies" tvg-type="live",B4U Kadak
+https://cdn-2.pishow.tv/live/227/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="B4U Music" tvg-logo="https://dtil.tmsimg.com/assets/s158141_ld_h15_aa.png?lock=720x540" group-title="Music" tvg-type="live",B4U Music
+https://cdn-2.pishow.tv/live/415/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Big Magic" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG002YJ850.png?lock=720x540" group-title="Movies" tvg-type="live",Big Magic
+https://mumt05.tangotv.in/87NeALx2BIGMAGIC/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="CNBC TV18 Prime HD" tvg-logo="https://www.cnbctv18.com/static/images/cnbc-new-logo/cnbc-prime-livetv.svg" group-title="News" tvg-type="live",CNBC TV18 Prime HD
+https://n18syndication.akamaized.net/bpk-tv/CNBC_Tv18_Prime_HD_NW18_MOB/output01/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Colors" tvg-logo="https://i.imgur.com/M8uCJ0D.png" group-title="Television" tvg-type="live",Colors
+http://103.229.254.25:7001/play/a077/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Colors HD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/63/Colors_HD.svg" group-title="Television" tvg-type="live",Colors HD
+https://trs1.aynaott.com/colorshd/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Disney International HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_INTERNATIONAL_HD/images/LOGO_HD/image.png" group-title="Kids" tvg-type="live",Disney International HD
+http://149.71.34.166:8002/play/a01p/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Disney Junior" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="Kids" tvg-type="live",Disney Junior
+http://149.71.34.166:8000/play/a00l/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="E 24" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_E24/images/LOGO_HD/image.png" group-title="Music" tvg-type="live",E 24
+https://live-cf-e24.dailyhunt.in/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Fakt Marathi" tvg-logo="https://dtil.tmsimg.com/assets/s143038_ld_h15_aa.png?lock=720x540" group-title="Movies" tvg-type="live",Fakt Marathi
+https://mumt02.tangotv.in/FAKTMARATHI/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Food Food" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Food_Food.png" group-title="Lifestyle" tvg-type="live",Food Food
+https://mumt03.tangotv.in/Dsly5z3HFOODFOOD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Goldmines" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOLDMINES/images/LOGO_HD/image.png" group-title="Movies" tvg-type="live",Goldmines
+https://cdn-2.pishow.tv/live/1459/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Goldmines Bollywood" tvg-logo="https://i.imgur.com/6mNQ9mM.png" group-title="Movies" tvg-type="live",Goldmines Bollywood
+https://mumt03.tangotv.in/Dsly5z3HGOLDMINESBOLLYWOOD/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Goldmines Movies" tvg-logo="https://dtil.tmsimg.com/assets/s142881_ld_h15_aa.png?lock=720x540" group-title="Movies" tvg-type="live",Goldmines Movies
+https://cdn-2.pishow.tv/live/1461/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="History TV18 HD" tvg-logo="https://dtil.tmsimg.com/assets/s143133_ld_h15_aa.png?lock=720x540" group-title="Documentary" tvg-type="live",History TV18 HD
+https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="History TV18" tvg-logo="https://dtil.tmsimg.com/assets/s143132_ld_h15_aa.png?lock=720x540" group-title="Documentary" tvg-type="live",History TV18
+http://103.72.101.252:8080/live/1471.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Hungama TV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HUNGAMA/images/LOGO_HD/image.png" group-title="Kids" tvg-type="live",Hungama TV
+http://149.71.34.166:8000/play/a075/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="India Today" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_INDIA_TODAY/images/LOGO_HD/image.png" group-title="News" tvg-type="live",India Today
+https://livehub-voidnet.onrender.com/cluster/streamcore/in/INDIATODAY_StreamOrchestrator.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="India TV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_INDIA_TV/images/LOGO_HD/image.png" group-title="News" tvg-type="live",India TV
+https://pl-indiatvnews.akamaized.net/out/v1/db79179b608641ceaa5a4d0dd0dca8da/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="India TV Aap Ki Adalat" tvg-logo="https://play-lh.googleusercontent.com/2IlBX3IQHna8g4g-56vwGWb14K38spcviIh3i7uJCJ32ydfhcKZdOsacgijPkPeerEA" group-title="News" tvg-type="live",India TV Aap Ki Adalat
+https://amg01550-amg01550c6-samsung-in-4679.playouts.now.amagi.tv/playlist/amg01550-indiatvfast-indiatvakasamsung-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Jai Maharashtra" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Jai_Maharashtra.png" group-title="News" tvg-type="live",Jai Maharashtra
+https://cdn-3.pishow.tv/live/1465/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Maha Movie" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Maha_Movies.png" group-title="Movies" tvg-type="live",Maha Movie
+https://cdn-6.pishow.tv/live/10007/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Manoranjan TV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MANORANJAN_TV/images/LOGO_HD/image.png" group-title="Movies" tvg-type="live",Manoranjan TV
+https://cdn-1.pishow.tv/live/1013/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Mirror Now" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MIRROR_NOW/images/LOGO_HD/image.png" group-title="Entertainment" tvg-type="live",Mirror Now
+https://dai.google.com/linear/hls/event/ClPOullTQky5vGPf7fMZ8g/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MoviePlex" tvg-logo="https://i.imgur.com/THJEAqJ.png" group-title="Movies" tvg-type="live",MoviePlex
+https://mumt04.tangotv.in/m18aqlK4MOVIEPLEX/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Movies Now" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png" group-title="Movies" tvg-type="live",Movies Now
+http://103.161.153.165:8000/play/mnh/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Movies Now +" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNSYMPLUS/images/LOGO_HD/image.png" group-title="Movies" tvg-type="live",Movies Now +
+http://149.71.34.166:8000/play/a05t/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MTV/images/LOGO_HD/image.png" group-title="Music" tvg-type="live",MTV
+http://103.72.101.252:8080/live/248.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="MTV HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MTV/images/LOGO_HD/image.png" group-title="Movies" tvg-type="live",MTV HD
+http://149.71.34.166:8000/play/a00p/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Music India" tvg-logo="https://dtil.tmsimg.com/assets/s143563_ld_h15_aa.png?lock=720x540" group-title="Music" tvg-type="live",Music India
+https://cdn-2.pishow.tv/live/226/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="National Geographic" tvg-logo="https://dtil.tmsimg.com/assets/s143573_ld_h15_aa.png?lock=720x540" group-title="Documentary" tvg-type="live",National Geographic
+http://149.71.34.166:8002/play/a013/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="NDTV Marathi" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_MARATHI/images/LOGO_HD/image.png" group-title="News" tvg-type="live",NDTV Marathi
+https://web-ndtv-marathi.akamaized.net/hls/live/2110470/ndtvmarathi/master_1.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="NDTV Profit" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_PROFIT_PRIME/images/LOGO_HD/image.png" group-title="News" tvg-type="live",NDTV Profit
+https://ndtvprofit.akamaized.net/hls/live/2107404/ndtvprofit/chunklist_5.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="NDTV 24x7" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_24X7/images/LOGO_HD/image.png" group-title="News" tvg-type="live",NDTV 24x7
+https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="NDTV Good Times" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOOD_TIMES/images/LOGO_HD/image.png" group-title="News" tvg-type="live",NDTV Good Times
+https://d2gvyg6lvauoko.cloudfront.net/230226/ndtvgoodtimes/chunks.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="NDTV India" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NDTV_INDIA/images/LOGO_HD/image.png" group-title="News" tvg-type="live",NDTV India
+https://ndtvindiaelemarchana.akamaized.net/hls/live/2003679/ndtvindia/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="News18 India" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS18_INDIA/images/LOGO_HD/image.png" group-title="News" tvg-type="live",News18 India
+https://n18syndication.akamaized.net/bpk-tv/News18_India_NW18_MOB/output01/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="News18 Marathi" tvg-logo="https://images.news18.com/dlxczavtqcctuei/news18/static/images/marathi/NEWS_18_Marathi_Logo.svg" group-title="News" tvg-type="live",News18 Marathi
+https://n18syndication.akamaized.net/bpk-tv/News18_Lokmat_NW18_MOB/output01/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Republic Bharat" tvg-logo="https://dtil.tmsimg.com/assets/s143724_ld_h15_aa.png?lock=720x540" group-title="News" tvg-type="live",Republic Bharat
+https://vg-republictvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-275673/main.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Nick HD+" tvg-logo="https://dtil.tmsimg.com/assets/s159121_ld_h15_aa.png?lock=720x540" group-title="Kids" tvg-type="live",Nick HD+
+http://116.90.120.157:8000/play/a0i3/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Sangeet Marathi" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SANGEET_MARATHI/images/LOGO_HD/image.png" group-title="Music" tvg-type="live",Sangeet Marathi
+https://cdn-3.pishow.tv/live/1229/master.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Shemaroo Marathi Bana" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHEMAROO_MARATHIBANA/images/LOGO_HD/image.png" group-title="Entertainment" tvg-type="live",Shemaroo Marathi Bana
+https://airtelapp.shemaroo.com/marathibana/smil:marathibanaadp.smil/playlist.m3u8]
+#EXTINF:-1 tvg-id="" tvg-name="Shemaroo TV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHEMAROO_TV/images/LOGO_HD/image.png" group-title="Entertainment" tvg-type="live",Shemaroo TV
+https://airtelapp.shemaroo.com/shemarootv/smil:shemarootvadp.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Shemaroo Umang" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHEMAROO_UMANG/images/LOGO_HD/image.png" group-title="Entertainment" tvg-type="live",Shemaroo Umang
+https://airtelapp.shemaroo.com/shemarooumang/smil:shemarooumangadp.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Sony Marathi" tvg-logo="" group-title="Entertainment" tvg-type="live",Sony Marathi
+http://217.20.112.199:8080/sonymarathi/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Sony Max 2" tvg-logo="https://i.imgur.com/gqUYk6C.png" group-title="Movies" tvg-type="live",Sony Max 2
+http://149.71.34.166:8000/play/a00z/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Sony Sports Ten 3 Hindi" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0025TCMR.png?lock=720x540" group-title="Sports" tvg-type="live",Sony Sports Ten 3 Hindi
+http://103.229.254.25:7001/play/a09q/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Star Gold Thrills" tvg-logo="https://i.imgur.com/azqtpYh.png" group-title="" tvg-type="live",Star Gold Thrills
+http://103.157.248.140:8000/play/a00b/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Star Sports 1 HD" tvg-logo="https://dtil.tmsimg.com/assets/s143837_ld_h15_aa.png?lock=720x540" group-title="Sports" tvg-type="live",Star Sports 1 HD
+http://103.253.18.58:8000/play/a00m
+#EXTINF:-1 tvg-id="" tvg-name="Star Sports 1 Hindi HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HD_HINDI/images/LOGO_HD/image.png" group-title="" tvg-type="live",Star Sports 1 Hindi HD
+http://103.253.18.58:8000/play/a00t
+#EXTINF:-1 tvg-id="" tvg-name="Star Utsav Movies" tvg-logo="https://i.imgur.com/k5QHfH2.png" group-title="Movies" tvg-type="live",Star Utsav Movies
+http://149.71.34.166:8000/play/a059/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="StarPlus" tvg-logo="https://i.imgur.com/xWxNy3L.png" group-title="Entertainment" tvg-type="live",StarPlus
+http://41.205.77.102/STAR-PLUS/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="StarPlus HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_PLUS_HD/images/LOGO_HD/image.png" group-title="Entertainment" tvg-type="live",StarPlus HD
+https://trs1.aynaott.com/starplushd/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Travelxp 4K HDR" tvg-logo="https://i.imgur.com/HUWEnc5.png" group-title="Lifestyle" tvg-type="live",Travelxp 4K HDR
+https://deltatesttatasky.akamaized.net/out/i/968284.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Travelxp HD" tvg-logo="https://dtil.tmsimg.com/assets/s144015_ld_h15_aa.png?lock=720x540" group-title="Lifestyle" tvg-type="live",Travelxp HD
+https://amg00416-amg00416c9-samsung-in-4882.playouts.now.amagi.tv/playlist/amg00416-travelxp-travelxphd-samsungin/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="TV9 Marathi" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_TV9_MARATHI/images/LOGO_HD/image.png" group-title="News" tvg-type="live",TV9 Marathi
+https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9marlygv8h/liveabr/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="YRF Music" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/YRF_Music.png" group-title="Music" tvg-type="live",YRF Music
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee 24 Taas" tvg-logo="https://english.cdn.zeenews.com/images/logo/zee-24-taas-08.svg" group-title="News" tvg-type="live",Zee 24 Taas
+https://dgrvlduwztkd4.cloudfront.net/index_5.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Action" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540" group-title="Movies" tvg-type="live",Zee Action
+http://103.72.101.252:8080/live/488.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Bharat" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG00230QBL.png?lock=720x540" group-title="News" tvg-type="live",Zee Bharat
+https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeehindustan/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/96bbab12-582e-4540-af70-510ab6824581/main.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Bollymovies" tvg-logo="https://framerusercontent.com/images/mqfJ18x4jYe0GbZUbxSHsbnWU.png?scale-down-to=512" group-title="Movies" tvg-type="live",Zee Bollymovies
+https://amg17931-zee-amg17931c8-samsung-th-6526.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Bollywood" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0022T6DM.png?lock=720x540" group-title="Movies" tvg-type="live",Zee Bollywood
+http://149.71.34.166:8000/play/a01q/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Cine Classic" tvg-logo="https://i.imgur.com/QCRhS1n.png" group-title="Movies" tvg-type="live",Zee Cine Classic
+https://amg00862-amg00862c8-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c8-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Cinema" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/92/Zee_Cinema_2025.svg" group-title="Movies" tvg-type="live",Zee Cinema
+https://d1g8wgjurz8via.cloudfront.net/bpk-tv/NGCHD/default/NGCHD.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Cinema HD" tvg-logo="" group-title="Movies" tvg-type="live",Zee Cinema HD
+http://103.72.101.252:8080/live/165.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Classic" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CLASSIC/images/LOGO_HD/LOGO_HD_image.png" group-title="Movies" tvg-type="live",Zee Classic
+http://103.229.254.25:7001/play/a09w/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Comedy Nation" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN2100002GD_20260325T012327SQUARE.png" group-title="Entertainment" tvg-type="live",Zee Comedy Nation
+https://amg00862-amg00862c5-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c5-amgplt0173/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Marathi" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_MARATHI/images/LOGO_HD/LOGO_HD_image.png" group-title="Movies" tvg-type="live",Zee Marathi
+http://103.72.101.252:8080/live/445.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Marathi HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_MARATHI_HD/images/LOGO_HD/LOGO_HD_image.png" group-title="Movies" tvg-type="live",Zee Marathi HD
+http://103.72.101.252:8080/live/1360.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="Movies" tvg-type="live",
 
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
-#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
-
+#EXTINF:-1 tvg-id="" tvg-name="Zee TV HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a2/Zee_TV_Logo_2025.svg" group-title="Entertainment" tvg-type="live",Zee TV HD
+http://41.205.77.102/ZEE-TV/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zee Yuva" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_YUVA/images/LOGO_HD/LOGO_HD_image.png" group-title="Entertainment" tvg-type="live",Zee Yuva
+http://103.72.101.252:8080/live/414.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Zoom" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZOOM/images/LOGO_HD/image.png" group-title="Music" tvg-type="live",Zoom
+https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
 
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" tvg-type="live",
@@ -21869,6 +21987,154 @@ https://cloudstorage.bar/zip_7657093121515192404_11/The.Gringo.Hunters.S01E10.La
 https://cloudstorage.bar/zip_7657093121515192404_2/The.Gringo.Hunters.S01E11.Anybody.call.a.cop.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
 #EXTINF:-1 tvg-id="246026" tvg-name="The Gringo Hunters" tvg-logo="" group-title="Netflix" series-name="The Gringo Hunters" season="1" episode="12",The Gringo Hunters - S01E12
 https://cloudstorage.bar/zip_7657093121515192404_6/The.Gringo.Hunters.S01E12.428.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+
+#EXTINF:-1 tvg-id="239826" tvg-name="Ballard" tvg-logo="https://media.themoviedb.org/t/p/w780/vHQGu6ducKC7JcDU6lqWyx7tWW5.jpg" group-title="Prime Video" series-name="Ballard" season="1" episode="1",Ballard - S01E01
+https://cloudstorage.bar/zip_7657185347347939336_7/Ballard.S01E01.1080p.AMZN.WEB-DL.DDP5.1.H.265-4khdHub.com.mkv
+#EXTINF:-1 tvg-id="239826" tvg-name="Ballard" tvg-logo="" group-title="Prime Video" series-name="Ballard" season="1" episode="2",Ballard - S01E02
+https://cloudstorage.bar/zip_7657185347347939336_1/Ballard.S01E02.1080p.AMZN.WEB-DL.DDP5.1.H.265-4khdHub.com.mkv
+#EXTINF:-1 tvg-id="239826" tvg-name="Ballard" tvg-logo="" group-title="Prime Video" series-name="Ballard" season="1" episode="3",Ballard - S01E03
+https://cloudstorage.bar/zip_7657185347347939336_6/Ballard.S01E03.1080p.AMZN.WEB-DL.DDP5.1.H.265-4khdHub.com.mkv
+#EXTINF:-1 tvg-id="239826" tvg-name="Ballard" tvg-logo="" group-title="Prime Video" series-name="Ballard" season="1" episode="4",Ballard - S01E04
+https://cloudstorage.bar/zip_7657185347347939336_3/Ballard.S01E04.1080p.AMZN.WEB-DL.DDP5.1.H.265-4khdHub.com.mkv
+#EXTINF:-1 tvg-id="239826" tvg-name="Ballard" tvg-logo="" group-title="Prime Video" series-name="Ballard" season="1" episode="5",Ballard - S01E05
+https://cloudstorage.bar/zip_7657185347347939336_4/Ballard.S01E05.1080p.AMZN.WEB-DL.DDP5.1.H.265-4khdHub.com.mkv
+#EXTINF:-1 tvg-id="239826" tvg-name="Ballard" tvg-logo="" group-title="Prime Video" series-name="Ballard" season="1" episode="6",Ballard - S01E06
+https://cloudstorage.bar/zip_7657185347347939336_9/Ballard.S01E06.1080p.AMZN.WEB-DL.DDP5.1.H.265-4khdHub.com.mkv
+#EXTINF:-1 tvg-id="239826" tvg-name="Ballard" tvg-logo="" group-title="Prime Video" series-name="Ballard" season="1" episode="7",Ballard - S01E07
+https://cloudstorage.bar/zip_7657185347347939336_2/Ballard.S01E07.1080p.AMZN.WEB-DL.DDP5.1.H.265-4khdHub.com.mkv
+#EXTINF:-1 tvg-id="239826" tvg-name="Ballard" tvg-logo="" group-title="Prime Video" series-name="Ballard" season="1" episode="8",Ballard - S01E08
+https://cloudstorage.bar/zip_7657185347347939336_0/Ballard.S01E08.1080p.AMZN.WEB-DL.DDP5.1.H.265-4khdHub.com.mkv
+#EXTINF:-1 tvg-id="239826" tvg-name="Ballard" tvg-logo="" group-title="Prime Video" series-name="Ballard" season="1" episode="9",Ballard - S01E09
+https://cloudstorage.bar/zip_7657185347347939336_5/Ballard.S01E09.1080p.AMZN.WEB-DL.DDP5.1.H.265-4khdHub.com.mkv
+#EXTINF:-1 tvg-id="239826" tvg-name="Ballard" tvg-logo="" group-title="Prime Video" series-name="Ballard" season="1" episode="10",Ballard - S01E10
+https://cloudstorage.bar/zip_7657185347347939336_8/Ballard.S01E10.1080p.AMZN.WEB-DL.DDP5.1.H.265-4khdHub.com.mkv
+
+#EXTINF:-1 tvg-id="294187" tvg-name="The Hunt: The Rajiv Gandhi Assassination Case" tvg-logo="https://media.themoviedb.org/t/p/w780/2Jz3O43oDAJZIlzfmgmbvxjRuH3.jpg" group-title="SonyLiv" series-name="The Hunt: The Rajiv Gandhi Assassination Case" season="1" episode="1",The Hunt: The Rajiv Gandhi Assassination Case - S01E01
+https://cloudstorage.bar/zip_7657186455449501720_4/The.Hunt.The.Rajiv.Gandhi.Assassination.Case.S01E01.1080p.SLIV.WEB-DL.Hindi.DDP5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294187" tvg-name="The Hunt: The Rajiv Gandhi Assassination Case" tvg-logo="" group-title="SonyLiv" series-name="The Hunt: The Rajiv Gandhi Assassination Case" season="1" episode="2",The Hunt: The Rajiv Gandhi Assassination Case - S01E02
+https://cloudstorage.bar/zip_7657186455449501720_6/The.Hunt.The.Rajiv.Gandhi.Assassination.Case.S01E02.1080p.SLIV.WEB-DL.Hindi.DDP5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294187" tvg-name="The Hunt: The Rajiv Gandhi Assassination Case" tvg-logo="" group-title="SonyLiv" series-name="The Hunt: The Rajiv Gandhi Assassination Case" season="1" episode="3",The Hunt: The Rajiv Gandhi Assassination Case - S01E03
+https://cloudstorage.bar/zip_7657186455449501720_5/The.Hunt.The.Rajiv.Gandhi.Assassination.Case.S01E03.1080p.SLIV.WEB-DL.Hindi.DDP5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294187" tvg-name="The Hunt: The Rajiv Gandhi Assassination Case" tvg-logo="" group-title="SonyLiv" series-name="The Hunt: The Rajiv Gandhi Assassination Case" season="1" episode="4",The Hunt: The Rajiv Gandhi Assassination Case - S01E04
+https://cloudstorage.bar/zip_7657186455449501720_1/The.Hunt.The.Rajiv.Gandhi.Assassination.Case.S01E04.1080p.SLIV.WEB-DL.Hindi.DDP5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294187" tvg-name="The Hunt: The Rajiv Gandhi Assassination Case" tvg-logo="" group-title="SonyLiv" series-name="The Hunt: The Rajiv Gandhi Assassination Case" season="1" episode="5",The Hunt: The Rajiv Gandhi Assassination Case - S01E05
+https://cloudstorage.bar/zip_7657186455449501720_0/The.Hunt.The.Rajiv.Gandhi.Assassination.Case.S01E05.1080p.SLIV.WEB-DL.Hindi.DDP5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294187" tvg-name="The Hunt: The Rajiv Gandhi Assassination Case" tvg-logo="" group-title="SonyLiv" series-name="The Hunt: The Rajiv Gandhi Assassination Case" season="1" episode="6",The Hunt: The Rajiv Gandhi Assassination Case - S01E06
+https://cloudstorage.bar/zip_7657186455449501720_2/The.Hunt.The.Rajiv.Gandhi.Assassination.Case.S01E06.1080p.SLIV.WEB-DL.Hindi.DDP5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294187" tvg-name="The Hunt: The Rajiv Gandhi Assassination Case" tvg-logo="" group-title="SonyLiv" series-name="The Hunt: The Rajiv Gandhi Assassination Case" season="1" episode="7",The Hunt: The Rajiv Gandhi Assassination Case - S01E07
+https://cloudstorage.bar/zip_7657186455449501720_3/The.Hunt.The.Rajiv.Gandhi.Assassination.Case.S01E07.1080p.SLIV.WEB-DL.Hindi.DDP5.1.ESub.x264-HDHub4u.Ms.mkv
+
+#EXTINF:-1 tvg-id="294178" tvg-name="Good Wife" tvg-logo="https://media.themoviedb.org/t/p/w780/7Z6yxgUaiIsOcIrVeuAbDvwIYej.jpg" group-title="JioHotstar" series-name="Good Wife" season="1" episode="1",Good Wife - S01E01
+https://cloudstorage.bar/zip_7657186841996558384_3/Good.Wife.S01E01.1080p.JHS.WEB-DL.Hindi.DDP5.1-Tamil.DDPA5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294178" tvg-name="Good Wife" tvg-logo="" group-title="JioHotstar" series-name="Good Wife" season="1" episode="2",Good Wife - S01E02
+https://cloudstorage.bar/zip_7657186841996558384_2/Good.Wife.S01E02.1080p.JHS.WEB-DL.Hindi.DDP5.1-Tamil.DDPA5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294178" tvg-name="Good Wife" tvg-logo="" group-title="JioHotstar" series-name="Good Wife" season="1" episode="3",Good Wife - S01E03
+https://cloudstorage.bar/zip_7657186841996558384_0/Good.Wife.S01E03.1080p.JHS.WEB-DL.Hindi.DDP5.1-Tamil.DDPA5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294178" tvg-name="Good Wife" tvg-logo="" group-title="JioHotstar" series-name="Good Wife" season="1" episode="4",Good Wife - S01E04
+https://cloudstorage.bar/zip_7657186841996558384_5/Good.Wife.S01E04.1080p.JHS.WEB-DL.Hindi.DDP5.1-Tamil.DDPA5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294178" tvg-name="Good Wife" tvg-logo="" group-title="JioHotstar" series-name="Good Wife" season="1" episode="5",Good Wife - S01E05
+https://cloudstorage.bar/zip_7657186841996558384_1/Good.Wife.S01E05.1080p.JHS.WEB-DL.Hindi.DDP5.1-Tamil.DDPA5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="294178" tvg-name="Good Wife" tvg-logo="" group-title="JioHotstar" series-name="Good Wife" season="1" episode="6",Good Wife - S01E06
+https://cloudstorage.bar/zip_7657186841996558384_4/Good.Wife.S01E06.1080p.JHS.WEB-DL.Hindi.DDP5.1-Tamil.DDPA5.1.ESub.x264-HDHub4u.Ms.mkv
+
+#EXTINF:-1 tvg-id="230777" tvg-name="The Trunk" tvg-logo="https://media.themoviedb.org/t/p/w780/d4RSgEVbISGhgPpxfZQg5chpAZ9.jpg" group-title="Netflix" series-name="The Trunk" season="1" episode="1",The Trunk - S01E01
+https://cloudstorage.bar/zip_7657233966377730060_7/The.Trunk.S01E01.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="230777" tvg-name="The Trunk" tvg-logo="" group-title="Netflix" series-name="The Trunk" season="1" episode="2",The Trunk - S01E02
+https://cloudstorage.bar/zip_7657233966377730060_5/The.Trunk.S01E02.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="230777" tvg-name="The Trunk" tvg-logo="" group-title="Netflix" series-name="The Trunk" season="1" episode="3",The Trunk - S01E03
+https://cloudstorage.bar/zip_7657233966377730060_6/The.Trunk.S01E03.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="230777" tvg-name="The Trunk" tvg-logo="" group-title="Netflix" series-name="The Trunk" season="1" episode="4",The Trunk - S01E04
+https://cloudstorage.bar/zip_7657233966377730060_2/The.Trunk.S01E04.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="230777" tvg-name="The Trunk" tvg-logo="" group-title="Netflix" series-name="The Trunk" season="1" episode="5",The Trunk - S01E05
+https://cloudstorage.bar/zip_7657233966377730060_0/The.Trunk.S01E05.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="230777" tvg-name="The Trunk" tvg-logo="" group-title="Netflix" series-name="The Trunk" season="1" episode="6",The Trunk - S01E06
+https://cloudstorage.bar/zip_7657233966377730060_3/The.Trunk.S01E06.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="230777" tvg-name="The Trunk" tvg-logo="" group-title="Netflix" series-name="The Trunk" season="1" episode="7",The Trunk - S01E07
+https://cloudstorage.bar/zip_7657233966377730060_1/The.Trunk.S01E07.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="230777" tvg-name="The Trunk" tvg-logo="" group-title="Netflix" series-name="The Trunk" season="1" episode="8",The Trunk - S01E08
+https://cloudstorage.bar/zip_7657233966377730060_4/The.Trunk.S01E08.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+
+#EXTINF:-1 tvg-id="129418" tvg-name="Brand New Cherry Flavor" tvg-logo="https://media.themoviedb.org/t/p/w780/cX4acZbi2l4v051NJZfonqY0E3X.jpg" group-title="Netflix" series-name="Brand New Cherry Flavor" season="1" episode="1",Brand New Cherry Flavor - S01E01
+https://cloudstorage.bar/zip_7657245747473023052_3/Brand.New.Cherry.Flavor.S01E01.I.Exist.1080p.NF.WEB-DL.Hindi.DDP5.1-English.DDP5.1.Atmos.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="129418" tvg-name="Brand New Cherry Flavor" tvg-logo="" group-title="Netflix" series-name="Brand New Cherry Flavor" season="1" episode="2",Brand New Cherry Flavor - S01E02
+https://cloudstorage.bar/zip_7657245747473023052_2/Brand.New.Cherry.Flavor.S01E02.Hair.of.the.Dog.1080p.NF.WEB-DL.Hindi.DDP5.1-English.DDP5.1.Atmos.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="129418" tvg-name="Brand New Cherry Flavor" tvg-logo="" group-title="Netflix" series-name="Brand New Cherry Flavor" season="1" episode="3",Brand New Cherry Flavor - S01E03
+https://cloudstorage.bar/zip_7657245747473023052_6/Brand.New.Cherry.Flavor.S01E03.Roman.Candle.1080p.NF.WEB-DL.Hindi.DDP5.1-English.DDP5.1.Atmos.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="129418" tvg-name="Brand New Cherry Flavor" tvg-logo="" group-title="Netflix" series-name="Brand New Cherry Flavor" season="1" episode="4",Brand New Cherry Flavor - S01E04
+https://cloudstorage.bar/zip_7657245747473023052_0/Brand.New.Cherry.Flavor.S01E04.Tadpole.Smoothie.1080p.NF.WEB-DL.Hindi.DDP5.1-English.DDP5.1.Atmos.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="129418" tvg-name="Brand New Cherry Flavor" tvg-logo="" group-title="Netflix" series-name="Brand New Cherry Flavor" season="1" episode="5",Brand New Cherry Flavor - S01E05
+https://cloudstorage.bar/zip_7657245747473023052_1/Brand.New.Cherry.Flavor.S01E05.Jennifer.1080p.NF.WEB-DL.Hindi.DDP5.1-English.DDP5.1.Atmos.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="129418" tvg-name="Brand New Cherry Flavor" tvg-logo="" group-title="Netflix" series-name="Brand New Cherry Flavor" season="1" episode="6",Brand New Cherry Flavor - S01E06
+https://cloudstorage.bar/zip_7657245747473023052_4/Brand.New.Cherry.Flavor.S01E06.Milk.Bath.1080p.NF.WEB-DL.Hindi.DDP5.1-English.DDP5.1.Atmos.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="129418" tvg-name="Brand New Cherry Flavor" tvg-logo="" group-title="Netflix" series-name="Brand New Cherry Flavor" season="1" episode="7",Brand New Cherry Flavor - S01E07
+https://cloudstorage.bar/zip_7657245747473023052_5/Brand.New.Cherry.Flavor.S01E07.Egg.1080p.NF.WEB-DL.Hindi.DDP5.1-English.DDP5.1.Atmos.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="129418" tvg-name="Brand New Cherry Flavor" tvg-logo="" group-title="Netflix" series-name="Brand New Cherry Flavor" season="1" episode="8",Brand New Cherry Flavor - S01E08
+https://cloudstorage.bar/zip_7657245747473023052_7/Brand.New.Cherry.Flavor.S01E08.Bodies.1080p.NF.WEB-DL.Hindi.DDP5.1-English.DDP5.1.Atmos.H.265-4kHdHub.Com.mkv
+
+#EXTINF:-1 tvg-id="293808" tvg-name="Marked" tvg-logo="https://media.themoviedb.org/t/p/w780/1XFP7vl4KDAuCNOdtq8lFm5LeSW.jpg" group-title="Netflix" series-name="Marked" season="1" episode="1",Marked - S01E01
+https://cloudstorage.bar/zip_7657246185559687264_0/Marked.S01E01.1080p.NF.WEB-DL.DDP5.1.H.265-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="293808" tvg-name="Marked" tvg-logo="" group-title="Netflix" series-name="Marked" season="1" episode="2",Marked - S01E02
+https://cloudstorage.bar/zip_7657246185559687264_5/Marked.S01E02.1080p.NF.WEB-DL.DDP5.1.H.265-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="293808" tvg-name="Marked" tvg-logo="" group-title="Netflix" series-name="Marked" season="1" episode="3",Marked - S01E03
+https://cloudstorage.bar/zip_7657246185559687264_2/Marked.S01E03.1080p.NF.WEB-DL.DDP5.1.H.265-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="293808" tvg-name="Marked" tvg-logo="" group-title="Netflix" series-name="Marked" season="1" episode="4",Marked - S01E04
+https://cloudstorage.bar/zip_7657246185559687264_4/Marked.S01E04.1080p.NF.WEB-DL.DDP5.1.H.265-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="293808" tvg-name="Marked" tvg-logo="" group-title="Netflix" series-name="Marked" season="1" episode="5",Marked - S01E05
+https://cloudstorage.bar/zip_7657246185559687264_1/Marked.S01E05.1080p.NF.WEB-DL.DDP5.1.H.265-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="293808" tvg-name="Marked" tvg-logo="" group-title="Netflix" series-name="Marked" season="1" episode="6",Marked - S01E06
+https://cloudstorage.bar/zip_7657246185559687264_3/Marked.S01E06.1080p.NF.WEB-DL.DDP5.1.H.265-4kHdHub.com.mkv
+
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="https://media.themoviedb.org/t/p/w780/sILKrYhFK6bedXgDggQD3GmGUUV.jpg" group-title="Netflix" series-name="Leanne" season="1" episode="1",Leanne - S01E01
+https://cloudstorage.bar/zip_7657254461961666624_11/Leanne%20S01E01%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="2",Leanne - S01E02
+https://cloudstorage.bar/zip_7657254461961666624_4/Leanne%20S01E02%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="3",Leanne - S01E03
+https://cloudstorage.bar/zip_7657254461961666624_3/Leanne%20S01E03%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="4",Leanne - S01E04
+https://cloudstorage.bar/zip_7657254461961666624_7/Leanne%20S01E04%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="5",Leanne - S01E05
+https://cloudstorage.bar/zip_7657254461961666624_5/Leanne%20S01E05%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="6",Leanne - S01E06
+https://cloudstorage.bar/zip_7657254461961666624_9/Leanne%20S01E06%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="7",Leanne - S01E07
+https://cloudstorage.bar/zip_7657254461961666624_12/Leanne%20S01E07%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="8",Leanne - S01E08
+https://cloudstorage.bar/zip_7657254461961666624_15/Leanne%20S01E08%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="9",Leanne - S01E09
+https://cloudstorage.bar/zip_7657254461961666624_6/Leanne%20S01E09%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="10",Leanne - S01E10
+https://cloudstorage.bar/zip_7657254461961666624_1/Leanne%20S01E10%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="11",Leanne - S01E11
+https://cloudstorage.bar/zip_7657254461961666624_14/Leanne%20S01E11%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="12",Leanne - S01E12
+https://cloudstorage.bar/zip_7657254461961666624_10/Leanne%20S01E12%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="13",Leanne - S01E13
+https://cloudstorage.bar/zip_7657254461961666624_2/Leanne%20S01E13%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="14",Leanne - S01E14
+https://cloudstorage.bar/zip_7657254461961666624_0/Leanne%20S01E14%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="15",Leanne - S01E15
+https://cloudstorage.bar/zip_7657254461961666624_13/Leanne%20S01E15%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="1" episode="16",Leanne - S01E16
+https://cloudstorage.bar/zip_7657254461961666624_8/Leanne%20S01E16%202160p%20NF%2010bit%20WEB-DL%20SDR%20HEVC%20%5BHin-Tam-Tel%20DDP%205.1%20%2B%20English%20DDP%205.1%5D%20H.265%20%28HHWEB-4kHDHub.com%29.mkv
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="2" episode="1",Leanne - S02E01
+
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="2" episode="2",Leanne - S02E02
+
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="2" episode="3",Leanne - S02E03
+
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="2" episode="4",Leanne - S02E04
+
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="2" episode="5",Leanne - S02E05
+
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="2" episode="6",Leanne - S02E06
+
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="2" episode="7",Leanne - S02E07
+
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="2" episode="8",Leanne - S02E08
+
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="2" episode="9",Leanne - S02E09
+
+#EXTINF:-1 tvg-id="252751" tvg-name="Leanne" tvg-logo="" group-title="Netflix" series-name="Leanne" season="2" episode="10",Leanne - S02E10
 
 
 
