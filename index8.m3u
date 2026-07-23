@@ -1458,10 +1458,6 @@ https://cloudstorage.bar/zip_7664333216605536280_2/Pirates_of_the_Caribbean_-_De
 https://cloudstorage.bar/zip_7664333216605536280_1/Pirates_of_the_Caribbean_-_At_World%27s_End_%282007%29_1080p_BluRay_10bit_HEVC_%5BHindi_DDP_5.1_%2B_English_AAC_5.1%5D_x265-EONMOVIES.mkv
 #EXTINF:-1 tvg-id="166426" tvg-name="Pirates of the Caribbean: Dead Men Tell No Tales" tvg-logo="https://image.tmdb.org/t/p/w780/6lAPOAFYFWIO3SQRemEY2wInQMC.jpg" group-title="Hollywood Movies",Pirates of the Caribbean: Dead Men Tell No Tales
 https://cloudstorage.bar/zip_7664333216605536280_0/5._Pirates_of_the_Caribbean_-_Dead_Men_Tell_No_Tales_2017_1080p_10bit_BluRay_x265_HEVC_%5BOrg_Hindi_BD_5.1_%2B_English_AAC_5.1%5D_ESubs_~_PeruGuy.mkv
-#EXTINF:-1 tvg-id="1522074" tvg-name="Pirates of the Caribbean | Disneyland Resort" tvg-logo="https://image.tmdb.org/t/p/w780/hZaiYY3ruIqHNLbbVWDRVNiaYRx.jpg" group-title="Hollywood Movies",Pirates of the Caribbean | Disneyland Resort
-
-#EXTINF:-1 tvg-id="230652" tvg-name="Pirates of the Caribbean: Tales of the Code: Wedlocked" tvg-logo="https://image.tmdb.org/t/p/w780/gJfzdiL6XkFRB5Oh57D7VijT4OK.jpg" group-title="Hollywood Movies",Pirates of the Caribbean: Tales of the Code: Wedlocked
-
 #EXTINF:-1 tvg-id="512200" tvg-name="Jumanji: The Next Level" tvg-logo="https://image.tmdb.org/t/p/w780/jyw8VKYEiM1UDzPB7NsisUgBeJ8.jpg" group-title="Hollywood Movies",Jumanji: The Next Level
 https://cloudstorage.bar/7651454065678745648/Jumanji.The.Next.Level.2019.1080p.10bit.Bluray.HEVC.mkv
 #EXTINF:-1 tvg-id="353486" tvg-name="Jumanji: Welcome to the Jungle" tvg-logo="https://image.tmdb.org/t/p/w780/pSgXKPU5h6U89ipF7HBYajvYt7j.jpg" group-title="Hollywood Movies",Jumanji: Welcome to the Jungle
@@ -1528,8 +1524,6 @@ https://cloudstorage.bar/7651461139489882176/The.Hangover.3.2013.1080p.10bit.Blu
 
 #EXTINF:-1 tvg-id="243683" tvg-name="Step Up All In" tvg-logo="https://image.tmdb.org/t/p/w780/hgAjyJyEvj5S9CeztXs39iEUJKS.jpg" group-title="Hollywood Movies",Step Up All In
 
-#EXTINF:-1 tvg-id="68726" tvg-name="Pacific Rim" tvg-logo="https://image.tmdb.org/t/p/w780/8wo4eN8dWKaKlxhSvBz19uvj8gA.jpg" group-title="Hollywood Movies",Pacific Rim
-
 #EXTINF:-1 tvg-id="268896" tvg-name="Pacific Rim: Uprising" tvg-logo="https://image.tmdb.org/t/p/w780/nFWhttU8PM50t25NPdy7PE7rv3G.jpg" group-title="Hollywood Movies",Pacific Rim: Uprising
 https://cloudstorage.bar/7651457673451274384/Pacific.Rim.Uprising.2018.1080p.Bluray.mkv
 #EXTINF:-1 tvg-id="1948" tvg-name="Crank" tvg-logo="https://image.tmdb.org/t/p/w780/rsKmhnvzJezjwC1Ud2Hh37oNpdQ.jpg" group-title="Hollywood Movies",Crank
@@ -1556,8 +1550,6 @@ https://cloudstorage.bar/7651477073818550432/Baywatch.2017.1080p.Bluray.mkv
 
 #EXTINF:-1 tvg-id="615656" tvg-name="Meg 2: The Trench" tvg-logo="https://image.tmdb.org/t/p/w780/4m1Au3YkjqsxF8iwQy0fPYSxE0h.jpg" tvg-sub="https://file.garden/aG0M3eyoAi7HijUP/SUBS/Movies/Hollywood/The%20Meg%202%20the%20Trench%20-Hindi.srt" tvg-audio="https://new.akshayy.workers.dev/0:/Meg.2.The.Trench.2023.ORG.GPLAY.Hindi.DDP5.1-384Kbps.Audio-YAGAMi.m4a" group-title="Hollywood Movies",Meg 2: The Trench
 https://new.akshayy.workers.dev/0:/Meg.2.The.Trench.2023.720p.AMZN.WEB-DL.DDP5.1.H.264-KEWP.mkv
-#EXTINF:-1 tvg-id="117251" tvg-name="White House Down" tvg-logo="https://image.tmdb.org/t/p/w780/6TeIVKPw7nXXWy2zKmDmlnSwzb7.jpg" group-title="Hollywood Movies",White House Down
-
 #EXTINF:-1 tvg-id="14161" tvg-name="2012" tvg-logo="https://image.tmdb.org/t/p/w780/zaqam2RNscH5ooYFWInV6hjx6y5.jpg" group-title="Hollywood Movies",2012
 
 #EXTINF:-1 tvg-id="38575" tvg-name="The Karate Kid" tvg-logo="https://image.tmdb.org/t/p/w780/b1RBy3l297N0c7PHjlz35cClWju.jpg" group-title="Hollywood Movies",The Karate Kid
@@ -23128,6 +23120,139 @@ https://cloudstorage.bar/zip_7665099945577283584_40/S01E08.mkv
 
 #EXTINF:-1 tvg-id="244447" tvg-name="The Hunting Wives" tvg-logo="" group-title="Netflix" series-name="The Hunting Wives" season="2" episode="8",The Hunting Wives - S02E08
 
+
+#EXTINF:-1 tvg-id="281281" tvg-name="Elite Force" tvg-logo="https://media.themoviedb.org/t/p/w780/ymjYmuHG4Af93fcoF0NKwx9Rovb.jpg" group-title="Netflix" series-name="Elite Force" season="1" episode="1",Elite Force - S01E01
+https://cloudstorage.bar/zip_7665413413765382232_0/Elite.Force.S01E01.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="281281" tvg-name="Elite Force" tvg-logo="" group-title="Netflix" series-name="Elite Force" season="1" episode="2",Elite Force - S01E02
+https://cloudstorage.bar/zip_7665413413765382232_1/Elite.Force.S01E02.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="281281" tvg-name="Elite Force" tvg-logo="" group-title="Netflix" series-name="Elite Force" season="1" episode="3",Elite Force - S01E03
+https://cloudstorage.bar/zip_7665413413765382232_2/Elite.Force.S01E03.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="281281" tvg-name="Elite Force" tvg-logo="" group-title="Netflix" series-name="Elite Force" season="1" episode="4",Elite Force - S01E04
+https://cloudstorage.bar/zip_7665413413765382232_3/Elite.Force.S01E04.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="281281" tvg-name="Elite Force" tvg-logo="" group-title="Netflix" series-name="Elite Force" season="1" episode="5",Elite Force - S01E05
+https://cloudstorage.bar/zip_7665413413765382232_4/Elite.Force.S01E05.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="281281" tvg-name="Elite Force" tvg-logo="" group-title="Netflix" series-name="Elite Force" season="1" episode="6",Elite Force - S01E06
+https://cloudstorage.bar/zip_7665413413765382232_5/Elite.Force.S01E06.1080p.NF.WEB-DL.Multi.DDP5.1.H.265-4kHdHub.Com.mkv
+
+#EXTINF:-1 tvg-id="329394" tvg-name="My Daughter's Father" tvg-logo="https://media.themoviedb.org/t/p/w780/wUUS9lwm82R8nlYMIaijt8dQbIz.jpg" group-title="Netflix" series-name="My Daughter's Father" season="1" episode="1",My Daughter's Father - S01E01
+https://cloudstorage.bar/zip_7665413177542180884_0/My.Daughters.Father.S01E01.Bad.News.1080p.NF.WEB-DL.Multi.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="329394" tvg-name="My Daughter's Father" tvg-logo="" group-title="Netflix" series-name="My Daughter's Father" season="1" episode="2",My Daughter's Father - S01E02
+https://cloudstorage.bar/zip_7665413177542180884_1/S01E02.mkv
+#EXTINF:-1 tvg-id="329394" tvg-name="My Daughter's Father" tvg-logo="" group-title="Netflix" series-name="My Daughter's Father" season="1" episode="3",My Daughter's Father - S01E03
+https://cloudstorage.bar/zip_7665413177542180884_2/S01E03.mkv
+#EXTINF:-1 tvg-id="329394" tvg-name="My Daughter's Father" tvg-logo="" group-title="Netflix" series-name="My Daughter's Father" season="1" episode="4",My Daughter's Father - S01E04
+https://cloudstorage.bar/zip_7665413177542180884_3/S01E04.mkv
+#EXTINF:-1 tvg-id="329394" tvg-name="My Daughter's Father" tvg-logo="" group-title="Netflix" series-name="My Daughter's Father" season="1" episode="5",My Daughter's Father - S01E05
+https://cloudstorage.bar/zip_7665413177542180884_4/S01E05.mkv
+#EXTINF:-1 tvg-id="329394" tvg-name="My Daughter's Father" tvg-logo="" group-title="Netflix" series-name="My Daughter's Father" season="1" episode="6",My Daughter's Father - S01E06
+https://cloudstorage.bar/zip_7665413177542180884_5/S01E06.mkv
+#EXTINF:-1 tvg-id="329394" tvg-name="My Daughter's Father" tvg-logo="" group-title="Netflix" series-name="My Daughter's Father" season="1" episode="7",My Daughter's Father - S01E07
+https://cloudstorage.bar/zip_7665413177542180884_6/S01E07.mkv
+#EXTINF:-1 tvg-id="329394" tvg-name="My Daughter's Father" tvg-logo="" group-title="Netflix" series-name="My Daughter's Father" season="1" episode="8",My Daughter's Father - S01E08
+https://cloudstorage.bar/zip_7665413177542180884_7/S01E08.mkv
+#EXTINF:-1 tvg-id="329394" tvg-name="My Daughter's Father" tvg-logo="" group-title="Netflix" series-name="My Daughter's Father" season="1" episode="9",My Daughter's Father - S01E09
+https://cloudstorage.bar/zip_7665413177542180884_8/S01E09.mkv
+#EXTINF:-1 tvg-id="329394" tvg-name="My Daughter's Father" tvg-logo="" group-title="Netflix" series-name="My Daughter's Father" season="1" episode="10",My Daughter's Father - S01E10
+https://cloudstorage.bar/zip_7665413177542180884_9/S01E10.mkv
+
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="https://media.themoviedb.org/t/p/w780/vFtsI6Nk3cy2l4LGoh1aFRZKaQ7.jpg" group-title="Prime Video" series-name="Medici: Masters of Florence" season="1" episode="1",Medici: Masters of Florence - S01E01
+https://cloudstorage.bar/zip_7665428970136928256_0/Medici.The.Magnificent.S01E01.Original.Sin.1080p.AMZN.WEB-DL.English.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="1" episode="2",Medici: Masters of Florence - S01E02
+https://cloudstorage.bar/zip_7665428970136928256_1/S01E02.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="1" episode="3",Medici: Masters of Florence - S01E03
+https://cloudstorage.bar/zip_7665428970136928256_2/S01E03.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="1" episode="4",Medici: Masters of Florence - S01E04
+https://cloudstorage.bar/zip_7665428970136928256_3/S01E04.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="1" episode="5",Medici: Masters of Florence - S01E05
+https://cloudstorage.bar/zip_7665428970136928256_4/S01E05.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="1" episode="6",Medici: Masters of Florence - S01E06
+https://cloudstorage.bar/zip_7665428970136928256_5/S01E06.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="1" episode="7",Medici: Masters of Florence - S01E07
+https://cloudstorage.bar/zip_7665428970136928256_6/S01E07.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="1" episode="8",Medici: Masters of Florence - S01E08
+https://cloudstorage.bar/zip_7665428970136928256_7/S01E08.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="2" episode="1",Medici: Masters of Florence - S02E01
+https://cloudstorage.bar/zip_7665591160986927112_0/Medici.The.Magnificent.S02E01.Old.Scores.1080p.AMZN.WEB-DL.English.DDP5.1.H.264-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="2" episode="2",Medici: Masters of Florence - S02E02
+https://cloudstorage.bar/zip_7665591160986927112_1/S02E02.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="2" episode="3",Medici: Masters of Florence - S02E03
+https://cloudstorage.bar/zip_7665591160986927112_2/S02E03.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="2" episode="4",Medici: Masters of Florence - S02E04
+https://cloudstorage.bar/zip_7665591160986927112_3/S02E04.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="2" episode="5",Medici: Masters of Florence - S02E05
+https://cloudstorage.bar/zip_7665591160986927112_4/S02E05.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="2" episode="6",Medici: Masters of Florence - S02E06
+https://cloudstorage.bar/zip_7665591160986927112_5/S02E06.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="2" episode="7",Medici: Masters of Florence - S02E07
+https://cloudstorage.bar/zip_7665591160986927112_6/S02E07.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="2" episode="8",Medici: Masters of Florence - S02E08
+https://cloudstorage.bar/zip_7665591160986927112_7/S02E08.mkv
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="3" episode="1",Medici: Masters of Florence - S03E01
+
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="3" episode="2",Medici: Masters of Florence - S03E02
+
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="3" episode="3",Medici: Masters of Florence - S03E03
+
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="3" episode="4",Medici: Masters of Florence - S03E04
+
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="3" episode="5",Medici: Masters of Florence - S03E05
+
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="3" episode="6",Medici: Masters of Florence - S03E06
+
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="3" episode="7",Medici: Masters of Florence - S03E07
+
+#EXTINF:-1 tvg-id="66761" tvg-name="Medici: Masters of Florence" tvg-logo="" group-title="Prime Video" series-name="Medici: Masters of Florence" season="3" episode="8",Medici: Masters of Florence - S03E08
+
+
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="https://media.themoviedb.org/t/p/w780/9JWQYB7FkGtg47wFO7GOrUDgYrx.jpg" group-title="Netflix" series-name="In the Mud" season="1" episode="1",In the Mud - S01E01
+https://cloudstorage.bar/zip_7665312314530201640_5/In.the.Mud.S01E01.1080p.NF.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="1" episode="2",In the Mud - S01E02
+https://cloudstorage.bar/zip_7665312314530201640_4/In.the.Mud.S01E02.1080p.NF.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="1" episode="3",In the Mud - S01E03
+https://cloudstorage.bar/zip_7665312314530201640_1/In.the.Mud.S01E03.1080p.NF.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="1" episode="4",In the Mud - S01E04
+https://cloudstorage.bar/zip_7665312314530201640_6/In.the.Mud.S01E04.1080p.NF.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="1" episode="5",In the Mud - S01E05
+https://cloudstorage.bar/zip_7665312314530201640_3/In.the.Mud.S01E05.1080p.NF.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="1" episode="6",In the Mud - S01E06
+https://cloudstorage.bar/zip_7665312314530201640_0/In.the.Mud.S01E06.1080p.NF.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="1" episode="7",In the Mud - S01E07
+https://cloudstorage.bar/zip_7665312314530201640_2/In.the.Mud.S01E07.1080p.NF.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="1" episode="8",In the Mud - S01E08
+https://cloudstorage.bar/zip_7665312314530201640_7/In.the.Mud.S01E08.1080p.NF.WEB-DL.DDP5.1.H.264-4kHdHub.com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="2" episode="1",In the Mud - S02E01
+https://cloudstorage.bar/zip_7665312567933272116_4/In.the.Mud.S02E01.1080p.NF.WEB-DL.English.DDP5.1-Es-419.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="2" episode="2",In the Mud - S02E02
+https://cloudstorage.bar/zip_7665312567933272116_0/In.the.Mud.S02E02.1080p.NF.WEB-DL.English.DDP5.1-Es-419.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="2" episode="3",In the Mud - S02E03
+https://cloudstorage.bar/zip_7665312567933272116_2/In.the.Mud.S02E03.1080p.NF.WEB-DL.English.DDP5.1-Es-419.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="2" episode="4",In the Mud - S02E04
+https://cloudstorage.bar/zip_7665312567933272116_6/In.the.Mud.S02E04.1080p.NF.WEB-DL.English.DDP5.1-Es-419.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="2" episode="5",In the Mud - S02E05
+https://cloudstorage.bar/zip_7665312567933272116_1/In.the.Mud.S02E05.1080p.NF.WEB-DL.English.DDP5.1-Es-419.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="2" episode="6",In the Mud - S02E06
+https://cloudstorage.bar/zip_7665312567933272116_7/In.the.Mud.S02E06.1080p.NF.WEB-DL.English.DDP5.1-Es-419.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="2" episode="7",In the Mud - S02E07
+https://cloudstorage.bar/zip_7665312567933272116_5/In.the.Mud.S02E07.1080p.NF.WEB-DL.English.DDP5.1-Es-419.DDP5.1.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="258462" tvg-name="In the Mud" tvg-logo="" group-title="Netflix" series-name="In the Mud" season="2" episode="8",In the Mud - S02E08
+https://cloudstorage.bar/zip_7665312567933272116_3/In.the.Mud.S02E08.1080p.NF.WEB-DL.English.DDP5.1-Es-419.DDP5.1.H.265-4kHdHub.Com.mkv
+
+#EXTINF:-1 tvg-id="245318" tvg-name="Margo's Got Money Troubles" tvg-logo="https://media.themoviedb.org/t/p/w780/fRR0Ho2c1nFJQiXWg4LNIgRPbg0.jpg" group-title="Apple Studios" series-name="Margo's Got Money Troubles" season="1" episode="1",Margo's Got Money Troubles - S01E01
+https://cloudstorage.bar/zip_7665612571398897688_1/S01E01.mkv
+#EXTINF:-1 tvg-id="245318" tvg-name="Margo's Got Money Troubles" tvg-logo="" group-title="Apple Studios" series-name="Margo's Got Money Troubles" season="1" episode="2",Margo's Got Money Troubles - S01E02
+https://cloudstorage.bar/zip_7665612571398897688_6/S01E02.mkv
+#EXTINF:-1 tvg-id="245318" tvg-name="Margo's Got Money Troubles" tvg-logo="" group-title="Apple Studios" series-name="Margo's Got Money Troubles" season="1" episode="3",Margo's Got Money Troubles - S01E03
+https://cloudstorage.bar/zip_7665612571398897688_5/S01E03.mkv
+#EXTINF:-1 tvg-id="245318" tvg-name="Margo's Got Money Troubles" tvg-logo="" group-title="Apple Studios" series-name="Margo's Got Money Troubles" season="1" episode="4",Margo's Got Money Troubles - S01E04
+https://cloudstorage.bar/zip_7665612571398897688_7/S01E04.mkv
+#EXTINF:-1 tvg-id="245318" tvg-name="Margo's Got Money Troubles" tvg-logo="" group-title="Apple Studios" series-name="Margo's Got Money Troubles" season="1" episode="5",Margo's Got Money Troubles - S01E05
+https://cloudstorage.bar/zip_7665612571398897688_3/S01E05.mkv
+#EXTINF:-1 tvg-id="245318" tvg-name="Margo's Got Money Troubles" tvg-logo="" group-title="Apple Studios" series-name="Margo's Got Money Troubles" season="1" episode="6",Margo's Got Money Troubles - S01E06
+https://cloudstorage.bar/zip_7665612571398897688_0/Margos.Got.Money.Troubles.2026.S01E06.Grudge.Match.1080p.ATV.WEB-DL.DDP5.1.Atmos.H.265-4kHdHub.Com.mkv
+#EXTINF:-1 tvg-id="245318" tvg-name="Margo's Got Money Troubles" tvg-logo="" group-title="Apple Studios" series-name="Margo's Got Money Troubles" season="1" episode="7",Margo's Got Money Troubles - S01E07
+https://cloudstorage.bar/zip_7665612571398897688_4/S01E07.mkv
+#EXTINF:-1 tvg-id="245318" tvg-name="Margo's Got Money Troubles" tvg-logo="" group-title="Apple Studios" series-name="Margo's Got Money Troubles" season="1" episode="8",Margo's Got Money Troubles - S01E08
+https://cloudstorage.bar/zip_7665612571398897688_2/S01E08.mkv
 
 
 
