@@ -1,0 +1,30 @@
+#EXTM3U
+//Movies
+#EXTINF:-1 tvg-id="1292415" tvg-name="Beast" tvg-logo="https://media.themoviedb.org/t/p/w780/7NrvUI3vnW8H3rD7ExKcTL7KRcQ.jpg" group-title="Prime Video",Beast
+https://share.cloudstorage.bar/7670166542402715960/Beast.2026.1080p.BluRay.Hindi.5.1-English.5.1.ESub.x264.mkv
+#EXTINF:-1 tvg-id="1432631" tvg-name="Idhayam Murali" tvg-logo="https://media.themoviedb.org/t/p/w780/xeb6080yZcKijIoXc1YxOU5A2Gb.jpg" group-title="Netflix India",Idhayam Murali
+
+#EXTINF:-1 tvg-id="1744681" tvg-name="M.R.P (Neekentha Naakentha)" tvg-logo="https://media.themoviedb.org/t/p/w780/yNf3kFRSO7ojLDJUA5iOtHYPLQF.jpg" group-title="JioHotstar",M.R.P (Neekentha Naakentha)
+https://share.cloudstorage.bar/7671233777351262248/MRP.Neekentha.Naakentha.2026.1080p.WEB-DL.Hindi.5.1-Telugu.5.1.ESub.x264.mkv
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="",
+
+
+
+
+
+
+
+
+
+
+//Series
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" series-name="" season="1" episode="1", - S01E01
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" series-name="" season="1" episode="2", - S01E02
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="" series-name="" season="1" episode="", - S01E0
