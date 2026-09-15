@@ -40,7 +40,7 @@ https://feeds.intoday.in/aajtak/api/aajtakhd/master.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Aaj Tak" tvg-thumb="" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_AAJ_TAK/images/LOGO_HD/image.png" group-title="News" tvg-type="live",Aaj Tak
 https://aajtaklive-amd.akamaized.net/hls/live/2014416/aajtak/aajtaklive/live_404p/chunks.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Colors Marathi" tvg-thumb="" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_MARATHI/images/LOGO_HD/image.png" group-title="Television" tvg-type="live",Colors Marathi
-http://103.72.101.252:8080/live/755.m3u8
+https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorsmarathihd.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="ABP Majha" tvg-thumb="" tvg-logo="https://dtil.tmsimg.com/assets/s142521_ld_h15_aa.png?lock=720x540" group-title="News" tvg-type="live",ABP Majha
 https://yupprestreamliveus.akamaized.net/vglive-sk-355289/majha/master.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="All Time Movies" tvg-thumb="" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ALL_TIME_MOVIES/images/LOGO_HD/image.png" group-title="Movies" tvg-type="live",All Time Movies
@@ -60,13 +60,13 @@ https://n18syndication.akamaized.net/bpk-tv/CNBC_Tv18_Prime_HD_NW18_MOB/output01
 #EXTINF:-1 tvg-id="" tvg-name="Colors" tvg-thumb="" tvg-logo="https://i.imgur.com/M8uCJ0D.png" group-title="Television" tvg-type="live",Colors
 http://103.229.254.25:7001/play/a077/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Colors HD" tvg-thumb="" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/63/Colors_HD.svg" group-title="Television" tvg-type="live",Colors HD
-https://trs1.aynaott.com/colorshd/index.m3u8
+http://66.102.126.10:8000/play/a00a/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Disney International HD" tvg-thumb="" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_DISNEY_INTERNATIONAL_HD/images/LOGO_HD/image.png" group-title="Kids" tvg-type="live",Disney International HD
 http://149.71.34.166:8002/play/a01p/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Disney Junior" tvg-thumb="" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="Kids" tvg-type="live",Disney Junior
 http://149.71.34.166:8000/play/a00l/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="E 24" tvg-thumb="" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_E24/images/LOGO_HD/image.png" group-title="Music" tvg-type="live",E 24
-https://live-cf-e24.dailyhunt.in/master.m3u8
+https://mumt04.tangotv.in/m18aqlK4E24/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Fakt Marathi" tvg-thumb="" tvg-logo="https://dtil.tmsimg.com/assets/s143038_ld_h15_aa.png?lock=720x540" group-title="Movies" tvg-type="live",Fakt Marathi
 https://mumt02.tangotv.in/FAKTMARATHI/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Food Food" tvg-thumb="" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Food_Food.png" group-title="Lifestyle" tvg-type="live",Food Food
@@ -139,6 +139,14 @@ https://airtelapp.shemaroo.com/shemarootv/smil:shemarootvadp.smil/playlist.m3u8
 https://airtelapp.shemaroo.com/shemarooumang/smil:shemarooumangadp.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Sony Marathi" tvg-thumb="" tvg-logo="" group-title="Entertainment" tvg-type="live",Sony Marathi
 http://217.20.112.199:8080/sonymarathi/index.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Sony Entertainment Television HD" tvg-thumb="" tvg-logo="https://dtil.tmsimg.com/assets/s159096_ld_h15_aa.png?lock=720x540" group-title="Movies" tvg-type="live",Sony Entertainment Television
+https://cloudplay-sonyliv.pages.dev/sethd.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Sony Max HD" tvg-thumb="" tvg-logo="https://dtil.tmsimg.com/assets/s157590_ld_h15_aa.png?lock=720x540" group-title="Movies" tvg-type="live",Sony Max HD
+https://cloudplay-sonyliv.pages.dev/maxhd.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Sony Pix HD" tvg-thumb="" tvg-logo="https://dtil.tmsimg.com/assets/s143803_ld_h15_aa.png?lock=720x540" group-title="Movies" tvg-type="live",Sony
+https://cloudplay-sonyliv.pages.dev/pixhd.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Sony Sports Ten 3 Hindi HD" tvg-thumb="" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0025TCMR.png?lock=720x540" group-title="Movies" tvg-type="live",Sony Sports Ten 3 Hindi
+https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Sony Max 2" tvg-thumb="" tvg-logo="https://i.imgur.com/gqUYk6C.png" group-title="Movies" tvg-type="live",Sony Max 2
 http://149.71.34.166:8000/play/a00z/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Sony Sports Ten 3 Hindi" tvg-thumb="" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0025TCMR.png?lock=720x540" group-title="Sports" tvg-type="live",Sony Sports Ten 3 Hindi
@@ -434,37 +442,37 @@ https://deepstorage.dev/7639674245991104612/Avengers.Age.Of.Ultron.2015.1080p.Bl
 https://deepstorage.dev/7639674812926787596/Avengers.Infinity.War.2018.4K.Bluray.mkv
 #EXTINF:-1 tvg-id="299534" tvg-name="Avengers: EndGame" tvg-thumb="https://cinemar.cc/static/preview/197/46197/3cddc11e3ae70005ef5596dd8a4b86b3e4a198c6/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" group-title="Marvel",Avengers: EndGame
 https://deepstorage.dev/7639675521596391584/Avengers.Endgame.2019.1080p.Bluray.mkv
-#EXTINF:-1 tvg-id="315635" tvg-name="Spider-Man: Homecoming" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg" group-title="Marvel",Spider-Man: Homecoming 2017
+#EXTINF:-1 tvg-id="315635" tvg-name="Spider-Man: Homecoming" tvg-thumb="https://cinemar.cc/static/preview/877/80877/4f36d510291dc874e5da7fb27c780b24731e0c74/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg" group-title="Marvel",Spider-Man: Homecoming 2017
 https://deepstorage.dev/7639676230265995268/Spiderman.Homecoming.2017.1080p.10bit.Bluray.mkv
-#EXTINF:-1 tvg-id="533535" tvg-name="Deadpool & Wolverine" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" group-title="Marvel",Deadpool & Wolverine 2024
+#EXTINF:-1 tvg-id="533535" tvg-name="Deadpool & Wolverine" tvg-thumb="https://cinemar.cc/static/preview/91/81091/e56bb5c8de0b1d50746155c43752e41d94116e51/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" group-title="Marvel",Deadpool & Wolverine 2024
 https://deepstorage.dev/7639667507187417264/Deadpool.%26.Wolverine.2024.1080p.Web-DL.mkv
-#EXTINF:-1 tvg-id="1726" tvg-name="Iron Man" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" group-title="Marvel",Iron Man 2008
+#EXTINF:-1 tvg-id="1726" tvg-name="Iron Man" tvg-thumb="https://cinemar.cc/static/preview/748/45748/2d699a393d54fede3157a89e2eb40a6228ea46ef/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/78lPtwv72eTNqFW9COBYI0dWDJa.jpg" group-title="Marvel",Iron Man 2008
 https://deepstorage.dev/7639676913165795548/Iron.Man.2008.mkv
-#EXTINF:-1 tvg-id="68721" tvg-name="Iron Man 3" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg" group-title="Marvel",Iron Man 3 2013
+#EXTINF:-1 tvg-id="68721" tvg-name="Iron Man 3" tvg-thumb="https://cinemar.cc/static/preview/652/49652/89ed55d4559bd49d1d77c00e008f543601fab62d/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg" group-title="Marvel",Iron Man 3 2013
 https://deepstorage.dev/7630045247141052508/Iron.Man.2013.mp4
 #EXTINF:-1 tvg-id="617126" tvg-name="The Fantastic 4: First Steps" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/nf5qaSEvyYSNeFH0YhSs5EsBLX9.jpg" group-title="Marvel",The Fantastic 4: First Steps //https://cdn.pixeldrain.eu.cc/uUj7nMui
 https://deepstorage.dev/7639677780749189144/The.Fantastic.4.The.First.Steps.2025.1080p.Bluray.mkv
-#EXTINF:-1 tvg-id="429617" tvg-name="Spider-Man: Far From Home" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg" group-title="Marvel",Spider-Man: Far From Home
+#EXTINF:-1 tvg-id="429617" tvg-name="Spider-Man: Far From Home" tvg-thumb="https://cinemar.cc/static/preview/194/46194/0fdbd35440f7bce6be7ce9fd87ca66813f9c3185/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg" group-title="Marvel",Spider-Man: Far From Home
 https://deepstorage.dev/7630046716019867772/Spiderman.Far.From.Home.2019.mp4
 #EXTINF:-1 tvg-id="557" tvg-name="Spider-Man" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/kjdJntyBeEvqm9w97QGBdxPptzj.jpg" group-title="Marvel",Spider-Man 2002
 
-#EXTINF:-1 tvg-id="559" tvg-name="Spider-Man 3" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg" group-title="Marvel",Spider-Man 3 2007
+#EXTINF:-1 tvg-id="559" tvg-name="Spider-Man 3" tvg-thumb="https://cinemar.cc/static/preview/633/45633/29bfc57b48701e895409b3f744dd40fa11d63a5d/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg" group-title="Marvel",Spider-Man 3 2007
 https://deepstorage.dev/7631532199178666104/Spiderman.3.mp4
-#EXTINF:-1 tvg-id="986056" tvg-name="Thunderbolts*" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg" group-title="Marvel",Thunderbolts* //https://cdn.pixeldrain.eu.cc/xVYwEzZQ
+#EXTINF:-1 tvg-id="986056" tvg-name="Thunderbolts*" tvg-thumb="https://cinemar.cc/static/preview/461/87461/0f16ed94c68bf9b2db059f7023958f1fe7cee130/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg" group-title="Marvel",Thunderbolts* //https://cdn.pixeldrain.eu.cc/xVYwEzZQ
 https://deepstorage.dev/7639682578227658892/Thunderbolts.2025.1080p.Bluray.mkv
-#EXTINF:-1 tvg-id="10138" tvg-name="Iron Man 2" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg" group-title="Marvel",Iron Man 2
+#EXTINF:-1 tvg-id="10138" tvg-name="Iron Man 2" tvg-thumb="https://cinemar.cc/static/preview/825/48825/cdbbcdf2a5ba1d219c007fe9003f5b04d24209c1/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg" group-title="Marvel",Iron Man 2
 https://deepstorage.dev/7631530884918673492/Iron.Man.2.mp4
-#EXTINF:-1 tvg-id="271110" tvg-name="Captain America: Civil War" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg" group-title="Marvel",Captain America: Civil War
+#EXTINF:-1 tvg-id="271110" tvg-name="Captain America: Civil War" tvg-thumb="https://cinemar.cc/static/preview/158/46158/a44f0309ad9a64dbae83adb3fb02f131016d5d61/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg" group-title="Marvel",Captain America: Civil War
 https://deepstorage.dev/7639683046379094292/Captain.America.Civil.War.2016.1080p.Bluray.mkv
-#EXTINF:-1 tvg-id="447365" tvg-name="Guardians of the Galaxy Vol. 3" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" group-title="Marvel",Guardians of the Galaxy Vol. 3
+#EXTINF:-1 tvg-id="447365" tvg-name="Guardians of the Galaxy Vol. 3" tvg-thumb="https://cinemar.cc/static/preview/907/82907/60a5804e8c9252f90526643ece34c207716d1490/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" group-title="Marvel",Guardians of the Galaxy Vol. 3
 https://deepstorage.dev/7639683394271445308/Guardians.Of.The.Galaxy.Vol.3.2023.1080p.Bluray.mkv
-#EXTINF:-1 tvg-id="453395" tvg-name="Doctor Strange in the Multiverse of Madness" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg" group-title="Marvel",Doctor Strange in the Multiverse of Madness
+#EXTINF:-1 tvg-id="453395" tvg-name="Doctor Strange in the Multiverse of Madness" tvg-thumb="https://cinemar.cc/static/preview/864/53864/7a555719abf373ec8db0febfc3464ab7f25ce6b0/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg" group-title="Marvel",Doctor Strange in the Multiverse of Madness
 https://deepstorage.dev/7639624922586677324/Doctor.Strange.In.The.Multiverse.Of.Madness.2022.1080p.Web-DL.mkv
-#EXTINF:-1 tvg-id="283995" tvg-name="Guardians of the Galaxy Vol. 2" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg" group-title="Marvel",Guardians of the Galaxy Vol. 2
+#EXTINF:-1 tvg-id="283995" tvg-name="Guardians of the Galaxy Vol. 2" tvg-thumb="https://cinemar.cc/static/preview/483/48483/9f4a3238e7177fddcd11684ddade306cb976c687/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg" group-title="Marvel",Guardians of the Galaxy Vol. 2
 https://deepstorage.dev/7639656022444867692/Guardians.Of.The.Galaxy.Vol.2.2017.IMAX.1080p.mkv
-#EXTINF:-1 tvg-id="284053" tvg-name="Thor: Ragnarok" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg" group-title="Marvel",Thor: Ragnarok
+#EXTINF:-1 tvg-id="284053" tvg-name="Thor: Ragnarok" tvg-thumb="https://cinemar.cc/static/preview/581/60581/8b595a496e7a028dc6f690dd49b33aa738819145/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg" group-title="Marvel",Thor: Ragnarok
 https://deepstorage.dev/7639683828063142108/Thor.Ragnarok.2017.1080p.Bluray.mkv
-#EXTINF:-1 tvg-id="822119" tvg-name="Captain America: Brave New World" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg" group-title="Marvel",Captain America: Brave New World //https://cdn.pixeldrain.eu.cc/EH3PM4wc
+#EXTINF:-1 tvg-id="822119" tvg-name="Captain America: Brave New World" tvg-thumb="https://cinemar.cc/static/preview/235/87235/80c439126d3e872e4affdb9590f999f5707680ca/collection.vtt" tvg-logo="https://image.tmdb.org/t/p/w780/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg" group-title="Marvel",Captain America: Brave New World //https://cdn.pixeldrain.eu.cc/EH3PM4wc
 https://deepstorage.dev/7631667220065550360/Captain.America.Brave.New.World.mp4
 #EXTINF:-1 tvg-id="284054" tvg-name="Black Panther" tvg-thumb="" tvg-logo="https://image.tmdb.org/t/p/w780/uxzzxijgPIY7slzFvMotPv8wjKA.jpg" group-title="Marvel",Black Panther
 https://deepstorage.dev/7639607442069782684/Black%20Panther.2019.IMAX.1080p.mkv
@@ -37026,7 +37034,7 @@ https://cdn.pixeldrain.eu.cc/Q4CjRJXD
 #EXTINF:-1 tvg-id="11436" tvg-name="Bigg Boss" tvg-thumb="" tvg-logo="" group-title="JioHotstar" series-name="Bigg Boss" season="20" episode="9",Bigg Boss - S20E09
 https://cdn.pixeldrain.eu.cc/7iYZyfV1
 #EXTINF:-1 tvg-id="11436" tvg-name="Bigg Boss" tvg-thumb="" tvg-logo="" group-title="JioHotstar" series-name="Bigg Boss" season="20" episode="10",Bigg Boss - S20E10
-
+https://cdn.pixeldrain.eu.cc/z5LsfEAB
 #EXTINF:-1 tvg-id="11436" tvg-name="Bigg Boss" tvg-thumb="" tvg-logo="" group-title="JioHotstar" series-name="Bigg Boss" season="20" episode="",Bigg Boss - S20E0
 
 #EXTINF:-1 tvg-id="11436" tvg-name="Bigg Boss" tvg-thumb="" tvg-logo="" group-title="JioHotstar" series-name="Bigg Boss" season="20" episode="",Bigg Boss - S20E0
