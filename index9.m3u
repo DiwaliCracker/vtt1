@@ -1,5 +1,7 @@
 #EXTM3U
 //Movies
+#EXTINF:-1 tvg-id="933260" tvg-name="The Substance" tvg-logo="https://media.themoviedb.org/t/p/w780/lqoMzCcZYEFK729d6qzt349fB4o.jpg" group-title="Hollywood Movies",The Substance
+https://cdn.pixeldrain.eu.cc/qhJix88f
 #EXTINF:-1 tvg-id="1213243" tvg-name="Toxic" tvg-thumb="https://vttgen.diwalicracker8.workers.dev/vttgen.vtt?img1=https://share.deepstorage.dev/2f2d677222c04a1808dca66c79376ec2/Toxic.HDRip.2026.10.jpg&w=320&h=180&r=140&c=5&interval=10" tvg-logo="https://media.themoviedb.org/t/p/w780/5RTd3YCLWbEhbe9OXRuNX3pbT5U.jpg" group-title="New Movies",Toxic
 https://1c8e2ebb17c55ccc855414dc97ed1e80.r2.cloudflarestorage.com/hub/TOXiC.2026.1080p.UNCENSORED.HDRip.Hindi.Kannada.Telugu.LiNE-Tamil.ORG.HC-ESub.x264-HDHub4u.Ag.mkv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=5182151ea5eaf657f35595cd12cb4710%2F20261019%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261019T174505Z&X-Amz-Expires=18000&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22TOXiC.2026.1080p.UNCENSORED.HDRip.Hindi.Kannada.Telugu.LiNE-Tamil.ORG.HC-ESub.x264-HDHub4u.Ag.mkv%22&X-Amz-Signature=366ce395ef561ef30a453ccc5e3e10ae562d38c6e60c80a08aedbb010af7d565
 #EXTINF:-1 tvg-id="1292415" tvg-name="Beast" tvg-thumb="" tvg-logo="https://media.themoviedb.org/t/p/w780/7NrvUI3vnW8H3rD7ExKcTL7KRcQ.jpg" group-title="Prime Video",Beast
