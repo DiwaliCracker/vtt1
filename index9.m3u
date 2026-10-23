@@ -1,5 +1,25 @@
 #EXTM3U
 //Movies
+#EXTINF:-1 tvg-id="1058424" tvg-name="Hope" tvg-logo="https://media.themoviedb.org/t/p/w780/6VY1ZKgpsc8CfGsQcCGiYEgHdH0.jpg" group-title="Korean Movies",Hope
+https://share.deepstorage.dev/7699873791807062072/Hope.2026.1080p.WEB-DL.Hindi.LiNE.2.0-Korean.5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="1579941" tvg-name="The Musical" tvg-logo="https://media.themoviedb.org/t/p/w780/paoRPVNta4eYyPO1vsdHTK8dUYa.jpg" group-title="Hollywood Movies",The Musical
+https://share.deepstorage.dev/7699743190441525272/The.Musical.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir.mkv
+#EXTINF:-1 tvg-id="1513253" tvg-name="Tiny Fugitives" tvg-logo="https://media.themoviedb.org/t/p/w780/unJWfg66bFwrGD31nBFoOQfkuba.jpg" group-title="Hollywood Movies",Tiny Fugitives
+https://share.deepstorage.dev/7699752257117487168/T%21ny.Fugitives.2026.1080p.mkv
+#EXTINF:-1 tvg-id="1393326" tvg-name="Ghost in the Cell" tvg-logo="https://media.themoviedb.org/t/p/w780/zxcMdx0w5Zmg8yZuuiS7CJ8vOea.jpg" group-title="Indonesian Movies",Ghost in the Cell
+https://share.deepstorage.dev/7699725280427900944/Ghost.in.the.Cell.2026.1080p.WEB-DL.Hindi.5.1-Indonesian.5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="1590613" tvg-name="Cerita Lila" tvg-logo="https://media.themoviedb.org/t/p/w780/mP94Yh7yoPYPHEWWdFBUNj9GHK5.jpg" group-title="Indonesian Movies",Cerita Lila
+https://share.deepstorage.dev/7699725941852864512/Cerita.Lila.2026.1080p.WEB-DL.Hindi.2.0-Indonesian.2.0.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="1713546" tvg-name="Jeena Dil Se" tvg-logo="https://media.themoviedb.org/t/p/w780/pEsKzjFxuwvw67mBEfvQaH7yKP4.jpg" group-title="Bollywood Movies",Jeena Dil Se
+https://share.deepstorage.dev/7699722153691709496/Jeena.Dil.Se.2026.1080p.HQ.WEB-DL.Hindi.DD5.1.ESub.x264-HDHub4u.kg.mkv
+#EXTINF:-1 tvg-id="1590718" tvg-name="Dhoomakethu" tvg-logo="https://media.themoviedb.org/t/p/w780/kZCKwhUx7r9HRDqpGbavdMtd8f5.jpg" group-title="Malayalam Movies",Dhoomakethu
+https://share.deepstorage.dev/7699722819411640392/Dhoomakethu.2026.1080p.DS4K.WEB-DL.Hindi.5.1-Malayalam.5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="1578079" tvg-name="Dorothy" tvg-logo="https://media.themoviedb.org/t/p/w780/o3r5DmWhOKdFmeIUoRJj4CvCqOP.jpg" group-title="Tamil Movies",Dorothy
+https://share.deepstorage.dev/7699724232455880712/Dorothy.2026.1080p.DS4K.WEB-DL.Hindi.5.1-Tamil.5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="1186823" tvg-name="Sumo Didi" tvg-logo="https://media.themoviedb.org/t/p/w780/5OyBiBCntjiMYJTPAObvfeRWVzV.jpg" group-title="Bollywood Movies",Sumo Didi
+https://share.deepstorage.dev/7699723540966146064/Sumo.Didi.2026.1080p.Hindi.DS4K.WEB-DL.5.1.ESub.x264-HDHub4u.Ms.mkv
+#EXTINF:-1 tvg-id="1453407" tvg-name="Gajab Raat" tvg-logo="https://media.themoviedb.org/t/p/w780/lbxsAJpf5dajPkEjsMWKNWfgaI5.jpg" group-title="Netflix India",Gajab Raat
+https://share.deepstorage.dev/7699834643180158976/Gajab.Raat.2026.1080p.Hindi.WEB-DL.5.1.ESub.x264-HDHub4u.Ms.mkv
 #EXTINF:-1 tvg-id="933260" tvg-name="The Substance" tvg-logo="https://media.themoviedb.org/t/p/w780/lqoMzCcZYEFK729d6qzt349fB4o.jpg" group-title="Hollywood Movies",The Substance
 https://cdn.pixeldrain.eu.cc/qhJix88f
 #EXTINF:-1 tvg-id="1213243" tvg-name="Toxic" tvg-thumb="https://vttgen.diwalicracker8.workers.dev/vttgen.vtt?img1=https://share.deepstorage.dev/2f2d677222c04a1808dca66c79376ec2/Toxic.HDRip.2026.10.jpg&w=320&h=180&r=140&c=5&interval=10" tvg-logo="https://media.themoviedb.org/t/p/w780/5RTd3YCLWbEhbe9OXRuNX3pbT5U.jpg" group-title="New Movies",Toxic
