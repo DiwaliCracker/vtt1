@@ -1,5 +1,13 @@
 #EXTM3U
 //Movies
+#EXTINF:-1 tvg-id="1400940" tvg-name="Clayface" tvg-logo="https://media.themoviedb.org/t/p/w780/9l1NuFjel2j89hiuiJbsxfblqjy.jpg" group-title="DC Movies",Clayface
+https://cdn.pixeldrain.eu.cc/QmqGRt8o
+#EXTINF:-1 tvg-id="1772549" tvg-name="Pehla Pyaar Doosri Baar" tvg-logo="https://media.themoviedb.org/t/p/w780/tGS4b47RIpF3DTAkezHBqfYNTm2.jpg" group-title="Bollywood Movies",Pehla Pyaar Doosri Baar
+https://cdn.pixeldrain.eu.cc/u9otTZig
+#EXTINF:-1 tvg-id="1375156" tvg-name="Udta Teer" tvg-logo="https://media.themoviedb.org/t/p/w780/tvICKypVlW7Iio4KVs7NousbSKi.jpg" group-title="Bollywood Movies",Udta Teer
+https://c534fe7bae27c24e257b5f60fcaab3a1.r2.cloudflarestorage.com/hub/Udta.Teer.2026.HQ-Rip.1080p.HDTC.Hindi-LiNE.x264-HDHub4u.Ag.mkv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=11c44f4b21a98b1b57dfeb8fa11cd090%2F20261023%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261023T185948Z&X-Amz-Expires=18000&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Udta.Teer.2026.HQ-Rip.1080p.HDTC.Hindi-LiNE.x264-HDHub4u.Ag.mkv%22&X-Amz-Signature=9ae67ff80abccb20ea576fca9538be22575c4ebb59ba5565441b20c0c9ed4629
+#EXTINF:-1 tvg-id="1290418" tvg-name="The Cycle" tvg-logo="https://media.themoviedb.org/t/p/w780/n5gSNf55KWfDc9hqP4H1KCCSutE.jpg" group-title="Hollywood Movies",The Cycle
+https://cdn.pixeldrain.eu.cc/DrtfksfV
 #EXTINF:-1 tvg-id="1058424" tvg-name="Hope" tvg-logo="https://media.themoviedb.org/t/p/w780/6VY1ZKgpsc8CfGsQcCGiYEgHdH0.jpg" group-title="Korean Movies",Hope
 https://share.deepstorage.dev/7699873791807062072/Hope.2026.1080p.WEB-DL.Hindi.LiNE.2.0-Korean.5.1.ESub.x264-HDHub4u.Ms.mkv
 #EXTINF:-1 tvg-id="1579941" tvg-name="The Musical" tvg-logo="https://media.themoviedb.org/t/p/w780/paoRPVNta4eYyPO1vsdHTK8dUYa.jpg" group-title="Hollywood Movies",The Musical
