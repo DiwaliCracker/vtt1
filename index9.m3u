@@ -1,5 +1,47 @@
 #EXTM3U
 //Movies
+#EXTINF:-1 tvg-id="1283515" tvg-name="Verity" tvg-logo="https://media.themoviedb.org/t/p/w780/zPHfsaiMZT1HNz1ZS55iyLKZkFG.jpg" group-title="Hollywood Movies",Verity
+https://share.deepstorage.dev/7701370124053250100/Verity%20%282026%29%201080p%20AMZN%20WEB-DL%20HEVC%20x265%20%5BHindi%20AMZN%20DDP%205.1%20640kbps%20%2B%20English%20DDP%20Atmos%205.1%5D%20ESub-%28KyoGo-4kHdHub%29.mkv
+#EXTINF:-1 tvg-id="1465063" tvg-name="Forgotten Island" tvg-logo="https://media.themoviedb.org/t/p/w780/myd1K3gefdNAWFsGNRDdMeiK9Qg.jpg" group-title="Animated",Forgotten Island
+https://cdn.pixeldrain.eu.cc/PttJzCR1
+#EXTINF:-1 tvg-id="1562777" tvg-name="The Stunt Driver" tvg-logo="https://media.themoviedb.org/t/p/w780/jFiMdTG8Hw41A3VxrzLEWtMFIYX.jpg" group-title="Hollywood Movies",The Stunt Driver
+https://cdn.pixeldrain.eu.cc/yAwWMRk1
+#EXTINF:-1 tvg-id="1635771" tvg-name="The Lost Ones" tvg-logo="https://media.themoviedb.org/t/p/w780/vJgnRh06pvQUOW2s455CsiJE3bN.jpg" group-title="Hollywood Movies",The Lost Ones
+https://cdn.pixeldrain.eu.cc/tQ4Af4su
+#EXTINF:-1 tvg-id="1417260" tvg-name="The Shallows" tvg-logo="https://media.themoviedb.org/t/p/w780/tTEvvi93axTduN31rpAeuCWXm4S.jpg" group-title="Netflix",The Shallows
+https://cdn.pixeldrain.eu.cc/jUtj37AY
+#EXTINF:-1 tvg-id="1384216" tvg-name="The Dog Stars" tvg-logo="https://media.themoviedb.org/t/p/w780/5O616X9vmRzQdB68PHzBewPittd.jpg" group-title="Hollywood Movies",The Dog Stars
+https://cdn.pixeldrain.eu.cc/oJ9fep1f
+#EXTINF:-1 tvg-id="843352" tvg-name="Legend of the White Dragon" tvg-logo="https://media.themoviedb.org/t/p/w780/k0L5ZQP4PjdNziVGvcOeaihXyCc.jpg" group-title="Hollywood Movies",Legend of the White Dragon
+https://cdn.pixeldrain.eu.cc/zzh4cvZf
+#EXTINF:-1 tvg-id="1021848" tvg-name="Queen at Sea" tvg-logo="https://media.themoviedb.org/t/p/w780/ueYawr1nldKchzyP8Q9KJpn31SK.jpg" group-title="Hollywood Movies",Queen at Sea
+https://cdn.pixeldrain.eu.cc/VpJywNx9
+#EXTINF:-1 tvg-id="1371730" tvg-name="Love Language" tvg-logo="https://media.themoviedb.org/t/p/w780/sCQde3BSMpDgA1qpE0zzboFdwl0.jpg" group-title="Hollywood Movies",Love Language
+https://cdn.pixeldrain.eu.cc/ckeWMPwb
+#EXTINF:-1 tvg-id="79548" tvg-name="Gone" tvg-logo="https://media.themoviedb.org/t/p/w780/5GcbQhm0Qbbf1qt24spUpqX5tfP.jpg" group-title="Hollywood Movies",Gone
+https://cdn.pixeldrain.eu.cc/tck3D73q
+#EXTINF:-1 tvg-id="813418" tvg-name="Hot Spot" tvg-logo="https://media.themoviedb.org/t/p/w780/42egzT6e4CIEdrEo4Xc31DKyGjA.jpg" group-title="Hollywood Movies",Hot Spot
+https://cdn.pixeldrain.eu.cc/Nx6eJfY2
+#EXTINF:-1 tvg-id="1773759" tvg-name="Seriously Single Too" tvg-logo="https://media.themoviedb.org/t/p/w780/ocSY3cX4g6hxy4EkQWXPjrrdzCI.jpg" group-title="Netflix",Seriously Single Too
+https://cdn.pixeldrain.eu.cc/bH37naBL
+#EXTINF:-1 tvg-id="1288069" tvg-name="Tenzing" tvg-logo="https://media.themoviedb.org/t/p/w780/eI0QW02PYqhnmIvLRdn9vrfVVP7.jpg" group-title="Apple Studios",Tenzing
+https://cdn.pixeldrain.eu.cc/ZYjbkxD3
+#EXTINF:-1 tvg-id="1236045" tvg-name="Animals" tvg-logo="https://media.themoviedb.org/t/p/w780/iISM36voS1E8gX9BM0DVK0kgi3E.jpg" group-title="Netflix",Animals
+https://cdn.pixeldrain.eu.cc/dyXRV2JQ
+#EXTINF:-1 tvg-id="1808505" tvg-name="Lagna Ani Barach Kahi" tvg-logo="" group-title="Marathi Movies",Lagna Ani Barach Kahi
+https://cdn.pixeldrain.eu.cc/pCJyzhLK
+#EXTINF:-1 tvg-id="1808741" tvg-name="Kapus Konda" tvg-logo="" group-title="Marathi Movies",Kapus Konda
+https://cdn.pixeldrain.eu.cc/1dcAJL8d
+#EXTINF:-1 tvg-id="1376400" tvg-name="Crawlers" tvg-logo="https://media.themoviedb.org/t/p/w780/lNXeEpg4yLSRwXwOeR5lbPgwbqL.jpg" group-title="Hollywood Movies",Crawlers
+https://77a21721b9c459c4a072310933958fc3.r2.cloudflarestorage.com/hub/ca689026383e18f85be2f436830c4078?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=7f3074e0cba0d2c225489dd68c0a2f2d%2F20261027%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261027T145802Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Crawlers.2025.1080p.BMS.WEB-DL.AAC5.1.H.264-4kHdHub.Com.mkv%22&X-Amz-Signature=11ff0f5542e1923f3b7f8a089dc6bbbd4c98dee89c4fc6f3c1d5757107b0cde0
+#EXTINF:-1 tvg-id="1686719" tvg-name="Super Hit" tvg-logo="https://media.themoviedb.org/t/p/w780/6oq8nDgJeDLOFustnNuqVxvs8Jt.jpg" group-title="SUN",Super Hit
+https://cdn.pixeldrain.eu.cc/j3cYX9R3
+#EXTINF:-1 tvg-id="1780005" tvg-name="Surviving Hurricane Otis" tvg-logo="https://media.themoviedb.org/t/p/w780/chZa8Jd9kSDj11bekGjwwotFPEw.jpg" group-title="Netflix",Surviving Hurricane Otis
+https://cdn.pixeldrain.eu.cc/txmvfyeR
+#EXTINF:-1 tvg-id="1785611" tvg-name="Tu Hai Meri Kiran" tvg-logo="https://media.themoviedb.org/t/p/w780/jjlqHKzDTPJXDl0eb77Q20Aipuc.jpg" group-title="Bollywood Movies",Tu Hai Meri Kiran
+https://cdn.pixeldrain.eu.cc/qkLbAiwj
+#EXTINF:-1 tvg-id="1806232" tvg-name="Tum Mere Ho" tvg-logo="https://media.themoviedb.org/t/p/w780/iQyd8w6xPjTrOeYImdt70EEQ0zv.jpg" group-title="Bollywood Movies",Tum Mere Ho
+https://cdn.pixeldrain.eu.cc/Zrt6PVGd
 #EXTINF:-1 tvg-id="1400940" tvg-name="Clayface" tvg-logo="https://media.themoviedb.org/t/p/w780/9l1NuFjel2j89hiuiJbsxfblqjy.jpg" group-title="DC Movies",Clayface
 https://cdn.pixeldrain.eu.cc/QmqGRt8o
 #EXTINF:-1 tvg-id="1772549" tvg-name="Pehla Pyaar Doosri Baar" tvg-logo="https://media.themoviedb.org/t/p/w780/tGS4b47RIpF3DTAkezHBqfYNTm2.jpg" group-title="Bollywood Movies",Pehla Pyaar Doosri Baar
