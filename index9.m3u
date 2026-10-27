@@ -1,6 +1,6 @@
 #EXTM3U
 //Movies
-#EXTINF:-1 tvg-id="1283515" tvg-name="Verity" tvg-logo="https://media.themoviedb.org/t/p/w780/zPHfsaiMZT1HNz1ZS55iyLKZkFG.jpg" group-title="Hollywood Movies",Verity
+#EXTINF:-1 tvg-id="1283515" tvg-name="Verity" tvg-thumb"https://share.deepstorage.dev/19153290579890635fda45f60aa0a30d/Verity.2026.vtt" tvg-logo="https://media.themoviedb.org/t/p/w780/zPHfsaiMZT1HNz1ZS55iyLKZkFG.jpg" group-title="Hollywood Movies",Verity
 https://share.deepstorage.dev/7701370124053250100/Verity%20%282026%29%201080p%20AMZN%20WEB-DL%20HEVC%20x265%20%5BHindi%20AMZN%20DDP%205.1%20640kbps%20%2B%20English%20DDP%20Atmos%205.1%5D%20ESub-%28KyoGo-4kHdHub%29.mkv
 #EXTINF:-1 tvg-id="1465063" tvg-name="Forgotten Island" tvg-logo="https://media.themoviedb.org/t/p/w780/myd1K3gefdNAWFsGNRDdMeiK9Qg.jpg" group-title="Animated",Forgotten Island
 https://cdn.pixeldrain.eu.cc/PttJzCR1
