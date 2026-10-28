@@ -1,5 +1,17 @@
 #EXTM3U
 //Movies
+#EXTINF:-1 tvg-id="1596275" tvg-name="Drive - The Pretenders" tvg-logo="https://media.themoviedb.org/t/p/w780/s9syckECnUYhKePQ1A0DC0mFVZ9.jpg" group-title="Prime Video",Drive - The Pretenders
+https://cdn.pixeldrain.eu.cc/LH775e9G
+#EXTINF:-1 tvg-id="1727734" tvg-name="Ali G: Who Iz I?" tvg-logo="https://media.themoviedb.org/t/p/w780/uTyVxPeWX8Ai30IQoyDDQONNcq.jpg" group-title="Hollywood Movies",Ali G: Who Iz I?
+https://cdn.pixeldrain.eu.cc/dBMwMwtn
+#EXTINF:-1 tvg-id="1495694" tvg-name="Beauty from Pain" tvg-logo="https://media.themoviedb.org/t/p/w780/mJtBKvHQaFzgp0N6JFskSvjbTar.jpg" group-title="Hollywood Movies",Beauty from Pain
+https://cdn.pixeldrain.eu.cc/2Emv8qHQ
+#EXTINF:-1 tvg-id="1774407" tvg-name="Beauty from Surrender" tvg-logo="https://media.themoviedb.org/t/p/w780/pDkoZOT80i8PCqK00TqIhA3Zxnq.jpg" group-title="Hollywood Movies",Beauty from Surrender
+https://cdn.pixeldrain.eu.cc/yDaQH6mB
+#EXTINF:-1 tvg-id="1629051" tvg-name="Never After Dark" tvg-logo="https://media.themoviedb.org/t/p/w780/5FgJEzfS9Sz2ncei1jdDmkNC9n8.jpg" group-title="Hollywood Movies",Never After Dark
+https://cdn.pixeldrain.eu.cc/nhxRZB3q
+#EXTINF:-1 tvg-id="1596301" tvg-name="Mum, I'm Alien Pregnant" tvg-logo="https://media.themoviedb.org/t/p/w780/RXfZ8QjllkTvNKyj7aTetQ8ywO.jpg" group-title="Hollywood Movies",Mum, I'm Alien Pregnant
+https://cdn.pixeldrain.eu.cc/6Np9eTPq
 #EXTINF:-1 tvg-id="1283515" tvg-name="Verity" tvg-thumb="https://share.deepstorage.dev/19153290579890635fda45f60aa0a30d/Verity.2026.vtt" tvg-logo="https://media.themoviedb.org/t/p/w780/zPHfsaiMZT1HNz1ZS55iyLKZkFG.jpg" group-title="Hollywood Movies",Verity
 https://share.deepstorage.dev/7701370124053250100/Verity%20%282026%29%201080p%20AMZN%20WEB-DL%20HEVC%20x265%20%5BHindi%20AMZN%20DDP%205.1%20640kbps%20%2B%20English%20DDP%20Atmos%205.1%5D%20ESub-%28KyoGo-4kHdHub%29.mkv
 #EXTINF:-1 tvg-id="1465063" tvg-name="Forgotten Island" tvg-logo="https://media.themoviedb.org/t/p/w780/myd1K3gefdNAWFsGNRDdMeiK9Qg.jpg" group-title="Animated",Forgotten Island
