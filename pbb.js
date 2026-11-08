@@ -1,7 +1,4 @@
-const sections = [
-  {
-    logo: "https://assets.vixen.com/img/vixen-white.svg",
-    items: [
+
       {
         img: "https://cdn.vixen.com/scene/videoimages/104989/mainLandscape/1728637979410/vixen-061924-bl-bl_1920x1080.webp",
         video: "https://cdn.porndiff.com/tubes/videos/104989_cd90dZ1kiltgqgqcE2diU4PpvugpDpR5s6Yj4Ww3muc_353P.mp4",
@@ -3858,6 +3855,3 @@ const sections = [
           { name: "Screenshots", link: "https://imgext.onrender.com/imgext.html?imge=https://caps1cdn.adultempire.com/3840/_&dgt=1&ext=0.jpg&frm=&tl=" }
         ]
       }
-    ]
-  }
-];
