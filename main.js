@@ -1,4 +1,4 @@
-const pages = ["https://file.garden/aG0M3eyoAi7HijUP/Searchv/bzz.js",
+const pages = ["https://file.garden/auZGaPoyIlevjCY8/JS/Production/bzz.js",
     "https://file.garden/auZGaPoyIlevjCY8/JS/Production/bzz2.js",
     "https://file.garden/auZGaPoyIlevjCY8/JS/Production/psm.js",
     "https://file.garden/auZGaPoyIlevjCY8/JS/Production/sweets.js",
